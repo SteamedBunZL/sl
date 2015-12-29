@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/mTime"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:background="@color/title_bar_bg_color"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="时间"
+        android:textColor="@color/item_title_text"
+        android:textSize="12sp" />
+
+    <View
+        android:id="@+id/v_divide_line"
+        style="@style/content_line_style"
+        android:background="@android:color/white" />
+
+    <RelativeLayout
+        android:id="@+id/mMainLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+        android:background="@color/msgroom_msgs_bg"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <ImageView
+            android:id="@+id/mHeadPic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/user_infor_head_boy" />
+
+        <TextView
+            android:id="@+id/mNickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/mHeadPic"
+            android:layout_marginLeft="7dip"
+            android:layout_toLeftOf="@+id/mNumber"
+            android:layout_toRightOf="@id/mHeadPic"
+            android:ellipsize="marquee"
+            android:maxEms="6"
+            android:singleLine="true"
+            android:text="名字"
+            android:textColor="@color/title_text_color"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/mContent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/mHeadPic"
+            android:layout_alignLeft="@id/mNickname"
+            android:maxEms="12"
+            android:singleLine="true"
+            android:layout_toLeftOf="@+id/mNumber"
+            android:ellipsize="end"
+            android:text="我兜里有巧克力~~"
+            android:textColor="@color/item_sign_text"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mNumber"
+            android:layout_width="55dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/action_btn_blue_selector"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="未处理"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" >
+        </TextView>
+    </RelativeLayout>
+
+</LinearLayout>

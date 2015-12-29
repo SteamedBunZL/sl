@@ -1,0 +1,424 @@
+package com.tuixin11sms.tx.core;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.Color;
+import android.os.Handler;
+import android.os.Message;
+import android.text.Editable;
+import android.view.KeyEvent;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.EditText;
+import android.widget.GridView;
+import android.widget.HorizontalScrollView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.RelativeLayout.LayoutParams;
+
+import com.shenliao.user.expressionpacage.ExpressionPackage;
+import com.tuixin11sms.tx.ExpressBackView;
+import com.tuixin11sms.tx.R;
+import com.tuixin11sms.tx.R.color;
+import com.tuixin11sms.tx.utils.Utils;
+
+public class MyPopupWindow {
+	private SmileyParser sParser;
+	private int face_page = 1;
+	private int densityDpi;
+	private SmileyParser sParser_edittext_hdpi;
+	private final int Num = 17;
+	private int pageNum = Num;// 每页显示数量
+	Activity con;
+	private ArrayList<ExpressionPackage> mList = new ArrayList<ExpressionPackage>();
+	private ArrayList<View> mViewList = new ArrayList<View>();
+	private RelativeLayout Pop;
+
+	public class SmileyAdapter extends BaseAdapter {
+		public int getCount() {
+			return pageNum + 1;
+		}
+
+		public Object getItem(int i) {
+			return null;
+		}
+
+		public long getItemId(int i) {
+			return 0L;
+		}
+
+		public View getView(int i, View view, ViewGroup viewgroup) {
+			ImageView imageview;
+			if (view == null) {
+				imageview = new ImageView(mContext);
+				android.widget.AbsListView.LayoutParams layoutparams = //
+				new android.widget.AbsListView.LayoutParams(
+						android.view.ViewGroup.LayoutParams.WRAP_CONTENT,//
+						android.view.ViewGroup.LayoutParams.WRAP_CONTENT);
+				imageview.setLayoutParams(layoutparams);
+				android.widget.ImageView.ScaleType scaletype = android.widget.ImageView.ScaleType.CENTER;
+				imageview.setScaleType(scaletype);
+				imageview.setOnTouchListener(new OnTouchListener() {
+					@Override
+					public boolean onTouch(View v, MotionEvent event) {
+						gridview_layout.isIntercept = false;
+						float dx;
+						switch (event.getAction()) {
+						case MotionEvent.ACTION_DOWN:
+							gridview_layout.b_x = gridview_layout.e_x = event
+									.getX();
+							break;
+						case MotionEvent.ACTION_UP:
+							gridview_layout.e_x = event.getX();
+							dx = gridview_layout.b_x - gridview_layout.e_x;
+							gridview_layout.b_x = -1;
+							gridview_layout.e_x = -1;
+							if (Math.abs(dx) > 50) {
+								turnPage(dx);
+								return true;
+							}
+
+							int id = (Integer) v.getTag();
+							if (id < 0) {
+								View focusView = con.getCurrentFocus();
+								focusView.dispatchKeyEvent(new KeyEvent(
+										KeyEvent.ACTION_DOWN,
+										KeyEvent.KEYCODE_DEL));
+							} else {
+								String s1 = SmileyParser.emots[id
+										+ (face_page - 1) * Num].mEsc1;
+
+								int index = editText.getSelectionStart();
+								Editable edit = editText.getEditableText();
+								if (index < 0 || index >= edit.length()) {
+									if (densityDpi > 160)
+										edit.append(sParser_edittext_hdpi
+												.addSmileySpans(s1, true, 0));
+									else
+										edit.append(sParser.addSmileySpans(s1,
+												true, 0));
+								} else {
+									if (densityDpi > 160)
+										edit.insert(index,
+												sParser_edittext_hdpi
+														.addSmileySpans(s1,
+																true, 0));
+									else
+										edit.insert(index, sParser
+												.addSmileySpans(s1, true, 0));
+								}
+							}
+							isShow = true;
+							break;
+						case MotionEvent.ACTION_MOVE:
+							gridview_layout.e_x = event.getX();
+							break;
+						case MotionEvent.ACTION_CANCEL:
+							dx = gridview_layout.b_x - gridview_layout.e_x;
+							gridview_layout.b_x = -1;
+							gridview_layout.e_x = -1;
+							if (Math.abs(dx) > 50) {
+								turnPage(dx);
+								return true;
+							}
+						}
+						return true;
+					}
+				});
+			} else {
+				imageview = (ImageView) view;
+			}
+			if (i == pageNum) {
+				imageview.setImageResource(R.drawable.smile_deleat);
+				imageview.setTag(-1);
+			} else {
+				imageview.setImageBitmap(sParser.getSmileyBitmap(i
+						+ (face_page - 1) * Num));
+				imageview.setTag(i);
+			}
+			return imageview;
+		}
+
+		private Context mContext;
+
+		public SmileyAdapter(Context context) {
+			mContext = context;
+		}
+	}
+
+	private Handler handler = new Handler() {
+		@Override
+		public void handleMessage(Message msg) {
+			switch (msg.what) {
+			case 1:
+				MyPopupWindow.this.editText.requestFocus();
+				RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
+						RelativeLayout.LayoutParams.FILL_PARENT, bmpHeight);
+				mPop.setLayoutParams(lp);
+				isShow = false;
+			}
+		}
+	};
+	private int bmpWidth;
+	private int bmpHeight;
+	private LinearLayout ll;
+
+	public MyPopupWindow(Activity chatRoom, RelativeLayout Pop, int screenW,
+			int screenH, EditText editText, int densityDpi,
+			HorizontalScrollView hsv, LinearLayout ll,
+			List<ExpressionPackage> list) {
+		this.densityDpi = densityDpi;
+		this.chatRoom = chatRoom;
+		bmpWidth = screenW;
+		bmpHeight = screenH / 3;
+		con = chatRoom;
+		this.editText = editText;
+		sParser = new SmileyParser(this.chatRoom);
+		sParser_edittext_hdpi = new SmileyParser(this.chatRoom);
+		sParser_edittext_hdpi.setInChatView(true);
+		this.ll = ll;
+		initExpressionPackageData(hsv, ll, list);
+		this.Pop = Pop;
+		initPopMenu(Pop);
+	}
+
+	public void initExpressionPackageData(HorizontalScrollView hsv,
+			LinearLayout ll, List<ExpressionPackage> list) {
+		ExpressionPackage defaultExrepssion1 = new ExpressionPackage(
+				R.drawable.e415);
+		ExpressionPackage defaultExpression2 = new ExpressionPackage(
+				R.drawable.input_other_type_msg_normal);
+		ExpressionPackage defaulteExpression3 = new ExpressionPackage(
+				R.drawable.e003);
+		ExpressionPackage defaultExrepssion4 = new ExpressionPackage(
+				R.drawable.e41);
+		ExpressionPackage defaultExrepssion5 = new ExpressionPackage(
+				R.drawable.e410);
+		ExpressionPackage defaultExrepssion6 = new ExpressionPackage(
+				R.drawable.e411);
+		ExpressionPackage defaultExrepssion7 = new ExpressionPackage(
+				R.drawable.e412);
+		ExpressionPackage defaultExrepssion8 = new ExpressionPackage(
+				R.drawable.e413);
+		ExpressionPackage defaultExrepssion9 = new ExpressionPackage(
+				R.drawable.e414);
+		ExpressionPackage defaultExrepssion10 = new ExpressionPackage(
+				R.drawable.e415);
+		mList.add(defaultExrepssion1);
+		mList.add(defaulteExpression3);
+		mList.add(defaultExrepssion4);
+		mList.add(defaultExrepssion5);
+		mList.add(defaultExrepssion6);
+		mList.add(defaultExrepssion7);
+		mList.add(defaultExrepssion8);
+		mList.add(defaultExrepssion9);
+		mList.add(defaultExrepssion10);
+		mList.add(defaultExpression2);
+		initExtraMenu(hsv, ll, list);
+	}
+
+	public void initExtraMenu(HorizontalScrollView hsv, LinearLayout ll,
+			List<ExpressionPackage> list) {
+		mList.addAll(1, list);
+		ll.removeAllViews();
+		ll.setVisibility(View.VISIBLE);
+		for (final ExpressionPackage expressionPackage : mList) {
+			final View view = View.inflate(con,
+					R.layout.item_horizable_expression, null);
+
+			ImageView img = (ImageView) view
+					.findViewById(R.id.img_item_horizable_expression);
+			img.setImageResource(expressionPackage.id);
+			mViewList.add(view);
+			view.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+					clearBlackground();
+					view.setBackgroundColor(con.getResources().getColor(
+							R.color.content_line_color_gray));
+					if (expressionPackage.id == R.drawable.e415) {
+						// if (!view.isSelected()) {
+						mPop.removeAllViews();
+						initPopMenu(Pop);
+						mPop.setVisibility(View.VISIBLE);
+						// }
+					} else {
+						mPop.removeAllViews();
+					}
+				}
+			});
+			View view_line = View.inflate(con,
+					R.layout.item_horizable_expreission_vertical_line, null);
+			ll.addView(view);
+			ll.addView(view_line);
+			mViewList.get(0).setBackgroundColor(
+					con.getResources()
+							.getColor(R.color.content_line_color_gray));
+		}
+		ll.setVisibility(View.GONE);
+	}
+
+	public void onClick() {
+		if (mPop.getVisibility() == View.GONE) {
+			mPop.setVisibility(View.VISIBLE);
+			// TODO 表情显示，下部添加栏也有view
+			ll.setVisibility(View.VISIBLE);
+		} else {
+		}
+	}
+
+	/**
+	 * 清除所有view的背景 #BFBFBF
+	 */
+	public void clearBlackground() {
+		for (View view : mViewList) {
+			view.setBackgroundColor(con.getResources().getColor(
+					R.color.expression_view_normal));
+		}
+	}
+
+	GridView gridview;
+	SmileyAdapter smileyadapter;
+	OnTouchListener flipperListener;
+	RelativeLayout main_layout;
+	ExpressBackView gridview_layout;
+
+	private void initPopMenu(RelativeLayout Pop) {
+		if (mPop == null || mPop.getChildCount() == 0) {
+			inflater = (LayoutInflater) chatRoom
+					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+			view = inflater.inflate(R.layout.smiley_dialog, null);
+			gridview = (GridView) view.findViewById(R.id.smiley_gridview11);
+			main_layout = (RelativeLayout) view
+					.findViewById(R.id.smiley_main_layout);
+			gridview_layout = (ExpressBackView) view
+					.findViewById(R.id.smiley_gridview_layout);
+			smileyadapter = new SmileyAdapter(chatRoom.getApplicationContext());
+			gridview.setAdapter(smileyadapter);
+			ivs = new ImageView[8];
+			ivs[0] = (ImageView) view.findViewById(R.id.tab_point);
+			ivs[1] = (ImageView) view.findViewById(R.id.tab_point2);
+			ivs[2] = (ImageView) view.findViewById(R.id.tab_point3);
+			ivs[3] = (ImageView) view.findViewById(R.id.tab_point4);
+			ivs[4] = (ImageView) view.findViewById(R.id.tab_point5);
+			ivs[5] = (ImageView) view.findViewById(R.id.tab_point6);
+			ivs[6] = (ImageView) view.findViewById(R.id.tab_point7);
+			ivs[7] = (ImageView) view.findViewById(R.id.tab_point8);
+			// ivs[8] = (ImageView) view.findViewById(R.id.tab_point9);
+			mPop = Pop;
+			mPop.removeAllViews();// 先清空该layout所有的view,否则会可能出现表情重叠的问题。2014.01.14
+									// shc
+			View v_line = new View(chatRoom);
+			RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+					LayoutParams.MATCH_PARENT, Utils.dip2px(0.5f, chatRoom));
+			v_line.setBackgroundColor(chatRoom.getResources().getColor(
+					R.color.content_line_color_gray));
+			v_line.setLayoutParams(params);
+			mPop.addView(v_line);
+			mPop.addView(view);
+			RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
+					RelativeLayout.LayoutParams.FILL_PARENT, bmpHeight);
+			mPop.setLayoutParams(lp);
+			flipperListener = new OnTouchListener() {
+				@Override
+				public boolean onTouch(View v, MotionEvent event) {
+					switch (event.getAction()) {
+					case MotionEvent.ACTION_DOWN:
+						gridview_layout.b_x = gridview_layout.e_x = event
+								.getX();
+						break;
+
+					case MotionEvent.ACTION_UP:
+						gridview_layout.e_x = event.getX();
+					case MotionEvent.ACTION_CANCEL:
+						float dx = gridview_layout.b_x - gridview_layout.e_x;
+						gridview_layout.b_x = -1;
+						gridview_layout.e_x = -1;
+						if (Math.abs(dx) > 50)
+							turnPage(dx);
+						break;
+					case MotionEvent.ACTION_MOVE:
+						gridview_layout.e_x = event.getX();
+						break;
+					}
+					return true;
+				}
+			};
+			mPop.setOnTouchListener(flipperListener);
+			gridview_layout.setOnTouchListener(flipperListener);
+		}
+		if (mPop.getVisibility() == View.VISIBLE) {
+			mPop.setVisibility(View.GONE);
+		}
+	}
+
+	public RelativeLayout mPop;// 显示表情的layout？
+	Activity chatRoom;
+	LayoutInflater inflater;
+	private boolean isShow = true;
+	View view;
+	EditText editText;
+
+	public RelativeLayout getPopupWindow() {
+		return mPop;
+	}
+
+	public SmileyParser getSParser() {
+		return sParser;
+	}
+
+	public SmileyParser getSParser_edittext_hdpi() {
+		return sParser_edittext_hdpi;
+	}
+
+	int x = 1;
+	ImageView[] ivs;
+
+	public void turnPage(float p) {
+		if (p > 0) {
+			face_page++;
+			if (face_page > ivs.length) {
+				face_page = 1;
+			}
+
+		} else {
+			face_page--;
+			if (face_page < 1) {
+				face_page = ivs.length;
+			}
+		}
+		if ((face_page * Num) > smileyLen()) {
+			pageNum = smileyLen() % Num;
+		} else {
+			pageNum = Num;
+		}
+		smileyadapter.notifyDataSetChanged();
+		for (int i = 0; i < ivs.length; i++) {
+			if (i + 1 == face_page) {
+				ivs[i].setImageResource(R.drawable.presence_online);
+			} else {
+				ivs[i].setImageResource(R.drawable.presence_invisible);
+			}
+		}
+
+	};
+
+	public void reset() {
+	}
+
+	private int smileyLen() {
+		return SmileyParser.emots.length;
+	}
+}

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_myblog"
+    style="@style/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/group_index_title"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="#96eeeeee" >
+
+        <LinearLayout
+            android:id="@+id/btn_back_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="返回"
+                android:textColor="#4abffb"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/Titile_Name_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="发表" />
+
+        <ImageView
+            android:id="@+id/myblog_add_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/right_ok_lan"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#cac8c9" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_myblog_add"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/group_index_title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dip"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/bt_myblog_add_img"
+            android:layout_width="145dp"
+            android:layout_height="146dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/sll_myblog_add_img" />
+
+        <RelativeLayout
+            android:layout_width="145dp"
+            android:layout_height="146dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/bt_myblog_add_aduio"
+                android:layout_width="145dp"
+                android:layout_height="146dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/sll_myblog_add_aduio" 
+                />
+
+            <LinearLayout
+                android:id="@+id/ll_addblog_audio"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal"
+                 android:visibility="gone">
+
+                <com.tuixin11sms.tx.view.BlogMusicSeekBar
+                    android:id="@+id/sb_addblog_process"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1000"
+                    android:maxHeight="0.5dp"
+                    android:minHeight="0.5dp"
+                    android:thumbOffset="0dp"
+                    android:progressDrawable="@drawable/sll_myblog_seekbar_style"
+                    android:thumb="@drawable/sll_myblog_seekbar_thumb" />
+
+                <TextView
+                    android:id="@+id/tv_addblog_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/sub_title_text_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_myblog_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+        android:layout_below="@id/ll_myblog_add"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="18dip" >
+
+        <EditText
+            android:id="@+id/et_myblog_msg"
+            android:layout_width="fill_parent"
+            android:layout_height="65dp"
+            android:background="@drawable/sll_favourite_textbackgroud_selector"
+            android:gravity="top"
+            android:hint="输入文字..."
+            android:padding="10dp"
+            android:textColor="#0c2049"
+            android:textColorHint="#888888"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_myblog_msg_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:text="55"
+            android:textColor="#ff3b30"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/myblog_place"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_below="@id/rl_myblog_msg"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="18dip"
+        android:background="@drawable/sll_favourite_textbackgroud_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/iv_myblog_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:src="@drawable/myblog_place_show" />
+
+        <TextView
+            android:id="@+id/tv_myblog_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="7dp"
+            android:text="显示所在城市"
+            android:textColor="@color/sub_title_text_color"
+            android:textSize="12sp" >
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dip"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/copyright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/warn_blog" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/my_blog_warn"
+            android:textColor="@color/myblog_warn"
+            android:textSize="12sp" >
+        </TextView>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/group_index_title"
+    android:layout_width="fill_parent"
+    android:layout_height="44dp"
+    android:background="#96eeeeee" >
+
+    <LinearLayout
+        android:id="@+id/btn_back_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:layout_marginLeft="10dp" >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="返回"
+            android:textColor="@color/content_color_blue"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/Titile_Name_Style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="新消息通知" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/line_size"
+        android:layout_alignParentBottom="true"
+        android:background="#cac8c9" />
+
+</RelativeLayout>

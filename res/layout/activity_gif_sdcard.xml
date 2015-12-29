@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_biaoti"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="#96eeeeee" >
+
+        <LinearLayout
+            android:id="@+id/btn_back_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="返回"
+                android:textColor="@color/content_color_blue"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title_sdcard_name"
+            style="@style/Titile_Name_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="SD卡文件" />
+
+        <TextView
+            android:id="@+id/tv_send_selected_files"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="添加"
+            android:textColor="@color/content_color_blue"
+            android:textSize="17sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#cac8c9" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_folder_derectory"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/rl_biaoti"
+        android:background="#eeeeee" >
+
+        <ImageView
+            android:id="@+id/iv_back_derectory_button"
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/selector_folder_explorer_back_btn" />
+
+        <TextView
+            android:id="@+id/tv_derectory_path_label"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="4dp"
+            android:layout_toLeftOf="@id/iv_back_derectory_button"
+            android:background="@drawable/sl_tab_sign_selector"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:padding="3dp"
+            android:text="path is"
+            android:textColor="@color/black" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#d5d7dc" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/rl_folder_derectory"
+        android:background="#ffffff" />
+
+    <LinearLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#eeeeee"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <CheckBox
+            android:id="@+id/cb_fenxiang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/checkbox_fenxiang"
+            android:button="@null"
+            android:checked="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="是否分享给其他用户" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_files_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/rl_bottom"
+        android:layout_below="@id/line1"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/transparent"
+        android:dividerHeight="0.0dp"
+        android:drawSelectorOnTop="true"
+        android:listSelector="@color/transparent"
+        android:longClickable="true"
+        android:smoothScrollbar="true" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@id/rl_bottom"
+        android:background="#ffffff" />
+
+</RelativeLayout>

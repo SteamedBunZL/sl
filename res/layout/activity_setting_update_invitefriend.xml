@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mBackground"
+    style="@style/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/group_index_title"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="#96eeeeee" >
+
+        <LinearLayout
+            android:id="@+id/btn_back_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="返回"
+                android:textColor="@color/content_color_blue"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/Titile_Name_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="邀请朋友使用神聊" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#cac8c9" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="18dp"
+        android:background="#d5d7dc" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- 通过短信邀请好友 -->
+
+        <include
+            android:id="@+id/sl_tab_setting_invitedfriend_phone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/sll_setting_update_invitefriend_include_phone" />
+
+        <!-- 通过邮箱邀请好友 -->
+
+        <include
+            android:id="@+id/sl_tab_setting_invitedfriend_email"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/sll_setting_update_invitefriend_include_email" />
+    </LinearLayout>
+
+</LinearLayout>

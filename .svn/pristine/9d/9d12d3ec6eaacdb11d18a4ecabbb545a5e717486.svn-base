@@ -1,0 +1,173 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mBackground"
+    style="@style/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/group_index_title"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="#96eeeeee" >
+
+        <LinearLayout
+            android:id="@+id/btn_back_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="返回"
+                android:textColor="@color/content_color_blue"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/Titile_Name_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="编辑个人资料" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#cac8c9" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="5dip"
+        android:layout_weight="1.0"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <!--
+            照片设置
+			<include android:id="@+id/sl_tab_setting_userinfo_photo"
+			        android:layout_marginLeft="9dp"
+			   android:layout_marginRight="9dp"
+				 android:layout_marginTop="12dip"
+				android:layout_width="fill_parent" android:layout_height="fill_parent"
+				layout="@layout/sl_tab_setting_userinfo_include_photo" />
+            -->
+            <!--
+            个人资料标题 
+			<include android:id="@+id/sl_tab_setting__userinfo_info"
+			   android:layout_marginLeft="9dp"
+			   android:layout_marginRight="9dp"
+			 android:layout_marginTop="12dip"
+				android:layout_width="fill_parent" android:layout_height="fill_parent"
+				layout="@layout/sl_tab_setting_userinfo_info" />
+            -->
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="18dp"
+                android:background="#d5d7dc" />
+            <!-- 头像 -->
+
+            <include
+                android:id="@+id/sl_tab_setting_userinfo_head"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/sll_tab_setting_useinfo_include_myhead" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="18dp"
+                android:background="#d5d7dc" />
+            <!-- 昵称 -->
+
+            <include
+                android:id="@+id/sl_tab_setting__userinfo_nick"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/sll_tab_setting_userinfo_include_nick" />
+            <!-- 性别 -->
+
+            <include
+                android:id="@+id/sl_tab_setting__userinfo_sex"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/sll_tab_setting_userinfo_include_sex" />
+            <!-- 出生日期 -->
+
+            <include
+                android:id="@+id/sl_tab_setting__userinfo_birth"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/sll_tab_setting_useinfo_include_birth" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="18dp"
+                android:background="#d5d7dc" />
+            <!-- 血型 -->
+
+            <include
+                android:id="@+id/sl_tab_setting__userinfo_bloodtype"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/sll_tab_setting_userinfo_include_bloodtype" />
+            <!-- 地区 -->
+
+            <include
+                android:id="@+id/sl_tab_setting__userinfo_area"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/sll_tab_setting_userinfo_include_area" />
+
+            <!-- 职业 -->
+
+            <include
+                android:id="@+id/sl_tab_setting__userinfo_profession"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/sll_tab_setting_userinfo_include_profession" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="18dp"
+                android:background="#d5d7dc" />
+            <!-- 语言 -->
+
+            <include
+                android:id="@+id/sl_tab_setting__userinfo_language"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/sll_tab_setting_userinfo_include_language" />
+            <!-- 兴趣爱好 -->
+
+            <include
+                android:id="@+id/sl_tab_setting__userinfo_favourite"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="18dp"
+                layout="@layout/sll_tab_setting_userinfo_include_favourite" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

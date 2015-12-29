@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/title_bar_layout" >
+
+        <TextView
+            android:id="@+id/tv_add_contacts_title"
+            style="@style/title_bar_textview"
+            android:text="添加" />
+
+        <View
+            style="@style/content_line_style"
+            android:layout_alignParentBottom="true" />
+
+        <TextView
+            android:id="@+id/tv_title_back"
+            style="@style/title_left_textview"
+            android:text="返回" />
+    </RelativeLayout>
+
+    <View
+        style="@style/content_line_style"
+        android:layout_marginTop="18dp" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#f5f5f5"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" >
+
+                <include
+                    android:id="@+id/search_add_friend"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/search_add_friend"
+                    android:visibility="visible" />
+
+                <View style="@style/content_line_style" />
+
+                <include
+                    android:id="@+id/search_sina_friend"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/search_sina_friend"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <View style="@style/content_line_style" />
+
+            <View
+                style="@style/content_line_style"
+                android:layout_marginTop="18dp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" 
+                android:orientation="vertical" >
+
+                <include
+                    android:id="@+id/search_qun"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/sll_search_qun"
+                    android:visibility="visible" />
+
+                <View style="@style/content_line_style" />
+
+                <include
+                    android:id="@+id/search_add_qun"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/sll_add_qun_creat"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <View style="@style/content_line_style" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

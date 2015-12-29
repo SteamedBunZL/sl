@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- com.tuixin11sms.tx.ResizeLayout -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/msgroom_down_more_back"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dip"
+    android:layout_marginRight="20dip"
+    android:background="@drawable/msgroom_down_more_back"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RelativeLayout style="@style/msgroom_down_popup_item" >
+
+            <TextView
+                android:id="@+id/msgRoom_down_more_item2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/msgroom_downpop_camera"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/msgroom_more_pop_pic"
+                android:textColor="#ffffff"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/msgRoom_more_down_item1_line"
+            android:layout_width="@dimen/line_gray_size"
+            android:layout_height="30dp"
+            android:background="@android:color/white" />
+
+        <RelativeLayout style="@style/msgroom_down_popup_item" >
+
+            <TextView
+                android:id="@+id/rl_down_pop_video_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/msgroom_downpop_video"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="视频"
+                android:textColor="#ffffff"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/msgRoom_more_down_item2_line"
+            android:layout_width="@dimen/line_gray_size"
+            android:layout_height="30dp"
+            android:background="@android:color/white" />
+
+        <RelativeLayout style="@style/msgroom_down_popup_item" >
+
+            <TextView
+                android:id="@+id/msgRoom_down_more_item4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/msgroom_downpop_card"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/msgroom_more_pop_card"
+                android:textColor="#ffffff"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/msgRoom_more_down_item3_line"
+            android:layout_width="@dimen/line_gray_size"
+            android:layout_height="30dp"
+            android:background="@android:color/white" />
+
+        <RelativeLayout
+            android:id="@+id/msgRoom_down_more_item5"
+            style="@style/msgroom_down_popup_item" >
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/line_gray_size"
+        android:background="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RelativeLayout style="@style/msgroom_down_popup_item" >
+
+            <TextView
+                android:id="@+id/msgRoom_down_more_item1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/msgroom_downpop_express"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/msgroom_more_pop_exp"
+                android:textColor="#ffffff"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/msgRoom_more_down_item5_line"
+            android:layout_width="@dimen/line_gray_size"
+            android:layout_height="30dp"
+            android:background="@android:color/white" />
+
+        <RelativeLayout style="@style/msgroom_down_popup_item" >
+
+            <TextView
+                android:id="@+id/rl_down_popup_music_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/msgroom_downpop_music"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="音乐"
+                android:textColor="#ffffff"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/msgRoom_more_down_item6_line"
+            android:layout_width="@dimen/line_gray_size"
+            android:layout_height="30dp"
+            android:background="@android:color/white" />
+
+        <RelativeLayout style="@style/msgroom_down_popup_item" >
+
+            <TextView
+                android:id="@+id/msgRoom_down_more_item3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/msgroom_downpop_geo"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/msgroom_more_pop_geo"
+                android:textColor="#ffffff"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/msgRoom_more_down_item7_line"
+            android:layout_width="@dimen/line_gray_size"
+            android:layout_height="30dp"
+            android:background="@android:color/white" />
+
+        <RelativeLayout style="@style/msgroom_down_popup_item" >
+
+            <TextView
+                android:id="@+id/rl_down_popup_file_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/msgroom_downpop_file"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="文件"
+                android:textColor="#ffffff"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

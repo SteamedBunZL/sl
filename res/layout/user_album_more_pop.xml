@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- com.tuixin11sms.tx.ResizeLayout -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/msgroom_more_back"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/msgroom_more_back"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/userinfo_more_item_markName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="6dip"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/save_img_relayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/userinfo_more_item__markName_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:gravity="center"
+                android:text="保存照片"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/userinfo_more_item__line_markName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="6dip"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/msgRoom_more_item1_line"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/msgroom_more_pop_line" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/userinfo_more_item1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="6dip"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/userinfo_relayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/userinfo_more_item1_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:gravity="center"
+                android:text="举报用户"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/userinfo_more_item__line_report"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="6dip"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/msgRoom_more_item1_line"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/msgroom_more_pop_line" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/userinfo_more_item_cancle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="6dip"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/userinfo_more_item_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/userinfo_more_item__cancle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

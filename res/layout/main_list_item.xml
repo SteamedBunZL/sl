@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tx_list_item"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/listitem_background"
+    android:gravity="center_vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="3dp" >
+
+    <RelativeLayout
+        android:id="@+id/rl_head_img"
+        android:layout_width="55dp"
+        android:layout_height="55dp" >
+
+        <ImageView
+            android:id="@+id/tx_list_item_photoview"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/user_infor_head_boy" />
+
+        <RelativeLayout
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" >
+
+            <TextView
+                android:id="@+id/tx_list_item_message_count"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/unread_msgstat"
+                android:gravity="center"
+                android:text="12"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"/>
+
+            <ImageView
+                android:id="@+id/iv_praised_msgs_unread"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/point" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignBottom="@+id/rl_head_img"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/rl_head_img" >
+
+        <TextView
+            android:id="@+id/tx_list_item_message_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="130.0dip"
+            android:singleLine="true"
+            android:text="name1111111111234567890123456"
+            android:textColor="@color/title_text_color"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/tx_list_item_message_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:focusable="false"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tx_list_item_message_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="[已发送]"
+            android:textColor="#ff8ba964"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tx_list_item_message_summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/tx_list_item_message_state"
+            android:ellipsize="end"
+            android:maxHeight="25dp"
+            android:singleLine="true"
+            android:text="message"
+            android:textColor="#777777"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/list_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_marginRight="@dimen/time_right"
+            android:layout_toLeftOf="@+id/tx_list_item_message_checkbox"
+            android:gravity="right"
+            android:singleLine="true"
+            android:text="77777"
+            android:textColor="#b9bbbe"
+            android:textSize="@dimen/time_size" />
+    </RelativeLayout>
+
+</RelativeLayout>

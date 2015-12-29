@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_linear"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/log_moreuser_bg"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/mLog_head"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="10dip" />
+
+    <TextView
+        android:id="@+id/mTX"
+        style="@style/Large_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dp"
+        android:layout_toRightOf="@+id/mLog_head"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:textColor="#ff000000" />
+
+    <ImageView
+        android:id="@+id/mDel"
+        style="@style/Large_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="6dp"
+        android:gravity="center"
+        android:paddingBottom="10dip"
+        android:paddingRight="8dp"
+        android:paddingTop="10dip"
+        android:src="@drawable/loginclear"
+        android:textColor="#ff000000" />
+
+    <!--
+		<AutoCompleteTextView android:text=""
+		android:layout_height="wrap_content" android:id="@+id/mTX"
+		android:layout_width="fill_parent"> <requestFocus></requestFocus>
+		</AutoCompleteTextView>-->
+
+</RelativeLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <View style="@style/content_line_style" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@android:color/white" >
+
+        <RelativeLayout
+            android:id="@+id/rl_user_head_icon"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp" >
+
+            <ImageView
+                android:id="@+id/iv_user_info_head"
+                android:layout_width="57dip"
+                android:layout_height="57dip"
+                android:focusable="true"
+                android:gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/user_infor_head_girl" />
+
+            <ImageView
+                android:id="@+id/iv_admin_icon"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/manager_56" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="62dp"
+            android:layout_toRightOf="@id/rl_user_head_icon" >
+
+            <TextView
+                android:id="@+id/user_info_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:ellipsize="end"
+                android:maxWidth="150dp"
+                android:singleLine="true"
+                android:text="哪儿哪儿"
+                android:textColor="@color/title_text_color"
+                android:textSize="18.0sp"
+                android:textStyle="bold" />
+
+            <com.tuixin11sms.tx.view.LevelTextView
+                android:id="@+id/user_info_level"
+                style="@style/level_text_style"
+                android:layout_alignBottom="@id/user_info_name"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/user_info_name"
+                android:text="LV 10" />
+
+            <RelativeLayout
+                android:id="@+id/rl_user_info_sex_age"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:layout_below="@+id/user_info_name"
+                android:background="@color/user_sex_bg_color_female"
+                android:paddingRight="5dp" >
+
+                <TextView
+                    android:id="@+id/tv_user_info_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="♀"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_info_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_user_info_sex"
+                    android:text="23"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="bottom"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/user_info_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sl_userinfo_id"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/user_info_id_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:text="232325"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View style="@style/content_line_style" />
+
+</LinearLayout>

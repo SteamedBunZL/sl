@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- com.tuixin11sms.tx.ResizeLayout -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/msgroom_more_back"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/msgroom_more_back"
+    android:orientation="vertical"
+    android:paddingLeft="13dip"
+    android:paddingRight="10dip" >
+
+    <TextView
+        android:id="@+id/tv_more_item_markName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dip"
+        android:paddingTop="8dip"
+        android:text="备注名"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/msgRoom_more_item1_line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/msgroom_more_pop_line"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/userinfo_more_item_star"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dip"
+        android:paddingTop="8dip"
+        android:text="设置为星标好友"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/msgRoom_more_item4_line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/msgroom_more_pop_line"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/userinfo_more_item_recommend"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dip"
+        android:paddingTop="8dip"
+        android:text="向TA推荐好友"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/msgRoom_more_item2_line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/msgroom_more_pop_line"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/userinfo_more_item_black"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dip"
+        android:paddingTop="8dip"
+        android:text="加入黑名单"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/msgRoom_more_item3_line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/msgroom_more_pop_line"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/userinfo_more_item_report"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dip"
+        android:paddingTop="8dip"
+        android:text="举报用户"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/msgRoom_more_item5_line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/msgroom_more_pop_line"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/userinfo_more_warn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dip"
+        android:paddingTop="8dip"
+        android:text="警告"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/msgRoom_more_item6_line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/msgroom_more_pop_line"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/userinfo_more_block_id"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dip"
+        android:paddingTop="8dip"
+        android:text="封ID"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/msgRoom_more_item7_line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/msgroom_more_pop_line"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/userinfo_more_block_device"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dip"
+        android:paddingTop="8dip"
+        android:text="封设备"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/msgRoom_more_item8_line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/msgroom_more_pop_line"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/userinfo_more_item_cancle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dip"
+        android:paddingTop="8dip"
+        android:text="取消"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:visibility="visible" />
+
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_below="@id/tab_title"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/contact_search"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_search_bar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/con_search_input_box"
+            style="@style/ConSearch_Edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/bg_search_input"
+            android:drawableLeft="@drawable/seach_icon"
+            android:inputType="textUri" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contact_search"
+        android:background="#ffdbe7ea"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/numprompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:text="@string/select_invite_contacts"
+            android:textAppearance="@style/IC_XName"
+            android:textColor="#ff698591" />
+
+        <CheckBox
+            android:id="@+id/all_select_invite_contacts_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="15dp"
+            android:button="@drawable/sll_checkbox_check_big"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/stateprompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/all_select_invite_contacts_checkbox"
+            android:text="全选"
+            android:textAppearance="@style/IC_XName"
+            android:textColor="#ff698591" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/seach_clean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/clear_all"
+        android:visibility="gone" />
+
+</RelativeLayout>

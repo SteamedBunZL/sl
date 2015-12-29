@@ -1,0 +1,368 @@
+# view res/layout/activity_group_index.xml #generated:147
+-keep class android.support.v4.view.ViewPager { <init>(...); }
+
+# view AndroidManifest.xml #generated:573
+-keep class com.baidu.location.f { <init>(...); }
+
+# view AndroidManifest.xml #generated:415
+-keep class com.shenliao.group.activity.CreateQun { <init>(...); }
+
+# view AndroidManifest.xml #generated:409
+-keep class com.shenliao.group.activity.GroupCreate { <init>(...); }
+
+# view AndroidManifest.xml #generated:431
+-keep class com.shenliao.group.activity.GroupCreateResult { <init>(...); }
+
+# view AndroidManifest.xml #generated:470
+-keep class com.shenliao.group.activity.GroupEdit { <init>(...); }
+
+# view AndroidManifest.xml #generated:389
+-keep class com.shenliao.group.activity.GroupIndex { <init>(...); }
+
+# view AndroidManifest.xml #generated:465
+-keep class com.shenliao.group.activity.GroupInfo { <init>(...); }
+
+# view AndroidManifest.xml #generated:460
+-keep class com.shenliao.group.activity.GroupJoin { <init>(...); }
+
+# view AndroidManifest.xml #generated:450
+-keep class com.shenliao.group.activity.GroupMember { <init>(...); }
+
+# view AndroidManifest.xml #generated:399
+-keep class com.shenliao.group.activity.GroupMine { <init>(...); }
+
+# view AndroidManifest.xml #generated:455
+-keep class com.shenliao.group.activity.GroupNewsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:394
+-keep class com.shenliao.group.activity.GroupPublic { <init>(...); }
+
+# view AndroidManifest.xml #generated:421
+-keep class com.shenliao.group.activity.GroupSearch { <init>(...); }
+
+# view AndroidManifest.xml #generated:426
+-keep class com.shenliao.group.activity.GroupSmallGuard { <init>(...); }
+
+# view AndroidManifest.xml #generated:436
+-keep class com.shenliao.group.activity.GroupTip { <init>(...); }
+
+# view AndroidManifest.xml #generated:404
+-keep class com.shenliao.group.activity.GroupVisited { <init>(...); }
+
+# view AndroidManifest.xml #generated:443
+-keep class com.shenliao.group.activity.GroupWarn { <init>(...); }
+
+# view AndroidManifest.xml #generated:308
+-keep class com.shenliao.set.activity.SetAssistFunctionActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:313
+-keep class com.shenliao.set.activity.SetBindManageActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:328
+-keep class com.shenliao.set.activity.SetBlackManageActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:353
+-keep class com.shenliao.set.activity.SetEmailBindActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:288
+-keep class com.shenliao.set.activity.SetGroupNewInfonActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:283
+-keep class com.shenliao.set.activity.SetGroupNewNameAcitivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:293
+-keep class com.shenliao.set.activity.SetGroupNewNoticeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:367
+-keep class com.shenliao.set.activity.SetUpdateAreaActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:343
+-keep class com.shenliao.set.activity.SetUpdateFavouriteActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:348
+-keep class com.shenliao.set.activity.SetUpdateInviteFriendActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:362
+-keep class com.shenliao.set.activity.SetUpdateLanguageActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:323
+-keep class com.shenliao.set.activity.SetUpdateOtherPassWordActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:318
+-keep class com.shenliao.set.activity.SetUpdatePassWordActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:338
+-keep class com.shenliao.set.activity.SetUpdateProfessionActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:303
+-keep class com.shenliao.set.activity.SetUpdateSignActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:278
+-keep class com.shenliao.set.activity.SetUserInfoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:333
+-keep class com.shenliao.set.activity.SetUserInfoUpdateNameAcitivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:532
+-keep class com.shenliao.set.activity.TabMoreActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:298
+-keep class com.shenliao.set.activity.TabSetActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:358
+-keep class com.shenliao.set.activity.UserInfoJoinFriendActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:373
+-keep class com.shenliao.user.activity.UserInfoPerfectActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:383
+-keep class com.shenliao.user.activity.UserInforRequestActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:378
+-keep class com.shenliao.user.activity.UserInformationActivity { <init>(...); }
+
+# view res/layout/activity_setting_userinfo_update_favourite.xml #generated:167
+-keep class com.shenliao.view.FavoriteViewPager { <init>(...); }
+
+# view res/layout/activity_msgroom.xml #generated:174
+-keep class com.shenliao.view.MyGroupListView { <init>(...); }
+
+# view res/layout/activity_group_info.xml #generated:315
+# view res/layout/msgroom_mainlist.xml #generated:715
+# view res/layout/sl_tab_setting_userinfo_include_photo.xml #generated:28
+# view res/layout/sll_tabitem_setting_userinfo_photo.xml #generated:50
+# view res/layout/sll_userinfo_include_favorite.xml #generated:25
+# view res/layout/sll_userinfo_include_photoalbum.xml #generated:38
+-keep class com.shenliao.view.SlGridView { <init>(...); }
+
+# view res/layout/fragment_screen_slide_page.xml #generated:10
+-keep class com.shenliao.view.TouchImageView { <init>(...); }
+
+# view AndroidManifest.xml #generated:546
+-keep class com.tuixin11sms.tx.Alarmreceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:537
+-keep class com.tuixin11sms.tx.BootReceiver { <init>(...); }
+
+# view res/layout/smiley_dialog.xml #generated:75
+-keep class com.tuixin11sms.tx.ExpressBackView { <init>(...); }
+
+# view AndroidManifest.xml #generated:565
+-keep class com.tuixin11sms.tx.ShenliaoOtherLoginService { <init>(...); }
+
+# view AndroidManifest.xml #generated:558
+-keep class com.tuixin11sms.tx.TuixinService1 { <init>(...); }
+
+# view AndroidManifest.xml #generated:13
+-keep class com.tuixin11sms.tx.TxData { <init>(...); }
+
+# view AndroidManifest.xml #generated:69
+-keep class com.tuixin11sms.tx.activity.ADActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:175
+-keep class com.tuixin11sms.tx.activity.AboutActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:239
+-keep class com.tuixin11sms.tx.activity.AddContactsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:185
+-keep class com.tuixin11sms.tx.activity.AddMyBlogActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:262
+-keep class com.tuixin11sms.tx.activity.CheckBigImgActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:257
+-keep class com.tuixin11sms.tx.activity.EditHeadIcon { <init>(...); }
+
+# view AndroidManifest.xml #generated:267
+-keep class com.tuixin11sms.tx.activity.EditSendImg { <init>(...); }
+
+# view AndroidManifest.xml #generated:208
+-keep class com.tuixin11sms.tx.activity.FindConditionFriendActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:226
+-keep class com.tuixin11sms.tx.activity.FindTxFriendActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:272
+-keep class com.tuixin11sms.tx.activity.FriendManagerActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:495
+-keep class com.tuixin11sms.tx.activity.GalleryFileActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:499
+-keep class com.tuixin11sms.tx.activity.GalleryUrlActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:251
+-keep class com.tuixin11sms.tx.activity.GroupMsgRoom { <init>(...); }
+
+# view AndroidManifest.xml #generated:201
+-keep class com.tuixin11sms.tx.activity.HelpActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:50
+-keep class com.tuixin11sms.tx.activity.IndexActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:131
+-keep class com.tuixin11sms.tx.activity.InviteContactsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:190
+-keep class com.tuixin11sms.tx.activity.LikeNoticeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:137
+-keep class com.tuixin11sms.tx.activity.LoginActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:155
+-keep class com.tuixin11sms.tx.activity.LostPasswordActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:116
+-keep class com.tuixin11sms.tx.activity.MessageActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:485
+-keep class com.tuixin11sms.tx.activity.MusicPlayActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:180
+-keep class com.tuixin11sms.tx.activity.MyBlogActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:220
+-keep class com.tuixin11sms.tx.activity.NearlyFriendActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:94
+-keep class com.tuixin11sms.tx.activity.OAuthShareWeiboActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:150
+-keep class com.tuixin11sms.tx.activity.PhoneBindActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:526
+-keep class com.tuixin11sms.tx.activity.PraiseNoticeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:104
+-keep class com.tuixin11sms.tx.activity.PrivacyViewActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:490
+-keep class com.tuixin11sms.tx.activity.ReceivedFilesActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:143
+-keep class com.tuixin11sms.tx.activity.RegistActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:475
+-keep class com.tuixin11sms.tx.activity.RegistSucceedActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:214
+-keep class com.tuixin11sms.tx.activity.SearchConditionResultActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:233
+-keep class com.tuixin11sms.tx.activity.SearchFriendActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:503
+-keep class com.tuixin11sms.tx.activity.SelectFileActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:37
+-keep class com.tuixin11sms.tx.activity.SelectFriendListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:110
+-keep class com.tuixin11sms.tx.activity.SellActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:170
+-keep class com.tuixin11sms.tx.activity.SettingsPreference { <init>(...); }
+
+# view AndroidManifest.xml #generated:245
+-keep class com.tuixin11sms.tx.activity.SingleMsgRoom { <init>(...); }
+
+# view AndroidManifest.xml #generated:195
+-keep class com.tuixin11sms.tx.activity.TelCheckActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:61
+-keep class com.tuixin11sms.tx.activity.TuiXinMainTab { <init>(...); }
+
+# view AndroidManifest.xml #generated:125
+-keep class com.tuixin11sms.tx.activity.TuixinContactsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:44
+-keep class com.tuixin11sms.tx.activity.TutorialTeachActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:511
+-keep class com.tuixin11sms.tx.activity.UnkownFileActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:162
+-keep class com.tuixin11sms.tx.activity.UserInfoSupplementActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:480
+-keep class com.tuixin11sms.tx.activity.VideoCaptureActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:507
+-keep class com.tuixin11sms.tx.activity.VideoPlayActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:519
+-keep class com.tuixin11sms.tx.activity.WarnDialogAcitvity { <init>(...); }
+
+# view AndroidManifest.xml #generated:99
+-keep class com.tuixin11sms.tx.activity.WebViewActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:77
+-keep class com.tuixin11sms.tx.activity.WeiboCardActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:515
+-keep class com.tuixin11sms.tx.activity.explorer.FolderExplorerActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:579
+-keep class com.tuixin11sms.tx.db.TxDBContentProvider { <init>(...); }
+
+# view AndroidManifest.xml #generated:569
+-keep class com.tuixin11sms.tx.net.LBSMsgHandleService { <init>(...); }
+
+# view res/layout/activity_myblog_add.xml #generated:103
+# view res/layout/sll_myblog_listitem.xml #generated:50
+-keep class com.tuixin11sms.tx.view.BlogMusicSeekBar { <init>(...); }
+
+# view res/layout/activity_group_index_listview_public.xml #generated:8
+-keep class com.tuixin11sms.tx.view.DragListView { <init>(...); }
+
+# view res/layout/activity_edit_head_icon.xml #generated:67
+-keep class com.tuixin11sms.tx.view.EditHeadIconView { <init>(...); }
+
+# view res/layout/contacts_list_item.xml #generated:109
+# view res/layout/sll_group_members_item.xml #generated:59
+# view res/layout/sll_more_info_item.xml #generated:69
+# view res/layout/sll_nearly_friend_list_item.xml #generated:81
+# view res/layout/sll_search_add_condition_result_listview_items.xml #generated:55
+# view res/layout/sll_userinfo_include_top.xml #generated:59
+-keep class com.tuixin11sms.tx.view.LevelTextView { <init>(...); }
+
+# view res/layout/msgroom_mainlist.xml #generated:269
+# view res/layout/sll_item_group_smallguard.xml #generated:202
+# view res/layout/sll_item_praise_message.xml #generated:132
+-keep class com.tuixin11sms.tx.view.PlayAdiouAnimation { <init>(...); }
+
+# view res/layout/sll_great_anim.xml #generated:7
+-keep class com.tuixin11sms.tx.view.PraiseCountTextView { <init>(...); }
+
+# view res/layout/activity_editimage.xml #generated:52
+-keep class com.tuixin11sms.tx.view.ProgressTextBar { <init>(...); }
+
+# view res/layout/activity_contacts.xml #generated:118
+# view res/layout/activity_select_friend_list.xml #generated:207
+-keep class com.tuixin11sms.tx.view.SearchBar { <init>(...); }
+
+# view res/layout/msgroom_mainlist.xml #generated:235
+# view res/layout/sll_item_group_smallguard.xml #generated:187
+# view res/layout/sll_item_praise_message.xml #generated:123
+-keep class com.tuixin11sms.tx.view.WaitAdiouAnimation { <init>(...); }
+
+# view AndroidManifest.xml #generated:18
+-keep class net.youmi.android.AdBrowser { <init>(...); }
+
+# view AndroidManifest.xml #generated:29
+-keep class net.youmi.android.AdReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:24
+-keep class net.youmi.android.AdService { <init>(...); }
+
+# view res/layout/activity_album_gallery.xml #generated:60
+# view res/layout/activity_gallery_files.xml #generated:62
+-keep class ru.truba.touchgallery.GalleryWidget.GalleryViewPager { <init>(...); }
+
+# view res/layout/activity_editimage.xml #generated:78
+-keep class ru.truba.touchgallery.TouchView.TouchImageView { <init>(...); }
+
+# onClick res/layout/activity_weibo_pre.xml #generated:173
+-keepclassmembers class * { *** next(...); }
+

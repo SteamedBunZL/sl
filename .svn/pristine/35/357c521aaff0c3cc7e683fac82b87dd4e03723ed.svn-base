@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/group_search_screen"
+    style="@style/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/group_index_title"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="#96eeeeee" >
+
+        <LinearLayout
+            android:id="@+id/btn_back_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取消"
+                android:textColor="@color/content_color_blue"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/group_title"
+            style="@style/Titile_Name_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="搜索聊天室" />
+
+        <TextView
+            android:id="@+id/find_group_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:text="搜索"
+            android:textColor="@color/content_color_blue"
+            android:textSize="17sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/line_size"
+            android:layout_alignParentBottom="true"
+            android:background="#cac8c9" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/line_size"
+        android:layout_marginTop="18dp"
+        android:background="@color/content_line_color_gray" />
+
+    <RelativeLayout
+        android:id="@+id/group_search_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/sll_more_item_select"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/search_type" />
+
+            <EditText
+                android:id="@+id/search_group_input_box"
+                android:layout_width="fill_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/sll_more_item_select"
+                android:gravity="center_vertical"
+                android:hint="请输入聊天室id或关键字"
+                android:textColorHint="#b9bbbe"
+                android:textSize="16.0sp" >
+            </EditText>
+
+            <Button
+                android:id="@+id/seach_group_clean_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/clear_all"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/line_size"
+            android:layout_alignParentBottom="true"
+            android:background="@color/content_line_color_gray" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="18dp" >
+
+        <View
+            android:id="@+id/line_top"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/line_size"
+            android:layout_alignParentTop="true"
+            android:background="@color/content_line_color_gray" />
+
+        <ListView
+            android:layout_below="@id/line_top"
+            android:id="@+id/group_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@color/transparent"
+            android:dividerHeight="0.0dp"
+            android:fadingEdge="none"
+            android:focusable="true"
+            android:listSelector="@color/transparent"
+            android:scrollbars="none" >
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/group_loading"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/content_bg_color"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="正在加载中..."
+                android:textAppearance="@style/Black_Text" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

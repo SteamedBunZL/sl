@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sll_more_item_select"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/search_tiaojian"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/title"
+            android:id="@+id/mSettingSign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="@string/search_tiaojian"
+            android:textColor="#0c2049"
+            android:textSize="@dimen/text_size" />
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/right_03"
+            android:focusable="false" />
+    </RelativeLayout>
+
+    <View
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="#d5d7dc" />
+
+</LinearLayout>

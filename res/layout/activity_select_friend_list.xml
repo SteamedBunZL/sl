@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/group_index_title"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="#96eeeeee" >
+
+        <LinearLayout
+            android:id="@+id/btn_back_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp" >
+
+            <Button
+                android:id="@+id/mCancel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:text="@string/cancel"
+                android:textColor="@color/content_color_blue"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tuixin_info_title"
+            style="@style/Titile_Name_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="已选定0人" />
+
+        <Button
+            android:id="@+id/mSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@color/transparent"
+            android:text="完成"
+            android:textColor="@color/content_color_blue"
+            android:textSize="@dimen/title_text_size" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#cac8c9" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/contact_search"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <EditText
+            android:id="@+id/createMsg_up_edit"
+            style="@style/Search_Edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:drawableLeft="@drawable/seach_icon"
+            android:inputType="textUri"
+            android:paddingRight="26dip"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/mClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="17dip"
+            android:background="@drawable/clear_all"
+            android:visibility="gone" >
+        </Button>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/mContactsType"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffdbe7ea"
+        android:paddingBottom="5dip"
+        android:paddingLeft="8dip"
+        android:paddingRight="8dip"
+        android:paddingTop="5dip"
+        android:visibility="gone" >
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/mTbs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0.5dip"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/create_shenliao_friend"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/mGroup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/create_mygroup"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/az"
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:layout_below="@id/group_index_title"
+        android:layout_marginLeft="10dp"
+        android:background="#eeeeee"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="A-Z"
+            android:textColor="#676767"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#ffffff" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/contacts_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/az"
+        android:background="@color/content_bg_color"
+        android:divider="@color/content_line_color_gray"
+        android:dividerHeight="@dimen/line_size"
+        android:fadingEdge="none"
+        android:scrollbars="vertical" />
+
+    <ListView
+        android:id="@+id/group_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/group_index_title"
+        android:background="@color/content_bg_color"
+        android:divider="@color/content_line_color_gray"
+        android:dividerHeight="@dimen/line_size"
+        android:fadingEdge="none"
+        android:scrollbars="vertical"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/list_hint_empty"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/mContactsType"
+        android:background="@color/white"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/list_hint_empty_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/no_friend_bg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/list_hint_empty_imageview"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="您还没有好友哦，\n请添加好友"
+            android:textColor="#b5bac5"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <com.tuixin11sms.tx.view.SearchBar
+        android:id="@+id/mSearchBar"
+        android:layout_width="24dip"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mHandleType"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/mContactsType"
+        android:layout_marginTop="3dip"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/prompt_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_marginRight="60dip"
+        android:layout_marginTop="120dip"
+        android:layout_toLeftOf="@id/mSearchBar"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/mHandleType"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dip"
+        android:orientation="vertical"
+        android:textColor="@color/white" >
+
+        <ImageView
+            android:id="@+id/mBaseLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip" />
+    </LinearLayout>
+
+</RelativeLayout>

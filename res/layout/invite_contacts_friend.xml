@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<LinearLayout android:gravity="center_vertical"
+		android:paddingLeft="@dimen/preference_padding_left"
+		android:paddingRight="@dimen/preference_padding_right"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_marginLeft="@dimen/preference_margin_left"
+		android:layout_marginRight="@dimen/preference_margin_right"
+		android:cacheColorHint="@android:color/white" android:minWidth="@dimen/preference_min_width"
+		android:minHeight="@dimen/preference_min_height" xmlns:android="http://schemas.android.com/apk/res/android" >
+		<TextView android:textSize="@dimen/preference_text_title_size"
+			android:layout_centerVertical="true"  android:layout_marginLeft="6dp"
+			android:textColor="@android:color/darker_gray"  android:id="@android:id/title"
+			android:fadingEdge="horizontal" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:singleLine="true" />
+		<RelativeLayout android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginLeft="10.0dip"
+			android:layout_marginTop="6.0dip" android:layout_marginRight="6.0dip"
+			android:layout_marginBottom="6.0dip" android:layout_weight="1.0">
+			<TextView android:textSize="@dimen/preference_text_title_size"
+				android:layout_centerVertical="true" 
+				android:text="@string/invite_contacts_firend"
+				android:textColor="@color/search_subtitle" 
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:singleLine="true" />
+		</RelativeLayout>
+		<ImageView android:background="@drawable/preference_arrows"
+			android:focusable="false" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+</LinearLayout>

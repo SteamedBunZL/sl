@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+   <!--  <item
+        android:id="@+id/tselect_delete_menu"
+        android:icon="@drawable/select_delet"
+        android:title="@string/tselect_delet_menu"/> -->
+    <item
+        android:id="@+id/texit_menu"
+        android:icon="@drawable/exit_icon"
+        android:title="@string/texit_menu"/>
+
+</menu>

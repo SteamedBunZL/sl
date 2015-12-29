@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_audio_view"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/iv_file_thumb"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/notify_icon" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_file_thumb"
+        android:layout_toRightOf="@id/iv_file_thumb"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_item_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:text="文件名"
+            android:textColor="@color/file_mian_text_color"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_item_FileSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:singleLine="true"
+            android:text="26KB"
+            android:textColor="@color/file_sub_text_color"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/file_divide_line_color" />
+
+</RelativeLayout>

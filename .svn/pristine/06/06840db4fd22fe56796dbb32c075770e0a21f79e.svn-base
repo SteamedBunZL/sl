@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:background="#000000"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent">
+	<ListView android:id="@+id/mms_info_list" android:fadingEdge = "none"
+					    android:background="#000000"
+					    android:divider="#00000000"
+					    android:layout_width="fill_parent" 
+					    android:layout_height="fill_parent" /> 
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+
+<!-- 相册大图的fragment布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+        <com.shenliao.view.TouchImageView
+            android:id="@+id/iv_album_big"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+</LinearLayout>
+

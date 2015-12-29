@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout 
+	android:layout_width="wrap_content" android:layout_height="wrap_content"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<TextView android:textSize="16sp"
+		android:id="@+id/logout" 
+		android:layout_centerInParent="true"
+		android:text="@string/setting_logout" android:textColor="@color/gray_all"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		/>
+</RelativeLayout>

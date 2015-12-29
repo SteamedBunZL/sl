@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/tab_title"
+        style="@style/title_bar_layout" >
+
+        <TextView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15.0dip"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:text="@string/back_btn"
+            android:textAppearance="@style/White_Text"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/con_info_title_name"
+            style="@style/title_bar_textview"
+            android:text="@string/share_tuixin_id" />
+
+        <View
+            style="@style/content_line_style"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <WebView
+            android:id="@+id/webOauth"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </WebView>
+    </ScrollView>
+
+</LinearLayout>

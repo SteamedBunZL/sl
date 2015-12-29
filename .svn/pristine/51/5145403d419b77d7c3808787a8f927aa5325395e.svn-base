@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/title_bar_layout" >
+
+        <TextView
+            style="@style/title_bar_textview"
+            android:text="神聊小卫士" />
+
+        <View
+            style="@style/content_line_style"
+            android:layout_alignParentBottom="true" />
+        <TextView
+            android:id="@+id/tv_clear_msgs"
+            style="@style/title_right_textview"
+            android:text="全部清除" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/group_smallGuard_listView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:dividerHeight="0dip"
+        android:fadingEdge="none" />
+
+</LinearLayout>

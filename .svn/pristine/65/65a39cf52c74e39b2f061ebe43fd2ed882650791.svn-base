@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project
+    name="Shenliao"
+    default="release" >
+
+    <!--
+    ANT环境变量 
+	<property environment="env" />
+    -->
+
+    <property
+        name="java_home"
+        value="D:/Program Files/Java/jdk1.6.0_45" />
+    <!-- 应用名称 -->
+
+    <property
+        name="appName"
+        value="${ant.project.name}" />
+    <!-- SDK目录(获取操作系统环境变量ANDROID_SDK_HOME的值) -->
+
+    <property
+        name="sdk-folder"
+        value="E:/adt-bundle-windows-x86-20130522/sdk/" />
+    <!-- SDK指定平台目录 -->
+
+    <property
+        name="sdk-platform-folder"
+        value="${sdk-folder}/platforms/android-17" />
+    <!-- SDK中tools目录 -->
+
+    <property
+        name="sdk-tools"
+        value="${sdk-folder}/tools" />
+    <!--
+    SDK指定平台中tools目录 
+	<property name="sdk-platform-tools" value="${sdk-platform-folder}/tools" />
+    -->
+
+    <property
+        name="proguard-home"
+        value="${sdk-folder}/tools/proguard/lib/proguard.jar" />
+
+    <property
+        name="sdk-platform-tools"
+        value="${sdk-folder}/build-tools/android-4.2.2" />
+    <!-- 使用到的命令(当前系统为windows,如果系统为linux,可将.bat文件替换成相对应的命令) -->
+
+    <property
+        name="aapt"
+        value="${sdk-platform-tools}/aapt" />
+
+    <property
+        name="aidl"
+        value="${sdk-platform-tools}/aidl" />
+
+    <property
+        name="dx"
+        value="${sdk-platform-tools}/dx.bat" />
+
+    <property
+        name="apkbuilder"
+        value="${sdk-tools}/apkbuilder.bat" />
+
+    <property
+        name="jarsigner"
+        value="${java_home}/bin/jarsigner" />
+
+    <!--
+    编译需要的jar; 如果项目使用到地图服务则需要maps.jar 
+	<property name="android-maps-jar" value="${sdk-folder}/add-ons/addon_google_apis_google_inc_8/libs/maps.jar" />
+    -->
+
+    <property
+        name="android-jar"
+        value="${sdk-platform-folder}/android.jar" />
+
+    <!-- 编译aidl文件所需的预处理框架文件framework.aidl -->
+
+    <property
+        name="framework-aidl"
+        value="${sdk-platform-folder}/framework.aidl" />
+
+    <!-- 生成R文件的相对目录 -->
+
+    <property
+        name="outdir-gen"
+        value="gen" />
+    <!-- 编译后的文件放置目录 -->
+
+    <property
+        name="outdir-bin"
+        value="bin" />
+
+    <!-- 清单文件 -->
+
+    <property
+        name="manifest-xml"
+        value="AndroidManifest.xml" />
+    <!-- 源文件目录 -->
+
+    <property
+        name="resource-dir"
+        value="res" />
+
+    <property
+        name="resource-ospath"
+        value="${basedir}/${resource-dir}" />
+
+    <property
+        name="file.replace.path"
+        value="com/tuixin11sms/tx/utils" />
+
+    <property
+        name="app.id"
+        value="0" />
+
+    <property
+        name="version.name"
+        value="0" />
+
+    <property
+        name="fileName"
+        value="Utils.java" />
+
+    <property
+        name="asset-dir"
+        value="assets" />
+
+    <property
+        name="version.code"
+        value="666" />
+
+    <property
+        name="version.v"
+        value="v" />
+
+    <!-- java源文件目录 -->
+
+    <property
+        name="srcdir"
+        value="src" />
+
+    <property
+        name="srcdir-ospath"
+        value="${basedir}/${srcdir}" />
+    <!-- 外部类库所在目录 -->
+
+    <property
+        name="external-lib"
+        value="lib" />
+
+    <property
+        name="external-lib-ospath"
+        value="${basedir}/${external-lib}" />
+
+    <property
+        name="external-libs"
+        value="libs" />
+
+    <property
+        name="external-libs-ospath"
+        value="${basedir}/${external-libs}" />
+    <!-- 生成class目录 -->
+
+    <property
+        name="outdir-classes"
+        value="${outdir-bin}" />
+
+    <property
+        name="outdir-classes-ospath"
+        value="${basedir}/${outdir-classes}" />
+    <!-- 生成build目录 -->
+
+    <property
+        name="outdir-build"
+        value="build" />
+    <!-- classes.dex相关变量 -->
+
+    <property
+        name="dex-file"
+        value="classes.dex" />
+
+    <property
+        name="dex-path"
+        value="${outdir-bin}/${dex-file}" />
+
+    <property
+        name="dex-ospath"
+        value="${basedir}/${dex-path}" />
+
+    <!-- 经过aapt生成的资源包文件 -->
+
+    <property
+        name="resources-package"
+        value="${outdir-bin}/resources.ap_" />
+
+    <property
+        name="resources-package-ospath"
+        value="${basedir}/${resources-package}" />
+
+    <!-- 未认证apk包 -->
+
+    <property
+        name="out-unsigned-package"
+        value="${outdir-bin}/${appName}-unsigned.apk" />
+
+    <property
+        name="out-unsigned-package-ospath"
+        value="${basedir}/${out-unsigned-package}" />
+
+    <!-- 证书文件 -->
+
+    <property
+        name="keystore-file"
+        value="${basedir}/android.keystore" />
+
+    <!-- 已认证apk包 -->
+
+    <property
+        name="out-signed-package"
+        value="${outdir-build}/${appName}_${version.v}${version.name}_${app.id}.apk" />
+
+    <property
+        name="out-signed-package-ospath"
+        value="${basedir}/${out-signed-package}" />
+    <!-- 初始化工作 -->
+
+    <target name="init" >
+
+        <echo>
+Initializing all output directories...
+        </echo>
+
+        <delete dir="${outdir-bin}" />
+
+        <mkdir dir="${outdir-bin}" />
+
+        <mkdir dir="${outdir-classes}" />
+    </target>
+
+    <!-- 根据工程中的资源文件生成R.java文件 -->
+
+    <target
+        name="gen-R"
+        depends="init" >
+
+        <echo>
+Generating R.java from the resources...
+        </echo>
+
+        <replaceregexp
+            byline="false"
+            encoding="UTF-8"
+            file="${manifest-xml}"
+            match="(android\s*:\s*versionCode\s*=\s*&quot;).*(&quot;)"
+            replace="\1${version.code}\2" />
+
+        <replaceregexp
+            byline="false"
+            encoding="UTF-8"
+            file="${manifest-xml}"
+            match="(android\s*:\s*versionName\s*=\s*&quot;).*(&quot;)"
+            replace="\1${version.name}\2" />
+
+        <exec
+            executable="${aapt}"
+            failonerror="true" >
+
+            <arg value="package" />
+
+            <arg value="-f" />
+
+            <arg value="-m" />
+
+            <arg value="-J" />
+
+            <arg value="${outdir-gen}" />
+
+            <arg value="-S" />
+
+            <arg value="${resource-dir}" />
+
+            <arg value="-M" />
+
+            <arg value="${manifest-xml}" />
+
+            <arg value="-I" />
+
+            <arg value="${android-jar}" />
+        </exec>
+    </target>
+    <!-- 编译aidl文件 -->
+
+    <target
+        name="aidl"
+        depends="gen-R" >
+
+        <echo>
+Compiling .aidl into java files...
+        </echo>
+
+        <apply
+            executable="${aidl}"
+            failonerror="true" >
+
+            <!-- 指定预处理文件 -->
+
+            <arg value="-p${framework-aidl}" />
+            <!-- aidl声明的目录 -->
+
+            <arg value="-I${srcdir}" />
+            <!-- 目标文件目录 -->
+
+            <arg value="-o${outdir-gen}" />
+            <!-- 指定哪些文件需要编译 -->
+
+            <fileset dir="${srcdir}" >
+
+                <include name="**/*.aidl" />
+            </fileset>
+        </apply>
+    </target>
+    <!-- 将工程中的java源文件编译成class文件 -->
+
+    <target
+        name="compile"
+        depends="aidl" >
+
+        <echo>
+Compiling java source code...
+        </echo>
+
+        <javac
+            bootclasspath="${android-jar}"
+            destdir="${outdir-classes}"
+            encoding="utf-8"
+            includeantruntime="on"
+            srcdir="."
+            target="1.6" >
+
+            <classpath>
+
+                <fileset
+                    dir="${external-libs}"
+                    includes="*.jar" />
+                <!--
+            	<filelist>
+					<file name="${android-maps-jar}" />
+				</filelist>
+                -->
+            </classpath>
+        </javac>
+    </target>
+    <!-- 将.class文件转化成.dex文件 -->
+
+    <target
+        name="dex"
+        depends="proguard" >
+
+        <echo>
+Converting compiled files and external libraries into a .dex file...
+        </echo>
+
+        <exec
+            executable="${dx}"
+            failonerror="true" >
+
+            <arg value="--dex" />
+            <!-- 输出文件 -->
+
+            <arg value="--output=${dex-ospath}" />
+            <!-- 要生成.dex文件的源classes和libraries -->
+
+            <arg value="${outdir-classes-ospath}" />
+
+            <arg value="${external-libs-ospath}" />
+        </exec>
+    </target>
+
+    <!-- 将资源文件放进输出目录 -->
+
+    <target name="package-res-and-assets" >
+
+        <echo>
+Packaging resources and assets...
+        </echo>
+
+        <exec
+            executable="${aapt}"
+            failonerror="true" >
+
+            <arg value="package" />
+
+            <arg value="-f" />
+
+            <arg value="-M" />
+
+            <arg value="${manifest-xml}" />
+
+            <arg value="-S" />
+
+            <arg value="${resource-dir}" />
+
+            <arg value="-A" />
+
+            <arg value="${asset-dir}" />
+
+            <arg value="-I" />
+
+            <arg value="${android-jar}" />
+
+            <arg value="-F" />
+
+            <arg value="${resources-package}" />
+        </exec>
+    </target>
+
+    <!-- 打包成未签证的apk -->
+
+    <target
+        name="release"
+        depends="dex, package-res-and-assets" >
+
+        <echo>
+Packaging unsigned apk for release...
+        </echo>
+
+        <exec
+            executable="${apkbuilder}"
+            failonerror="true" >
+
+            <arg value="${out-unsigned-package-ospath}" />
+
+            <arg value="-u" />
+
+            <arg value="-z" />
+
+            <arg value="${resources-package-ospath}" />
+
+            <arg value="-f" />
+
+            <arg value="${dex-ospath}" />
+
+            <arg value="-rf" />
+
+            <arg value="${srcdir-ospath}" />
+
+            <arg value="-nf" />
+
+            <arg value="${external-libs-ospath}" />
+        </exec>
+
+        <echo>
+It will need to be signed with jarsigner before being published.
+        </echo>
+    </target>
+
+    <target
+        name="proguard"
+        depends="compile" >
+
+        <echo>
+ Execute proguard class flies... 
+        </echo>
+
+        <echo>
+ ="-libraryjars ${android-jar}" 
+        </echo>
+
+        <mkdir dir="optimized" />
+
+        <java
+            failonerror="true"
+            fork="true"
+            jar="${proguard-home}" >
+
+            <jvmarg value="-Dmaximum.inlined.code.length=32" />
+
+            <arg value="-injars ${outdir-classes}" />
+
+            <arg value="-outjars optimized" />
+
+            <arg value="-libraryjars ${android-jar}" />
+
+            <arg value="-libraryjars libs/android-support-v4.jar" />
+            <arg value="-libraryjars libs/commons-codec-1.4.jar" />
+            <arg value="-libraryjars libs/commons-logging-1.1.jar" />
+            <arg value="-libraryjars libs/annotations.jar" />
+            <arg value="-libraryjars libs/locSDK_4.0.jar" />
+            <arg value="-libraryjars libs/umeng-analytics-v5.2.4.jar"/>
+            <arg value="@proguard.cfg" />
+        </java>
+
+        <delete dir="${outdir-classes}" />
+
+        <mkdir dir="${outdir-classes}" />
+
+        <move
+            file="optimized"
+            tofile="${outdir-classes}" />
+
+        <delete file="optimized" />
+    </target>
+
+</project>

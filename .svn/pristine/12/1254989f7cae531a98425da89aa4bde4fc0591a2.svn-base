@@ -1,0 +1,66 @@
+此文档主要记录在开发功能或者修改bug时，对功能流程的记录和总结，减少以后修改问题时对代码功能逻辑或者方法变量的学习成本。
+
+ 2013.09.22
+ 1、TX类中，tx_ids和mTBTXCache存储的是好友id和好友TX对象集合。两个同时存在的原因是：从服务器拉取用户好友id集合tx_ids后，好友的TX对象也许还没有从服务器取到，这时判断一个id是否是好友就应该从ids集合判断，因为mTBTXCache集合也许还不是完整的好友集合。
+	但是二者在增删改时要保持同步。
+ 2、联系人分为三种:通讯录联系人、神聊好友、普通神聊联系人。
+ 	①通讯录联系人为用户手机上的联系人，与神聊账号无关。打开应用就可以直接去获取，不用等到登陆成功后，并且切换账号后不用重复读取。
+ 	②神聊好友为当前登陆账号的神聊好友，这些好友会出现在该账号的好友list中。通过tx.tx_type = TxDB.TX_TYPE_TB判断是否为好友
+ 	③普通神聊联系人为在使用神聊客户端过程中，所有出现过的神聊用户，例如在聊天室中发过言、被自己搜索查询过、向自己发送过好友请求等的神聊用户。
+ 3、图片闪动是因为ImageView显示的为图像A,然后在设置为图像B（可以为null）后在很短时间内又设置为图像A，这样就会看到图片闪动。如果单纯的重复这是ImageView为图像A,重复次数很多也不会看到闪动。(以后遇到类似的bug按照此思路找原因)
+ 
+
+1.录放音
+	在同一时间内，只有一个放音或录音工作在进行。
+	录放音的实现在com.tuixin11sms.tx.audio.manager.ClientManager中实现。
+	ClientManager实现单例，在TxData.onCreate中进行初始化。	
+	录音时，必须每次初始化AudioRecord对象，因为它包括话简的选择（如机体MIC、耳机MIC）。
+	语音格式是每20ms一桢，每桢前4个字节表示桢长，iOS使用VBR编码，因此是桢长是不确定的。
+2.放音动画	
+ 	原来的逻辑是在TxMessage中放一个值PlayAudio，表明是否正在播放，这个状态是ClientMananger播放状态的冗余，有时会与ClientMananger的播放状态不一致。
+ 	现在的逻辑是ClientMananger中记录正在播放的TxMessage, 在更新会话界面显示时，检查ClientMananger正在播放的TxMessage是否为当前消息，是，启动动画，否则停止动画。
+	
+ 2013.09.25
+	1、登陆流程：向服务器发送登陆请求，SocketChannelConnectionImpl收到登陆成功的响应，发送广播，TuixinService收到广播开启子线程，用msgHelper的delMsg处理消息，然后开启数据库，用TX.initTx()从数据库取好友等信息。
+	
+ 2013.09.26
+ 	1、进入聊天室获取离线消息的流程：进入聊天室后，调用SocketHelper的sendGetGroupOfflineMsg方法获取离线消息。不再调用getMinGmid()获取gmid号，直接赋值空字符串"",代表调用当前时间的最新10条消息。
+ 	       （之前用getMinGmid()获取gmid是因为要获取50条离线消息，每次获取10条，为了防止取重复消息用的。）原来的成员变量minMsgId放到了dealGroupOfflineMessage方法内部，因为SocketHelper是单例，防止minMsgId没有被赋值，复用了上一个聊天室的值。
+	
+ 2013.10.09
+ 	1、IndexActivity的onCreate方法中的checkTuixinApp设置登陆参数的操作无用。
+ 	2、真正的自动登陆是在：application的onCreate方法中，会取得SocketHelper实例；
+ 	        在构造SocketHelper时，会创建SocketChannelConnectionImpl对象；
+ 	        在创建SocketChannelConnectionImpl对象时，会创建LoginSessionManager对象；
+ 	        在创建LoginSessionManager对象时，会自动设置参数登陆时需要的参数。这个设置要先于IndexActivity的设置。
+	3、自动登陆的参数设置完毕后，在SocketChannelConnectionImpl构造方法的最后一步就会开启线程与服务器通讯，第一步就是开始进行key交换等登陆操作。
+
+ 2013.10.15
+ 	1、数据库升级需要进行的操作步骤：
+	①修改DatabaseHelper创建对应表时执行的SQL语句。
+ 	②修改TxDBContentProvider的变量DATABASE_VERSION，一般修该是DATABASE_VERSION的值+1。
+ 	③增加一个upgradeDatabaseToVersion14(14与DATABASE_VERSION的值保持一致。)的方法，方法里面是升级数据库需要执行的修改语句。
+	④在重写系统的onUpgrade方法中，根据逻辑调用upgradeDatabaseToVersion14升级方法。
+	⑤在TxDBContentProvider的静态代码块中，给相应的s***ProjectionMap添加此次升级时添加的表字段。
+	⑥修改被修改的“数据库表”对应的对象相关的字段及相关方法内容。（例如修改TxDB.Tx表中字段，则需要修改其对应的对象TX相关的所有内容。）
+
+
+
+
+
+
+
+【以下待完成的工作，一直放在该文档的最下方】
+考虑后续的工作：
+	1.取消TXMessage.PlayAudio字段的相关逻辑。原来是通过这个字段指定音频消息的播放状态，播放不同的动画
+	2.com.tuixin11sms.tx.message.MsgStat.filterTXList(TxData)为什么要访问DB？有没有登录的情况调用此方法？
+	3.考虑为会话表设置主键:SessionID.
+	4、com.tuixin11sms.tx.message.MsgStat.saveMsgStattoDB(MsgStat, TxData)更新数据库有问题，查询个人会话时用partner_id有问题，如果和群消息的发言人partner_id一样，会查到群的那条记录，把群会话记录给覆盖了。
+	        需要修改TxDB.MsgStat表，增加会话类型字段。
+	5、升级提示问题需要处理：一、有多个地方在弹提示，实现重复；二、弹出时机需要控制，现在无论在聊天界面还是其它界面，断线重连就会提示，太烦。
+	        
+	        
+ 
+ 问题：
+ Constants.INTENT_ACTION_RECEIVE_MSG是SocketChannelConnectionImpl发送，接受者有TuixinService和一些activity。两个地方处理不一致
+	

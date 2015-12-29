@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--item android:state_focused="true" android:drawable="@drawable/btn_gray_t" />:
+	<item android:state_pressed="true" android:drawable="@drawable/btn_gray_t" />: 
+	<item android:drawable="@drawable/btn_gray" /-->:
+	
+	<!-- 没有焦点时的背景图片 -->  
+  	<item android:state_window_focused="false"
+  	    android:textColor="@color/black" />    
+
+<!-- 触摸模式下单击时的背景图片 -->  
+  <item android:state_focused="false" android:state_pressed="true"    
+        android:textColor="@color/red" />    
+  
+
+</selector>

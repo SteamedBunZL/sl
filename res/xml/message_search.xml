@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<searchable
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:label="@string/search_label"
+  android:hint="@string/search_hint"
+  android:searchSuggestThreshold="1"  
+  android:searchSuggestAuthority="com.tuixin11.smstx.search"
+  android:searchSuggestIntentAction="android.intent.action.VIEW"
+      
+>
+</searchable>
+<!-- 
+label：标签
+hint：输入框中的提示
+经测试，这两个值必须引用string，直接写死就不会跳出搜索框
+ -->

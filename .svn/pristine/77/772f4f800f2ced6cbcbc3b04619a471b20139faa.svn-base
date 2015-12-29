@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llout_tab_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#96eeeeee"
+    android:gravity="center"
+    android:minHeight="49dip"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="#c6c4c5" />
+
+    <FrameLayout
+        android:layout_width="40dp"
+        android:layout_height="27dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dip" >
+
+        <ImageView
+            android:id="@+id/iv_tab_item_icon"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/di_03" />
+
+        <ImageView
+            android:id="@+id/iv_tab_item_unread"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_gravity="top|right|center"
+            android:src="@drawable/point"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_tab_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center_horizontal"
+        android:text="12sdfsf"
+        android:textColor="#7d879c"
+        android:textSize="12.0dip" />
+
+</LinearLayout>

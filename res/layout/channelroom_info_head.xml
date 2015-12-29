@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout android:layout_width="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content" android:id="@+id/channelroom_createinfo_head">
+	<ImageView android:layout_marginLeft="14dip"
+		android:layout_marginTop="8dip"
+		android:layout_marginBottom="2dip"
+		android:layout_width="50dp" android:layout_height="50dp"
+		android:id="@+id/channel_create_icon" />
+	<TextView android:layout_width="wrap_content"
+		android:layout_marginLeft="5dip"
+		android:layout_marginTop="6dip"
+		android:textStyle="bold" android:textSize="17sp" android:textColor="@color/black"
+		android:layout_height="wrap_content" android:id="@+id/channel_create_title_info"
+		android:layout_toRightOf="@id/channel_create_icon" />
+		<!-- id -->
+	<TextView android:layout_width="wrap_content"
+		android:layout_marginLeft="5dip"
+		android:layout_marginTop="3dip"
+		android:layout_toRightOf="@id/channel_create_icon"
+		android:layout_below="@id/channel_create_title_info"
+		android:textColor="@color/black" android:textSize="14sp"
+		android:layout_height="wrap_content" 
+		android:id="@+id/channel_create_id"
+		android:text="@string/channelroom_create_id" />
+	<TextView android:layout_width="wrap_content"
+		android:layout_toRightOf="@id/channel_create_id"
+		android:layout_marginTop="3dip"
+		android:layout_below="@id/channel_create_title_info"
+		android:textColor="@color/black" android:textSize="14sp"
+		android:layout_height="wrap_content" 
+		android:id="@+id/channel_create_id_info" />
+		
+	<TextView android:layout_width="wrap_content"
+		android:layout_marginLeft="14dip" android:layout_below="@id/channel_create_icon"
+		android:text="@string/asson_title_context" android:textSize="18sp"
+		android:textStyle="bold" android:textColor="@color/black"
+		android:layout_marginBottom="5dip"
+		android:layout_height="wrap_content" />
+	
+</RelativeLayout>

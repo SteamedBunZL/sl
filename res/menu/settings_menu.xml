@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<menu xmlns:android="http://schemas.android.com/apk/res/android"><!--  
+    <item android:id="@+id/tseach_firend_menu" 
+          android:title="@string/tseach_firend_menu" 
+          android:icon="@drawable/find_friend" />
+     -->
+     <!-- 
+     <item android:id="@+id/tlogin_menu" 
+          android:title="@string/tlogin_menu"
+          android:icon="@drawable/chang_login" />
+           -->    
+     <item android:id="@+id/texit_menu"
+          android:title="@string/texit_menu"    
+          android:icon="@drawable/exit_icon" />              
+   
+</menu>  

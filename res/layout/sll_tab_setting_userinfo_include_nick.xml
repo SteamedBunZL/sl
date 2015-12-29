@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sll_more_item_select"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="44dip"
+        android:layout_gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/nickname"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/text_size" />
+
+        <ImageView
+            android:id="@+id/sl_tab_setting_include_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/right_03" />
+
+        <TextView
+            android:id="@+id/sl_tab_setting_userinfo_include_nickName"
+            style="@style/textColor_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dip"
+            android:layout_toLeftOf="@id/sl_tab_setting_include_image"
+            android:maxWidth="150dp"
+            android:singleLine="true"
+            android:text="hahahahha"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#d5d7dc" />
+
+</LinearLayout>

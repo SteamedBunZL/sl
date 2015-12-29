@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/msgroom_msgs_bg"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/msgroomitem_List1_Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:background="#d2d2d2"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:singleLine="true"
+        android:text="日期"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/msg_date_size" />
+
+    <!-- 对方的头像 -->
+
+    <LinearLayout
+        android:id="@+id/ll_other_head_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/msgroomitem_List1_Date"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_msgroom_head"
+            android:layout_width="50dp"
+            android:layout_height="50dp" >
+
+            <ImageView
+                android:id="@+id/msgroomitem_List1_head"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/group_star_bg"
+                android:contentDescription="对方消息头像"
+                android:scaleType="fitXY"
+                android:src="@drawable/user_infor_head_boy" />
+
+            <ImageView
+                android:id="@+id/iv_msgroom_star_crown"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/group_star_crown" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/msgroomitem_List1_Name"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:maxEms="4"
+            android:singleLine="true"
+            android:text="名字"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <!-- 我的头像 -->
+
+    <LinearLayout
+        android:id="@+id/ll_my_head_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/msgroomitem_List1_Date"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/iv_msg_head_icon_mine"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:contentDescription="我的头像"
+            android:scaleType="fitXY"
+            android:src="@drawable/user_infor_head_boy" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ll_other_head_icon"
+        android:layout_below="@id/msgroomitem_List1_Date"
+        android:layout_toLeftOf="@id/ll_my_head_icon"
+        android:layout_toRightOf="@id/ll_other_head_icon"
+        android:orientation="vertical"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp" >
+
+        <!-- 对方   聊天室列表类型 纯文字 -->
+
+        <RelativeLayout
+            android:id="@+id/msgroom_leftlist_type1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/ll_leftlist_textMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <!-- 不知道为什么父View写成LinearLayout会报类转换异常 -->
+
+                <TextView
+                    android:id="@+id/msgroomitem_RList1_SendTypeText"
+                    style="@style/msgroom_msg_send_type_style"
+                    android:text="待发/已发送？" />
+
+                <TextView
+                    android:id="@+id/msgroomitem_List1_MsgText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/msg_bg_mine"
+                    android:gravity="center_vertical"
+                    android:lineSpacingMultiplier="1.2"
+                    android:maxEms="10"
+                    android:text="自己发送的文字内容"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="@dimen/msgroom_text_msg_size_30" />
+            </LinearLayout>
+        </RelativeLayout>
+        <!-- 对方   聊天室列表类型 图片 -->
+
+        <RelativeLayout
+            android:id="@+id/msgroom_leftlist_type2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:id="@+id/rl_image_message_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/msgroomitem_List2_failImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/up_error"
+                    android:visibility="visible" />
+
+                <ProgressBar
+                    android:id="@+id/msgroomitem_RList2_loading"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="@dimen/msg_date_bottem"
+                    android:gravity="center_vertical"
+                    android:indeterminate="false"
+                    android:indeterminateOnly="false"
+                    android:progressDrawable="@drawable/progress_graygreen" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/msgroomitem_List2_dateLayout11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/rl_image_message_left"
+                android:background="@drawable/msg_img_bg_other" >
+
+                <ImageView
+                    android:id="@+id/msgroomitem_List2_MsgImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/msg_img_download_failed" />
+
+                <ProgressBar
+                    android:id="@+id/msgroomitem_List2_loading"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:id="@+id/shoudong_down_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:text="点击下载图片"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="@dimen/msgroom_text_msg_size_30" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:src="@drawable/file_zidown" />
+                </LinearLayout>
+            </FrameLayout>
+        </RelativeLayout>
+
+        <!-- 对方   聊天室列表类型 语音 -->
+
+        <RelativeLayout
+            android:id="@+id/msgroom_leftlist_type3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/msgroomitem_RList3_SendTypeText"
+                style="@style/msgroom_msg_send_type_style"
+                android:layout_centerVertical="true"
+                android:text="已发送" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/msgroomitem_RList3_SendTypeText"
+                android:orientation="horizontal" >
+
+                <com.tuixin11sms.tx.view.WaitAdiouAnimation
+                    android:id="@+id/msgroomitem_List3_dateLayout178"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1000"
+                    android:background="@drawable/msg_bg_other"
+                    android:gravity="center_vertical"
+                    android:padding="10dp" >
+
+                    <RelativeLayout
+                        android:id="@+id/msgroomitem_List3_PlayRecordImg_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <LinearLayout
+                            android:id="@+id/msgroomitem_RList3_recordTime_ll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/msgroomitem_RList3_recordTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1000"
+                                android:gravity="left"
+                                android:singleLine="true"
+                                android:text="8“"
+                                android:textColor="#000000"
+                                android:textSize="14sp" />
+
+                            <com.tuixin11sms.tx.view.PlayAdiouAnimation
+                                android:id="@+id/msgroomitem_List3_PlayRecordImg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/msg_audio_play_other_3" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/shoudong_down_adiuo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:text="点击下载音频"
+                                android:textColor="@color/title_text_color"
+                                android:textSize="@dimen/msgroom_text_msg_size_30" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/file_zidown" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/msgroomitem_List3_recordTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/msgroomitem_RList3_recordTime_ll"
+                            android:gravity="right"
+                            android:singleLine="true"
+                            android:text="8“"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+                </com.tuixin11sms.tx.view.WaitAdiouAnimation>
+
+                <ImageView
+                    android:id="@+id/msgroomitem_List3_PlayType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/msg_audio_unread" />
+
+                <ImageView
+                    android:id="@+id/msgroomitem_List3_failImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/up_error"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/msgroomitem_List3_Praise"
+                    android:layout_width="28dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="1"
+                    android:contentDescription="赞按钮"
+                    android:padding="3dp"
+                    android:src="@drawable/state_unpraised" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- 对方   名片 -->
+
+        <RelativeLayout
+            android:id="@+id/msgroom_leftlist_type4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:id="@+id/ll_tcard_message_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/msgroomitem_List4_failImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/up_error"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/msgroomitem_RList4_SendType"
+                    style="@style/msgroom_msg_send_type_style"
+                    android:text="已发送" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/msgroomitem_List4_Layout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/ll_tcard_message_left"
+                android:background="@drawable/msg_bg_other"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp" >
+
+                <LinearLayout
+                    android:id="@+id/msgroomitem_List4_Layout22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/msgroomitem_List4_Layoutdown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <ImageView
+                            android:id="@+id/msgroomitem_List4_card_head"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/user_infor_head_boy" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_card_name_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/msgroomitem_List4_card_head"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/msgroomitem_List4_cardName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxEms="6"
+                                android:singleLine="true"
+                                android:text="张三"
+                                android:textColor="@color/msgroom_msg_card_name_color"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/msgroomitem_List4_cardtxId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="12345"
+                                android:textColor="@color/sub_title_text_color"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@id/ll_card_name_id"
+                            android:src="@drawable/right_03" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/msgroomitem_List4_loading"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" >
+                </ProgressBar>
+            </FrameLayout>
+        </RelativeLayout>
+
+        <!-- 对方   地理位置 -->
+
+        <RelativeLayout
+            android:id="@+id/msgroom_leftlist_type5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:id="@+id/ll_msg_send_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/msgroomitem_RList5_failImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/up_error"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/msgroomitem_RList5_SendType"
+                    style="@style/msgroom_msg_send_type_style"
+                    android:text="已发送" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/msgroomitem_List5_dateLayout11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/ll_msg_send_state"
+                android:background="@drawable/msg_bg_other" >
+
+                <TextView
+                    android:id="@+id/msgroomitem_List5_MsgImg"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/geo_msg_rec"
+                    android:gravity="center_horizontal"
+                    android:maxLines="2"
+                    android:paddingTop="65dp"
+                    android:text="北京市朝阳区嘉铭桐城"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </FrameLayout>
+        </RelativeLayout>
+
+        <!-- 大文件消息类型 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_msglist_msg_big_file"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible" >
+
+            <ImageView
+                android:id="@+id/iv_failed_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/up_error" />
+
+            <RelativeLayout
+                android:id="@+id/rl_big_file_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_failed_image"
+                android:background="@drawable/msg_bg_other" >
+
+                <ImageView
+                    android:id="@+id/iv_big_file_thumb"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/thumb_video_room_big_file_unreceived" />
+
+                <TextView
+                    android:id="@+id/tv_big_file_name"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/iv_big_file_thumb"
+                    android:ellipsize="middle"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:text="papa.mp3"
+                    android:textColor="@color/file_mian_text_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_big_file_length"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_big_file_name"
+                    android:layout_toRightOf="@id/iv_big_file_thumb"
+                    android:ellipsize="middle"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:text="26.5M"
+                    android:textColor="@color/file_sub_text_color"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_upload_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/rl_big_file_message"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/iv_stop_upload"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/msgroom_stop_down_upload" />
+
+                <ProgressBar
+                    android:id="@+id/pb_big_file_uploading"
+                    style="@style/progressBarHorizontal_color"
+                    android:layout_width="60dp"
+                    android:layout_height="5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/iv_stop_upload"
+                    android:gravity="center_vertical"
+                    android:indeterminate="false"
+                    android:indeterminateOnly="false"
+                    android:max="100"
+                    android:progress="51" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_download_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/rl_big_file_message" >
+
+                <ProgressBar
+                    android:id="@+id/pb_big_file_downloading"
+                    style="@style/progressBarHorizontal_color"
+                    android:layout_width="60dp"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="@dimen/msg_date_bottem"
+                    android:layout_weight="10"
+                    android:gravity="center_vertical"
+                    android:indeterminate="false"
+                    android:indeterminateOnly="false"
+                    android:max="100"
+                    android:progress="51" />
+
+                <ImageView
+                    android:id="@+id/iv_stop_download"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/msgroom_stop_down_upload" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- 聊天室列表类型 公告提示 -->
+
+        <RelativeLayout
+            android:id="@+id/msgroom_list_type10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/msgroomitem_list10_MsgText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/group_tishi_back"
+                android:lineSpacingMultiplier="1.2"
+                android:maxEms="10"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text=""
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <!-- 聊天室列表类型 有人加入时的欢迎消息 -->
+
+        <RelativeLayout
+            android:id="@+id/msgroom_list_type12"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/msgroomitem_list12_MsgText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- 今日之星的条目，位置暂时放这里 -->
+
+    <LinearLayout
+        android:id="@+id/ll_lastWeekStars"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/rl_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_centerVertical="true"
+                android:background="@drawable/sl_line" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@color/msgroom_msgs_bg"
+                android:padding="15dip" >
+
+                <ImageView
+                    android:id="@+id/iv_crown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/sl_star_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@+id/iv_crown"
+                    android:text="@string/star_text"
+                    android:textColor="@color/start_text_color"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <com.shenliao.view.SlGridView
+            android:id="@+id/gv_lastWeekStars"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="5"
+            android:verticalSpacing="20dip" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="10dip"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:text="@string/start_conent_text"
+            android:textColor="@color/start_text_color"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@drawable/sl_line" />
+    </LinearLayout>
+
+</RelativeLayout>

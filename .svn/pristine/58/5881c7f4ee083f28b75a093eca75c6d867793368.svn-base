@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_audio_view"
+    style="@style/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/title_bar_layout" >
+
+        <TextView
+            android:id="@+id/tv_login_title"
+            style="@style/title_bar_textview"
+            android:text="文件" />
+
+        <View
+            style="@style/content_line_style"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical" >
+
+        <View style="@style/content_line_style" />
+
+        <RelativeLayout
+            android:id="@+id/rl_received_files_folder"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/white"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
+
+            <ImageView
+                android:id="@+id/iv_received_folder_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/folder_received_files" />
+
+            <TextView
+                android:id="@+id/tv_receive_folder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/iv_received_folder_icon"
+                android:singleLine="true"
+                android:text="已接收到文件"
+                android:textColor="#0c2049"
+                android:textSize="@dimen/text_size" />
+
+            <ImageView
+                android:id="@+id/iv_receive_right_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/right_03"
+                android:focusable="false" />
+        </RelativeLayout>
+
+        <View style="@style/content_line_style" />
+
+        <View
+            style="@style/content_line_style"
+            android:layout_marginTop="20dp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rl_device_folder"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/white"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" >
+
+                <ImageView
+                    android:id="@+id/iv_device_folder_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/folder_device" />
+
+                <TextView
+                    android:id="@+id/tv_device_folder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/iv_device_folder_icon"
+                    android:singleLine="true"
+                    android:text="手机内存"
+                    android:textColor="#0c2049"
+                    android:textSize="@dimen/text_size" />
+
+                <ImageView
+                    android:id="@+id/iv_receive_right_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/right_03"
+                    android:focusable="false" />
+
+                <View
+                    style="@style/content_line_style"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/iv_device_folder_icon" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_sdcard_folder"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/white"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" >
+
+                <ImageView
+                    android:id="@+id/iv_sdcard_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/folder_sdcard" />
+
+                <TextView
+                    android:id="@+id/tv_sdcard_folder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/iv_sdcard_icon"
+                    android:singleLine="true"
+                    android:text="SD卡"
+                    android:textColor="#0c2049"
+                    android:textSize="@dimen/text_size" />
+
+                <ImageView
+                    android:id="@+id/iv_sdcard_right_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/right_03"
+                    android:focusable="false" />
+            </RelativeLayout>
+
+            <View style="@style/content_line_style" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

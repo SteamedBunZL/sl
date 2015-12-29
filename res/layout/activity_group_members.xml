@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout 
+        android:id="@+id/rl_group_member_title"
+        style="@style/title_bar_layout" >
+
+        <TextView
+            android:id="@+id/tv_group_member_title"
+            style="@style/title_bar_textview"
+            android:text="成员列表" />
+
+        <View
+            style="@style/content_line_style"
+            android:layout_alignParentBottom="true" />
+        
+        <ImageView
+            android:id="@+id/iv_add_member"
+            style="@style/title_right_textview"
+            android:src="@drawable/add_contacts"
+            android:visibility="gone" />
+    </RelativeLayout>
+    
+    
+    <RelativeLayout
+        android:id="@+id/rl_group_switch_tab_title"
+        android:layout_width="fill_parent"
+        android:background="@color/title_bar_bg_color"
+        android:visibility="gone"
+        android:layout_height="43dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" >
+
+            <TextView
+                android:id="@+id/group_member"
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:background="@drawable/contacts_tab_left_selected"
+                android:gravity="center"
+                android:text="群成员"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/group_black"
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:background="@drawable/contacts_tab_right_unselected"
+                android:gravity="center"
+                android:text="黑名单"
+                android:textColor="@color/content_color_blue" />
+        </LinearLayout>
+
+        <View
+            style="@style/content_line_style"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ListView
+            android:id="@+id/group_member_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="none"
+            android:visibility="visible" >
+        </ListView>
+
+        <ListView
+            android:id="@+id/group_black_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="visible" >
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/group_loading"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="正在加载中..."
+                android:textAppearance="@style/Black_Text" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

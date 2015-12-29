@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/listitem_background"
+    android:gravity="center_vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp" >
+
+    <RelativeLayout
+        android:id="@+id/rl_head_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp" >
+
+        <ImageView
+            android:id="@+id/member_head"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/user_infor_head_boy" />
+
+        <ImageView
+            android:id="@+id/group_member_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/group_host" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/rl_head_icon"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/member_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="130dp"
+                android:padding="0dp"
+                android:singleLine="true"
+                android:text="小飞天"
+                android:textColor="@color/title_text_color"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <com.tuixin11sms.tx.view.LevelTextView
+                android:id="@+id/tv_level"
+                style="@style/level_text_style"
+                android:text="LV22"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/iv_online_memeber_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="12dp"
+                android:src="@drawable/online_sex_girl"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_online_memeber_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="北京"
+                android:textColor="@color/title_text_color"
+                android:textSize="12sp"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/member_introl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="简介简介简介简介简介简介简介简介简介"
+            android:textColor="@color/item_sign_text"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</RelativeLayout>

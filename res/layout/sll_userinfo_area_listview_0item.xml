@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/area_linear"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="18dp"
+        android:background="#f5f5f5" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/line_size"
+            android:layout_alignParentTop="true"
+            android:background="@color/content_line_color_gray" />
+
+        <TextView
+            android:id="@+id/area_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/line_size"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0.5dp"
+            android:background="@color/content_line_color_gray" />
+    </RelativeLayout>
+
+</LinearLayout>

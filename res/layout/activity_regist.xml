@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/title_bar_layout" >
+
+        <TextView
+            android:id="@+id/tv_regist_title"
+            style="@style/title_bar_textview"
+            android:text="注册" />
+
+        <View
+            style="@style/content_line_style"
+            android:layout_alignParentBottom="true" />
+
+      <TextView
+                android:id="@+id/tv_title_back"
+                style="@style/title_left_textview"
+                android:text="返回" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/content_bg_color"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="70dip"
+                android:layout_height="70dip"
+                android:layout_marginBottom="28dp"
+                android:layout_marginTop="28dp"
+                android:src="@drawable/regist_default_boy" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_regist_nick_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44dp"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:id="@+id/tv_regist_nick_name"
+                        style="@style/edit_infor_text"
+                        android:layout_marginLeft="5dip"
+                        android:text="@string/nickname" />
+
+                    <EditText
+                        android:id="@+id/et_regist_nick_name"
+                        style="@style/edit_hint_text"
+                        android:layout_marginLeft="35dip"
+                        android:layout_toLeftOf="@+id/tv_name_length_remain"
+                        android:layout_toRightOf="@+id/tv_regist_nick_name"
+                        android:hint="@string/input_nickname_hint" />
+
+                    <TextView
+                        android:id="@+id/tv_name_length_remain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="24"
+                        android:textColor="@color/content_line_color_gray" />
+                </RelativeLayout>
+
+                <View style="@style/content_line_style" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_regist_pwd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44dp"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:id="@+id/tv_regist_pwd"
+                        style="@style/edit_infor_text"
+                        android:layout_marginLeft="5dip"
+                        android:text="@string/password"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/et_regist_pwd"
+                        style="@style/edit_hint_text"
+                        android:layout_marginLeft="35dip"
+                        android:layout_toRightOf="@id/tv_regist_pwd"
+                        android:hint="@string/input_password_hint"
+                        android:inputType="textPassword" />
+                </RelativeLayout>
+
+                <View style="@style/content_line_style" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_regist_sex"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44dp"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:id="@+id/tv_regist_sex"
+                        style="@style/edit_infor_text"
+                        android:layout_marginLeft="5dip"
+                        android:text="@string/sex" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_regist_sex_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_toRightOf="@+id/tv_regist_sex"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_regist_sex_male"
+                            style="@style/edit_infor_text"
+                            android:text="男"
+                            android:textColor="@color/content_color_blue" />
+
+                        <ImageView
+                            android:id="@+id/iv_regist_sex_male"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/regist_sex_male_selected" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_regist_sex_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="44dp"
+                        android:layout_toRightOf="@+id/ll_regist_sex_male"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_regist_sex_female"
+                            style="@style/edit_infor_text"
+                            android:text="女" />
+
+                        <ImageView
+                            android:id="@+id/iv_regist_sex_female"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/regist_sex_female" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_regist"
+                style="@style/action_btn_style"
+                android:layout_marginTop="23dp"
+                android:text="@string/regist" />
+
+            <LinearLayout
+                android:id="@+id/user_agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp" >
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/privacy_warning" />
+
+                <TextView
+                    android:id="@+id/mRead2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/privacy_intro"
+                    android:textColor="@color/sub_title_text_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/mWeb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/privacy_name"
+                    android:textColor="@color/content_color_blue"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

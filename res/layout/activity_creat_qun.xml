@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/group_index_title"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="#96eeeeee" >
+
+        <LinearLayout
+            android:id="@+id/back_left_creatQ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="返回"
+                android:textColor="@color/content_color_blue"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tuixin_info_title"
+            style="@style/Titile_Name_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="创建群" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#cac8c9" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/group_create_screen"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/group_create_public"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="公共聊天室"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/group_setting_checkpublic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/group_create_public"
+                    android:layout_marginTop="5dip"
+                    android:button="@drawable/sll_group_tip_checkselector" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/group_create_public"
+                    android:layout_marginTop="15dip"
+                    android:layout_toRightOf="@+id/group_setting_checkpublic"
+                    android:text="公开聊天室,所有用户均可进入" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/group_create_private"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="私人聊天室"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/group_setting_checksearched"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/group_create_private"
+                    android:layout_marginTop="5dip"
+                    android:button="@drawable/sll_group_tip_checkselector" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/group_create_private"
+                    android:layout_marginTop="15dip"
+                    android:layout_toRightOf="@+id/group_setting_checksearched"
+                    android:text="可被搜索到.用户可申请成为聊天室成员" >
+                </TextView>
+
+                <CheckBox
+                    android:id="@+id/group_setting_checkinvited"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/group_setting_checksearched"
+                    android:button="@drawable/sll_group_tip_checkselector" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/group_setting_checksearched"
+                    android:layout_marginTop="10dip"
+                    android:layout_toRightOf="@+id/group_setting_checkinvited"
+                    android:text="不可被搜索到.须邀请加入" >
+                </TextView>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="18dp"
+                android:background="#d5d7dc" />
+
+            <LinearLayout
+                android:id="@+id/create_group_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sll_more_item_select"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="81dip"
+                    android:layout_gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:text="@string/sll_userinfo_head"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="@dimen/text_size" />
+
+                    <ImageView
+                        android:id="@+id/sl_tab_setting_include_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/right_03" />
+
+                    <ImageView
+                        android:id="@+id/sl_tab_setting_userinfo_include_head"
+                        android:layout_width="57dp"
+                        android:layout_height="57dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dip"
+                        android:layout_toLeftOf="@id/sl_tab_setting_include_image"
+                        android:singleLine="true"
+                        android:src="@drawable/qun_default" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="#d5d7dc" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/create_group_update_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/create_group_head"
+                android:layout_alignLeft="@+id/create_group_head"
+                android:layout_alignRight="@+id/create_group_head"
+                android:background="@android:color/black"
+                android:gravity="center_horizontal"
+                android:text="点击上传聊天室头像"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/create_group_input_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sll_more_item_select"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="44dip"
+                    android:layout_gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:text="名称"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="@dimen/text_size" />
+
+                    <ImageView
+                        android:id="@+id/sl_tab_setting_include_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/right_03" />
+
+                    <TextView
+                        android:id="@+id/group_new_name"
+                        style="@style/textColor_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dip"
+                        android:layout_toLeftOf="@id/sl_tab_setting_include_image"
+                        android:hint="必填"
+                        android:maxWidth="150dp"
+                        android:singleLine="true"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="#d5d7dc" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/create_group_input_introl_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sll_more_item_select"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="44dip"
+                    android:layout_gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:text="简介"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="@dimen/text_size" />
+
+                    <ImageView
+                        android:id="@+id/sl_tab_setting_include_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/right_03" />
+
+                    <TextView
+                        android:id="@+id/group_new_info"
+                        style="@style/textColor_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dip"
+                        android:layout_toLeftOf="@id/sl_tab_setting_include_image"
+                        android:hint="必填"
+                        android:maxWidth="150dp"
+                        android:singleLine="true"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#d5d7dc" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="18dp"
+                android:background="#d5d7dc" />
+
+            <LinearLayout
+                android:id="@+id/ll_allow_search"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sll_more_item_select"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="44dip"
+                    android:layout_gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_allow_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:text="允许被搜索"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="@dimen/text_size" />
+
+                    <CheckBox
+                        android:id="@+id/sl_allow_iv"
+                        android:layout_width="52dp"
+                        android:layout_height="33dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:clickable="false"
+                        android:button="@drawable/sll_checkbox_check" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#d5d7dc" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp"
+                android:text="关闭是需要邀请才能加入，打开后用户可以搜索到此群，并申请加入"
+                android:textColor="@color/sub_title_text_color"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/group_setting_create_btn"
+                style="@style/action_btn_style"
+                android:layout_marginTop="23dp"
+                android:text="创建" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

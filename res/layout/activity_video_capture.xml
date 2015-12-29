@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black" >
+
+    <RelativeLayout style="@style/title_bar_layout" >
+
+        <TextView
+            android:id="@+id/tv_title_name"
+            style="@style/title_bar_textview"
+            android:text="视频录制" />
+
+        <View
+            style="@style/content_line_style"
+            android:layout_alignParentBottom="true" />
+
+        <ImageView
+            android:id="@+id/iv_switch_camera"
+            style="@style/title_right_style"
+            android:padding="5dp"
+            android:src="@drawable/switch_record_camera" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <FrameLayout
+            android:id="@+id/fl_video_capture"
+            android:layout_width="240dp"
+            android:layout_height="320dp"
+            android:background="@color/blue" />
+
+        <TextView
+            android:id="@+id/tv_record_video_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fl_video_capture"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:text="按下录像按钮开始摄像"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_rec_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="3dp" >
+
+            <ImageView
+                android:id="@+id/iv_rec"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/rec_btn_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REC"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_record_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/fl_video_capture"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/video_record_duration_bg"
+            android:gravity="center"
+            android:text="00:00"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_video_tools_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#4a4a4a" >
+
+        <ImageView
+            android:id="@+id/iv_record_video"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/start_record_video" />
+    </RelativeLayout>
+
+</RelativeLayout>

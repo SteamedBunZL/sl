@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/title_bar_layout" >
+
+        <TextView
+            android:id="@+id/tv_user_request_title"
+            style="@style/title_bar_textview"
+            android:text="个人资料" />
+
+        <View
+            style="@style/content_line_style"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/sl_userinfo_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <include
+                android:id="@+id/userinfo_settings_photo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dip"
+                layout="@layout/sll_userinfo_include_top" />
+
+            <Button
+                android:id="@+id/user_request_ok"
+                style="@style/action_btn_style"
+                android:layout_marginTop="20dip"
+                android:text="通过验证" />
+
+            <Button
+                android:id="@+id/user_request_no"
+                style="@style/action_btn_red_style"
+                android:layout_marginTop="10dip"
+                android:text="拒绝并加入黑名单" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

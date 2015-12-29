@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<!--Gallery android:id="@+id/smiley_gridview_gallery"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:spacing="16dp"
+        android:unselectedAlpha="50.0"
+    /-->
+	<GridView android:gravity="center" android:id="@+id/smiley_gridview"
+		android:layout_width="fill_parent"	
+		android:layout_height="wrap_content" 			
+		android:padding="10.0dip"		
+		android:horizontalSpacing="10.0dip"
+		android:verticalSpacing="10.0dip" android:stretchMode="columnWidth"
+		android:numColumns="auto_fit" 
+		android:columnWidth="35dip"
+		android:scrollingCache="true"
+		android:listSelector="@xml/small_rect_selector"
+		android:drawSelectorOnTop="true"
+		 />
+<!--  
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<View android:id="@+id/divider_top_line" android:background="@color/bar_top_display_colour"
+			android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginRight="1dp"/>
+		<View android:id="@+id/divider_bottom_line" android:background="@color/bar_bottom_display_colour"
+			android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginRight="1dp"/>
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:background="@drawable/bg_face_function"
+			android:layout_marginRight="1dp"
+			android:layout_marginBottom="3dp"
+			android:gravity="center_vertical">
+			<ImageView
+				android:gravity="center" android:id="@+id/picture_button_message"
+				android:src="@drawable/send_picture_message_button"
+				android:layout_width="33dp" android:layout_height="33dp"				
+				android:layout_marginLeft="4dp"/>
+			<ImageView 
+				android:layout_width="33dp" android:layout_height="33dp"	
+				android:id="@+id/audio_record_button"
+				android:gravity="center"
+				android:layout_marginLeft="17dp"
+				android:src="@drawable/audio_record_button_selector"
+			/>
+			
+			<ImageView 
+				android:gravity="center" android:id="@+id/geo_button_message"
+				android:src="@drawable/geo_button_selector"
+				android:layout_width="33dp" android:layout_height="33dp"
+				android:layout_marginLeft="17dp"/>
+			<ImageView 
+				android:gravity="center" android:id="@+id/contacts_button_message"
+				android:src="@drawable/take_contact_button"
+				android:layout_width="33dp" android:layout_height="33dp"
+				android:layout_marginLeft="17dp"/>
+			
+			<ImageView 
+				android:gravity="center" android:id="@+id/localpic_button_message"
+				android:src="@drawable/select_local_picture_button"
+				android:layout_width="33dp" android:layout_height="33dp"
+				android:layout_marginLeft="17dp"/>
+		</LinearLayout>
+
+	</LinearLayout>
+	-->
+</LinearLayout>

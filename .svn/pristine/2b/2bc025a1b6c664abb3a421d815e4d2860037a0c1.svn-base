@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="#96eeeeee" >
+
+        <LinearLayout
+            android:id="@+id/btn_back_left_groupinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="返回"
+                android:textColor="@color/content_color_blue"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/group_join_title"
+            style="@style/Titile_Name_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/group_info_title" />
+
+        <Button
+            android:id="@+id/group_info_editbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@color/transparent"
+            android:text="@string/group_info_editbutton_text"
+            android:textColor="@color/content_color_blue"
+            android:textSize="17sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#cac8c9" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="18dp"
+        android:background="#d5d7dc" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="81dp"
+        android:background="@drawable/sll_more_item_select" >
+
+        <ImageView
+            android:id="@+id/group_info_head"
+            android:layout_width="57dp"
+            android:layout_height="57dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/user_infor_head_boy" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="57dp"
+            android:layout_alignTop="@id/group_info_head"
+            android:layout_toRightOf="@+id/group_info_head"
+            android:background="@drawable/sll_more_item_select" >
+
+            <TextView
+                android:id="@+id/group_info_groupname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dip"
+                android:text="@string/group_join_text_groupname"
+                android:textColor="@color/title_text_color"
+                android:textSize="16dp"
+                android:textStyle="bold" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/group_info_groupidname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/group_info_groupname"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="2dp"
+                android:text="@string/group_join_text_groupidname"
+                android:textColor="@color/sub_title_text_color"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/group_info_imagetype"
+                android:layout_width="28dp"
+                android:layout_height="15dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="3dip"
+                android:background="@drawable/ba_13"
+                android:gravity="center"
+                android:text="官方"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/group_info_groupid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/group_info_groupname"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@+id/group_info_groupidname"
+                android:text="1233547"
+                android:textColor="@color/title_text_color"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/group_info_groupCreate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="3dip"
+                android:text="@string/group_join_text_groupcreate"
+                android:textColor="@color/sub_title_text_color"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/group_info_groupcreate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/group_info_groupCreate"
+                android:text="神聊小管家"
+                android:textColor="@color/title_text_color"
+                android:textSize="12dp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#d5d7dc" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="18dp"
+                android:background="#d5d7dc" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:minHeight="44dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/group_info_noticename"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/group_info_notice_text"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/group_info_notice"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:gravity="center_vertical"
+                        android:text="请不要吝啬你手中的鲜花!!!"
+                        android:textColor="@color/sub_title_text_color"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="#d5d7dc" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:minHeight="44dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/group_info_introl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/group_info_introl_text"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/group_info_groupintrol"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center_vertical"
+                    android:text="想唱就唱，唱的响亮!!!"
+                    android:textColor="@color/sub_title_text_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#d5d7dc" />
+
+            <LinearLayout
+                android:id="@+id/rl_lask_week_stars"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp" >
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/sl_line" />
+
+                    <RelativeLayout
+                        style="@style/bg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="15dp" >
+
+                        <ImageView
+                            android:id="@+id/star_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:src="@drawable/sl_star_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_toRightOf="@+id/star_image"
+                            android:text="@string/star_text"
+                            android:textColor="@color/start_text_color"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical" >
+
+                    <com.shenliao.view.SlGridView
+                        android:id="@+id/sl_groupinfo_start_gridView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dip"
+                        android:listSelector="@android:color/transparent"
+                        android:numColumns="5"
+                        android:scrollbars="none"
+                        android:verticalSpacing="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/start_conent_text"
+                            android:textColor="@color/start_text_color"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/sl_line" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/group_info_chanelType"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="18dp"
+                    android:background="#d5d7dc" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sll_more_item_select"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="44dp" >
+
+                        <TextView
+                            android:id="@+id/group_info_accaptmessage"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center_vertical"
+                            android:text="接收此群消息"
+                            android:textColor="@color/title_text_color"
+                            android:textSize="16sp" >
+                        </TextView>
+
+                        <CheckBox
+                            android:id="@+id/group_info_accaptmessage_checkbox"
+                            android:layout_width="52dp"
+                            android:layout_height="33dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:button="@drawable/sll_checkbox_check"
+                            android:checked="true" >
+                        </CheckBox>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="#d5d7dc" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="44dp"
+                    android:background="@drawable/sll_more_item_select" >
+
+                    <TextView
+                        android:id="@+id/group_info_noticemessag"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:text="启用此群PUSH"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="16sp" >
+                    </TextView>
+
+                    <CheckBox
+                        android:id="@+id/group_info_noticemessage_checkbox"
+                        android:layout_width="52dp"
+                        android:layout_height="33dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:button="@drawable/sll_checkbox_check"
+                        android:checked="true" >
+                    </CheckBox>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#d5d7dc" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/group_info_members"
+                    style="@style/action_btn_style"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="23dip"
+                    android:text="查看聊天室成员"
+                    android:textSize="@dimen/title_text_size"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/group_info_exit_btn"
+                    style="@style/action_btn_red_style"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="11dip"
+                    android:background="@drawable/sll_action_btn_red_selector"
+                    android:gravity="center"
+                    android:text="@string/group_info_exit_btn"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

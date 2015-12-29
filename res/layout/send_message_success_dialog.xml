@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+	<TextView 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dip"
+		android:layout_marginLeft="20dip"
+		android:layout_marginRight="20dip"
+		android:layout_marginBottom="5dip"
+		android:textSize="18sp"
+		android:text="@string/send_check_message_success_title"
+		android:gravity="center"/>
+	<TextView 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="20dip"
+		android:layout_marginRight="20dip"
+		android:layout_marginBottom="12dip"
+		android:textSize="16sp"
+		android:text="@string/send_check_message_success_text"
+		android:gravity="center"/>
+	<Button 
+		android:id="@+id/send_message_success_button"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="12dip"
+		android:layout_marginRight="12dip"
+		android:text="@string/confirm"
+		android:gravity="center"/>
+</LinearLayout>

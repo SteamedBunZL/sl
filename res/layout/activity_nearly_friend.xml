@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/group_index_title"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="#96eeeeee" >
+
+        <LinearLayout
+            android:id="@+id/btn_back_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="返回"
+                android:textColor="@color/content_color_blue"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/nearly_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/back_left"
+            android:gravity="center"
+            android:paddingLeft="@dimen/back_paddingLeft"
+            android:text="@string/back_btn"
+            android:textAppearance="@style/White_Text"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/mid_title_name"
+                style="@style/Titile_Name_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nearly_title_name" />
+
+            <TextView
+                android:id="@+id/mid_title_name_choose"
+                style="@style/Titile_Name_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(女)"
+                android:textColor="@color/content_color_blue"
+                android:textSize="17sp"
+                android:textStyle="normal"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/select_sex_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/sll_search_btn_select" />
+
+        <ImageView
+            android:id="@+id/change_view"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@id/select_sex_view"
+            android:src="@drawable/touxiang_mode" />
+
+        <TextView
+            android:id="@+id/mid_channel_name"
+            style="@style/Large_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+        
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/line_size"
+            android:layout_alignParentBottom="true"
+            android:background="#cac8c9" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/group_index_title"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/list_contacts"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@color/content_line_color_gray"
+            android:dividerHeight="0.5dp"
+            android:fadingEdge="none"
+            android:listSelector="@color/transparent"
+            android:scrollbars="vertical" />
+
+        <GridView
+            android:id="@+id/con_gridview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:columnWidth="71dp"
+            android:gravity="center_horizontal"
+            android:horizontalSpacing="4dp"
+            android:numColumns="auto_fit"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="4dp" >
+        </GridView>
+
+        <TextView
+            android:id="@+id/nearly_list_hint_empty"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/nearly_empty"
+            android:gravity="center"
+            android:textAppearance="@style/IC_Name"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/head_loading"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="正在加载中..."
+            android:textAppearance="@style/Black_Text" />
+    </LinearLayout>
+
+</RelativeLayout>

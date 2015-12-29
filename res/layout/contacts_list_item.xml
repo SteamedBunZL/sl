@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="0.5dp" >
+
+    <LinearLayout
+        android:id="@+id/ll_contacts_titile"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/title_bar_bg_color"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip" >
+
+            <ImageView
+                android:id="@+id/iv_star_friend_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star_contacts" />
+
+            <TextView
+                android:id="@+id/tv_title_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:cacheColorHint="@android:color/white"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/recommended_shenliao_friend"
+                android:textColor="#676767"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <View
+            style="@style/content_line_style"
+            android:background="@android:color/white" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_conatct_item_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/listitem_background"
+        android:paddingBottom="10dp"
+        android:paddingTop="5dp" >
+
+        <RelativeLayout
+            android:id="@+id/rl_contacts_head_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp" >
+
+            <ImageView
+                android:id="@+id/contact_photo"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/user_infor_head_boy" />
+
+            <TextView
+                android:id="@+id/tv_unread_count"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/unread_msgstat"
+                android:gravity="center"
+                android:text="12"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignBottom="@id/rl_contacts_head_img"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/rl_contacts_head_img"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/contact_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:maxWidth="180dp"
+                    android:singleLine="true"
+                    android:text="Tonight"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <com.tuixin11sms.tx.view.LevelTextView
+                    android:id="@+id/tv_level"
+                    style="@style/level_text_style"
+                    android:text="LV22"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_group_members_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/group_members"
+                android:gravity="right|center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="2dp"
+                android:singleLine="true"
+                android:text="100"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tx_list_item_sign_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="1dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="猛虎猛虎猛虎猛虎猛虎猛虎猛虎猛虎猛虎猛虎猛虎猛虎猛虎猛虎猛虎猛虎猛虎猛虎猛虎猛虎猛虎"
+                android:textColor="#777777"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View style="@style/content_line_style" />
+
+</LinearLayout>

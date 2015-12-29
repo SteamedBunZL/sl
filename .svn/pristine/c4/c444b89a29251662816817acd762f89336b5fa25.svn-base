@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff" >
+
+    <LinearLayout
+        android:id="@+id/ll_blog"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1000" >
+
+            <ImageView
+                android:id="@+id/iv_myblog"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/myblog_music" />
+
+            <ImageView
+                android:id="@+id/iv_myblog_musicplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/myblog_music_dong" />
+
+            <LinearLayout
+                android:id="@+id/ll_myblog_music"
+                android:layout_width="fill_parent"
+                android:layout_height="34dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1000"
+                    android:background="@color/myblog_music_seekbar_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp" >
+
+                    <com.tuixin11sms.tx.view.BlogMusicSeekBar
+                        android:id="@+id/sb_myblog_process"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1000"
+                        android:maxHeight="0.5dp"
+                        android:minHeight="0.5dp"
+                        android:progressDrawable="@drawable/sll_myblog_seekbar_style"
+                        android:thumb="@drawable/sll_myblog_seekbar_thumb"
+                        android:thumbOffset="0dp" />
+
+                    <TextView
+                        android:id="@+id/tv_myblog_process"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:paddingLeft="5dp"
+                        android:text="5&apos;22&apos;&apos;"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_myblog_musicall"
+                    android:layout_width="73dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@color/myblog_music_play_bg" >
+
+                    <ImageView
+                        android:id="@+id/ll_myblog_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/down_record" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_myblog_musicplay"
+                        android:layout_width="73dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <ImageView
+                            android:id="@+id/iv_myblog_play"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/myblog_play" />
+
+                        <TextView
+                            android:id="@+id/tv_myblog_play"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="Play"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_blog_timeandplace"
+                android:layout_width="fill_parent"
+                android:layout_height="33dp"
+                android:layout_alignParentBottom="true"
+                android:background="#f7f7f7" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/myblog_time" />
+
+                    <TextView
+                        android:id="@+id/tv_blog_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="2014-04-23 14:18"
+                        android:textColor="#777777"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_myblog_place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/myblog_place" />
+
+                    <TextView
+                        android:id="@+id/tv_myblog_place"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="北京市"
+                        android:textColor="#777777"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_myblog"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="28dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="多么帅的男人。。。。"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+             />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="55dp"
+            android:layout_marginTop="26dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_myBlog_great"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/myblog_great" />
+
+            <TextView
+                android:id="@+id/tv_myBlog_great"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/iv_myBlog_great"
+                android:text="99+"
+                android:textColor="#4abffb"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/iv_myblog_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/myblog_more" />
+
+            <GridView
+                android:id="@+id/gv_myblog_liked_img"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/iv_myblog_more"
+                android:layout_toRightOf="@id/tv_myBlog_great"
+                android:columnWidth="41.5dp"
+                android:numColumns="4"
+                android:stretchMode="columnWidth" >
+            </GridView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/no_blog"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingBottom="15dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tv_no_blog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:text="Ta还没有发布过瞬间哟~"
+            android:textColor="@color/sub_title_text_color"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/noblog" />
+    </RelativeLayout>
+
+</RelativeLayout>

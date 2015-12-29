@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<menu xmlns:android="http://schemas.android.com/apk/res/android">  
+  <!--  <item android:id="@+id/msgroom_menu_add_content"  
+           android:title="@string/msg_menu_add_content"
+           android:icon="@drawable/msgroom_add_content" />  --> 
+           
+    
+                
+     <item android:id="@+id/msgroom_menu_changeChannel"  
+           android:title="@string/msg_menu_change_msgstate"
+           android:icon="@drawable/msgroom_turnchannel"/> 
+           
+     <item android:id="@+id/msgroom_menu_deletMsg"  
+           android:title="@string/msg_menu_delet_allmessage"
+           android:icon="@drawable/msgroom_deletmessage" /><!--  
+          
+      <item android:id="@+id/msgroom_menu_changeChannel"  
+           android:title="@string/msg_menu_check_card"
+           android:icon="@drawable/msgroom_checkcontentinfo"/> /> 
+          
+      --><item android:id="@+id/msgroom_menu_listener"  
+           android:title="@string/msg_menu_auto_listener"
+           android:icon="@drawable/msgroom_listener" />         
+    
+              
+</menu>  

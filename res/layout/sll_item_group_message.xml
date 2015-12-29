@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip" >
+
+        <ImageView
+            android:id="@+id/group_message_listView_item_photo"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/qun_default" />
+
+        <LinearLayout
+            android:id="@+id/ll_content_time"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@+id/group_message_listView_item_photo"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/group_message_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="内容"
+                android:textColor="@color/title_text_color"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/group_message_listView_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2012-2-6 12.00"
+                android:textColor="@color/sub_title_text_color"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/group_message_nobtn"
+            android:layout_width="60dp"
+            android:layout_height="29dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/ll_content_time"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/group_confirm_btn_bg_gray"
+            android:text="拒绝"
+            android:textColor="@color/gray_text"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/group_message_okbtn"
+            android:layout_width="60dp"
+            android:layout_height="29dp"
+            android:layout_below="@+id/ll_content_time"
+            android:layout_toLeftOf="@+id/group_message_nobtn"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/group_confirm_btn_bg_blue"
+            android:text="同意"
+            android:textColor="@color/content_color_blue"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/group_message_btnresult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/ll_content_time"
+            android:layout_marginRight="5dip"
+            android:text="结果" />
+    </RelativeLayout>
+
+    <View style="@style/content_line_style" />
+
+</LinearLayout>

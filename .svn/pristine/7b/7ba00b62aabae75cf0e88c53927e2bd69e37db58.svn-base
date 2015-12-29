@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <View style="@style/content_line_style" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="15dp" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp" >
+
+            <TextView
+                android:id="@+id/tv_user_info_constellation"
+                style="@style/user_infor_text_title_style"
+                android:text="@string/user_constellation" />
+
+            <TextView
+                android:id="@+id/user_info_constellation"
+                style="@style/user_infor_text_content_style"
+                android:layout_toRightOf="@+id/tv_user_info_constellation"
+                android:text="金牛座" />
+        </RelativeLayout>
+
+        <View style="@style/content_line_style" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/tv_user_info_blood"
+                style="@style/user_infor_text_title_style"
+                android:text="@string/user_bloodtype" />
+
+            <TextView
+                android:id="@+id/user_info_blood"
+                style="@style/user_infor_text_content_style"
+                android:layout_toRightOf="@+id/tv_user_info_blood"
+                android:text="o型" />
+        </RelativeLayout>
+
+        <View style="@style/content_line_style" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/tv_user_info_profession"
+                style="@style/user_infor_text_title_style"
+                android:text="@string/user_profession" />
+
+            <TextView
+                android:id="@+id/user_info_profession"
+                style="@style/user_infor_text_content_style"
+                android:layout_toRightOf="@+id/tv_user_info_profession"
+                android:text="设计师" />
+        </RelativeLayout>
+
+        <View style="@style/content_line_style" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/tv_user_info_area"
+                style="@style/user_infor_text_title_style"
+                android:text="@string/user_district" />
+
+            <TextView
+                android:id="@+id/user_info_area"
+                style="@style/user_infor_text_content_style"
+                android:layout_toRightOf="@+id/tv_user_info_area"
+                android:text="北京" />
+        </RelativeLayout>
+
+        <View style="@style/content_line_style" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/tv_user_language"
+                style="@style/user_infor_text_title_style"
+                android:text="@string/user_language" />
+
+            <TextView
+                android:id="@+id/user_language"
+                style="@style/user_infor_text_content_style"
+                android:layout_toRightOf="@+id/tv_user_language"
+                android:text="英语" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View style="@style/content_line_style" />
+
+</LinearLayout>

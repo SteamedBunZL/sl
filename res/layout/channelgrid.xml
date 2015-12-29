@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- com.tuixin11sms.tx.ResizeLayout -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" android:id="@+id/channelList_mainLayout"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:paddingBottom="15dip"
+	>
+	<ImageView android:id="@+id/channelList_icon"
+		android:layout_width="55dp" android:layout_height="55dp"
+		android:background="@drawable/user_infor_head_boy"
+		android:layout_gravity="center_horizontal" />
+	<TextView android:id="@+id/channelList_title"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:layout_toRightOf="@id/channelList_icon"
+		android:layout_alignTop="@id/channelList_icon" android:singleLine="true"
+		android:maxEms="8" android:text="@string/channelroom_title"
+		android:layout_marginTop="9dp" android:textSize="16sp"
+		android:textColor="#415860" />
+</LinearLayout>

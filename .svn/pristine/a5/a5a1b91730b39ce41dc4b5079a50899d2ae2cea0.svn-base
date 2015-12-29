@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- com.tuixin11sms.tx.ResizeLayout -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- 上面显示对话人信息栏 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_msgroom_title_bar"
+        style="@style/title_bar_layout" >
+
+        <TextView
+            android:id="@+id/tv_title_back"
+            style="@style/title_left_textview"
+            android:text="返回" />
+
+        <RelativeLayout
+            android:id="@+id/rl_msgroom_right_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/MsgRoom_handset_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/handset_mode" />
+
+            <ImageView
+                android:id="@+id/MsgRoom_autoplay_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/MsgRoom_handset_icon"
+                android:src="@drawable/not_autoplay_mode" />
+
+            <ImageView
+                android:id="@+id/MsgRoom_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/MsgRoom_autoplay_icon"
+                android:paddingLeft="5dp"
+                android:paddingRight="10dp"
+                android:src="@drawable/sll_search_btn_select" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/MsgRoom_personName"
+            style="@style/title_bar_textview"
+            android:layout_toLeftOf="@+id/rl_msgroom_right_layout"
+            android:layout_toRightOf="@id/tv_title_back"
+            android:text="求搭讪" />
+
+        <View
+            style="@style/content_line_style"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/msg_expression_hsv_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <View style="@style/content_line_style" />
+
+        <HorizontalScrollView
+            android:id="@+id/msgroom_expression_hsv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#efefef"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/msgroom_expression_hsv_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#efefef"
+                android:orientation="horizontal"
+                android:visibility="gone" />
+        </HorizontalScrollView>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/MsgRoom_Expression_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/msg_expression_hsv_rl" >
+
+        <View style="@style/content_line_style" />
+
+        <RelativeLayout
+            android:id="@+id/MsgRoom_Expression"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#efefef"
+            android:visibility="gone" >
+        </RelativeLayout>
+    </RelativeLayout>
+    <!-- 下面公用功能窗口 -->
+
+    <LinearLayout
+        android:id="@+id/publicmsg_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/MsgRoom_Expression_layout"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <!-- 下面的几个功能选项 -->
+
+        <RelativeLayout
+            android:id="@+id/publicmsg_DownTools"
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:background="#efefef" >
+
+            <View
+                style="@style/content_line_style"
+                android:layout_alignParentTop="true" />
+
+            <ImageButton
+                android:id="@+id/publicmsg_send_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="#00000000"
+                android:paddingBottom="10dp"
+                android:paddingLeft="6dp"
+                android:paddingTop="10dp"
+                android:src="@drawable/sll_msgroom_intput_text_selector" />
+
+            <ImageButton
+                android:id="@+id/publicmsg_send_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/publicmsg_send_tab"
+                android:background="#00000000"
+                android:paddingBottom="10dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="9dp"
+                android:paddingTop="10dp"
+                android:src="@drawable/sll_msgroom_send_more_selector" />
+
+            <TextView
+                android:id="@+id/publicmsg_SendButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/sll_msgroom_send_text_selector"
+                android:gravity="center"
+                android:text="发送"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/publicmsg_RecordButton"
+                android:layout_width="fill_parent"
+                android:layout_height="29dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/publicmsg_SendButton"
+                android:layout_toRightOf="@id/publicmsg_send_more"
+                android:background="@drawable/msgroom_record_btn_selector"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/publicmsg_Edit"
+                android:layout_width="fill_parent"
+                android:layout_height="29dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/publicmsg_SendButton"
+                android:layout_toRightOf="@id/publicmsg_send_more"
+                android:background="@drawable/msgroom_input_text_edit_text"
+                android:imeOptions="actionSend|flagNoEnterAction"
+                android:inputType="textCapSentences|textAutoCorrect|textMultiLine|textShortMessage"
+                android:maxLines="5"
+                android:minLines="1"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:singleLine="false"
+                android:text=""
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- 中间对话界面 -->
+
+    <com.shenliao.view.MyGroupListView
+        android:id="@+id/msgRoom_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/publicmsg_layout"
+        android:layout_below="@id/rl_msgroom_title_bar"
+        android:background="@color/msgroom_msgs_bg"
+        android:divider="#00000000"
+        android:fadingEdge="none"
+        android:stackFromBottom="false"
+        android:transcriptMode="alwaysScroll" />
+
+    <include
+        android:id="@+id/rl_praised_anim_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/publicmsg_layout"
+        android:layout_below="@id/rl_msgroom_title_bar"
+        layout="@layout/sll_great_anim" />
+
+    <include
+        android:id="@+id/toastNotice"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_msgroom_title_bar"
+        layout="@layout/sll_msgroom_notice"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+    <EditText android:text="EditText" android:layout_centerHorizontal="true" android:layout_height="wrap_content" android:id="@+id/pre_phone_editText" android:layout_alignParentTop="true" android:layout_width="fill_parent"></EditText>
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_below="@+id/pre_phone_editText" android:id="@+id/pre_country" android:text="@string/pref_login_country" android:layout_alignLeft="@+id/pre_phone_editText"></TextView>
+    <Spinner android:id="@+id/pre_country_spinner" android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_below="@+id/pre_country" android:layout_alignLeft="@+id/pre_country"></Spinner>
+  
+</RelativeLayout>

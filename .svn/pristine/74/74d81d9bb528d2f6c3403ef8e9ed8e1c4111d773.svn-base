@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/top_relative"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="#96eeeeee" >
+
+        <LinearLayout
+            android:id="@+id/btn_back_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="返回"
+                android:textColor="@color/content_color_blue"
+                android:textSize="17sp" />
+        </LinearLayout>
+        <!--
+			<Button android:id="@+id/group_tip_back"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="返回"
+			android:layout_centerVertical="true" />
+        -->
+
+        <TextView
+            style="@style/Titile_Name_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="警告" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/line_size"
+            android:layout_alignParentBottom="true"
+            android:background="#cac8c9" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_relative" >
+
+        <ScrollView
+            android:id="@+id/group_warn_screen"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/line_size"
+                    android:layout_marginTop="18dp"
+                    android:background="#d5d7dc" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="81dp"
+                    android:background="@android:color/white" >
+
+                    <ImageView
+                        android:id="@+id/group_warn_head"
+                        android:layout_width="57dip"
+                        android:layout_height="57dip"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/user_infor_head_girl" />
+
+                    <TextView
+                        android:id="@+id/group_warn_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/group_warn_head"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/group_warn_head"
+                        android:ellipsize="end"
+                        android:maxWidth="150dp"
+                        android:singleLine="true"
+                        android:text="肖鹏"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="18.0sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/group_warn_gender"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/group_warn_name"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/group_warn_head"
+                        android:background="@drawable/user_infor_sex_girl"
+                        android:gravity="right|center_vertical"
+                        android:paddingRight="2dp"
+                        android:text="23"
+                        android:textColor="@android:color/white"
+                        android:textSize="13.0sp" />
+
+                    <TextView
+                        android:id="@+id/group_warn_idName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/group_warn_gender"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_toRightOf="@+id/group_warn_head"
+                        android:text="神聊号:" />
+
+                    <TextView
+                        android:id="@+id/group_warn_idContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/group_warn_gender"
+                        android:layout_marginTop="2dp"
+                        android:layout_toRightOf="@+id/group_warn_idName"
+                        android:text="121312" />
+
+                    <TextView
+                        android:id="@+id/group_warn_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/group_warn_idName"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginTop="2dip"
+                        android:layout_toRightOf="@+id/group_warn_head"
+                        android:text="北京 通州"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/line_size"
+                    android:background="#d5d7dc" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/group_warn_sign"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="个性签名"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/group_warn_signContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dip"
+                        android:text="你好你好您好你好你好" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/group_tip_cause"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="20dp"
+                    android:text="警告原因"
+                    android:textColor="@color/sub_title_text_color"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/line_size"
+                    android:background="#d5d7dc" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/group_warn_text_fast"
+                        android:layout_width="fill_parent"
+                        android:layout_height="44dp"
+                        android:background="@drawable/sll_more_item_select"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_fast"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="发言频率过快"
+                            android:textColor="@color/title_text_color"
+                            android:textSize="16.0sp" />
+
+                        <CheckBox
+                            android:id="@+id/group_warn_check_fast"
+                            android:layout_width="21dp"
+                            android:layout_height="21dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dip"
+                            android:button="@drawable/sll_group_tip_checkselector" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/line_size"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="#d5d7dc" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/group_warn_text_yycs"
+                        android:layout_width="fill_parent"
+                        android:layout_height="44dp"
+                        android:background="@drawable/sll_more_item_select"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_yycs"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="发送的内容不符合神聊管理规范要求"
+                            android:textColor="@color/title_text_color"
+                            android:textSize="16.0sp" />
+
+                        <CheckBox
+                            android:id="@+id/group_warn_check_yycs"
+                            android:layout_width="21dp"
+                            android:layout_height="21dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dip"
+                            android:button="@drawable/sll_group_tip_checkselector" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/line_size"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="#d5d7dc" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/group_warn_text_image"
+                        android:layout_width="fill_parent"
+                        android:layout_height="44dp"
+                        android:background="@drawable/sll_more_item_select"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_image"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="使用的头像不符合神聊管理规范要求，请立即更换"
+                            android:textColor="@color/title_text_color"
+                            android:textSize="16.0sp" />
+
+                        <CheckBox
+                            android:id="@+id/group_warn_check_image"
+                            android:layout_width="21dp"
+                            android:layout_height="21dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dip"
+                            android:button="@drawable/sll_group_tip_checkselector" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/line_size"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="#d5d7dc" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/group_warn_text_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="44dp"
+                        android:background="@drawable/sll_more_item_select"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="使用的昵称不符合神聊管理规范要求，请立即更换"
+                            android:textColor="@color/title_text_color"
+                            android:textSize="16.0sp" />
+
+                        <CheckBox
+                            android:id="@+id/group_warn_check_name"
+                            android:layout_width="21dp"
+                            android:layout_height="21dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dip"
+                            android:button="@drawable/sll_group_tip_checkselector" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/line_size"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="#d5d7dc" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/group_warn_text_info"
+                        android:layout_width="fill_parent"
+                        android:layout_height="44dp"
+                        android:background="@drawable/sll_more_item_select"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_info"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="个人资料不符合神聊管理规范要求，请立即修改"
+                            android:textColor="@color/title_text_color"
+                            android:textSize="16.0sp" />
+
+                        <CheckBox
+                            android:id="@+id/group_warn_check_info"
+                            android:layout_width="21dp"
+                            android:layout_height="21dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dip"
+                            android:button="@drawable/sll_group_tip_checkselector" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/line_size"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="#d5d7dc" />
+                    </RelativeLayout>
+                    <!--
+						<RelativeLayout android:layout_width="wrap_content"
+						android:layout_height="wrap_content">
+						<CheckBox android:id="@+id/group_warn_check_sendimage"
+							android:layout_width="wrap_content" android:layout_height="wrap_content"
+							android:layout_centerVertical="true"
+							android:layout_alignParentLeft="true" android:layout_marginLeft="20dip"
+							android:button="@drawable/sl_group_tip_checkselector" 
+							
+							/>
+						<TextView android:id="@+id/group_warn_text_sendimage"
+							android:layout_width="wrap_content" android:layout_height="wrap_content"
+							android:layout_centerVertical="true" android:text="发送的图片引起其它用户不适"
+							android:layout_toRightOf="@+id/group_warn_check_sendimage"
+							android:textColor="@android:color/black" />
+					</RelativeLayout>
+						<RelativeLayout android:layout_width="wrap_content"
+						android:layout_height="wrap_content">
+						<CheckBox android:id="@+id/group_warn_check_sendaudio"
+							android:layout_width="wrap_content" android:layout_height="wrap_content"
+							android:layout_centerVertical="true"
+							android:layout_alignParentLeft="true" android:layout_marginLeft="20dip"
+							android:button="@drawable/sl_group_tip_checkselector" 
+							
+							/>
+						<TextView android:id="@+id/group_warn_text_sendaudio"
+							android:layout_width="wrap_content" android:layout_height="wrap_content"
+							android:layout_centerVertical="true" android:text="发送的语音引起其它用户不适"
+							android:layout_toRightOf="@+id/group_warn_check_sendaudio"
+							android:textColor="@android:color/black" />
+					</RelativeLayout>
+                    -->
+
+                    <RelativeLayout
+                        android:id="@+id/group_tip_text_otherInfo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="44dp"
+                        android:background="@drawable/sll_more_item_select"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="其他原因"
+                            android:textColor="@color/title_text_color"
+                            android:textSize="16.0sp" />
+
+                        <CheckBox
+                            android:id="@+id/group_tip_check_otherInfo"
+                            android:layout_width="21dp"
+                            android:layout_height="21dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dip"
+                            android:button="@drawable/sll_group_tip_checkselector" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/line_size"
+                            android:layout_alignParentBottom="true"
+                            android:background="#d5d7dc" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/other"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/sll_more_item_select"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/line_size"
+                            android:background="#d5d7dc" />
+
+                        <EditText
+                            android:id="@+id/group_warn_edit_otherCause"
+                            android:layout_width="fill_parent"
+                            android:layout_height="80dp"
+                            android:background="@drawable/sll_more_item_select"
+                            android:cursorVisible="false"
+                            android:hint="请输入其他举报原因"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/title_text_color"
+                            android:textColorHint="#b9bbbe"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/line_size"
+                            android:background="#d5d7dc" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/group_warn_btn"
+                    style="@style/action_btn_style"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="23dip"
+                    android:text="警告"
+                    android:textSize="@dimen/title_text_size"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

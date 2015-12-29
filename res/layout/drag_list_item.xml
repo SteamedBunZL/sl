@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 一定要使用相对布局 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/transparent" >
+
+    <ImageView
+        android:id="@+id/image_avatar"
+        android:layout_width="45dip"
+        android:layout_height="45dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/icon" />
+
+    <TextView
+        android:id="@+id/drag_list_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/image_avatar"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dip" />
+
+    <ImageView
+        android:id="@+id/drag_list_item_image"
+        android:layout_width="wrap_content"
+        android:layout_height="48dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/sort_icon"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/delete_list_item_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rectangle_radius_gray"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp"
+        android:text="移除" />
+
+</RelativeLayout>

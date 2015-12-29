@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:background="#ffab34"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+	<RelativeLayout android:id="@+id/msgRoom_toast_layou1"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  android:layout_centerInParent="true"
+			android:layout_marginTop="10dp">
+		 <ImageView android:id="@+id/msgRoom_up_toast_icon" android:layout_width="wrap_content"
+				   android:layout_height="wrap_content"  android:layout_centerVertical="true"
+				   android:layout_marginTop="3dp"
+				   android:background="@drawable/msgroom_more_pop_handset"/>
+		 <TextView android:id="@+id/msgRoom_up_toast_text" android:layout_width="wrap_content"
+				   android:layout_height="wrap_content"
+				   android:layout_centerVertical="true"
+				   android:textSize="16sp"
+				   android:text="test"
+				   android:layout_toRightOf="@id/msgRoom_up_toast_icon"
+				   android:layout_marginLeft="5dp"
+				   android:textColor="#ffffff"/>
+     </RelativeLayout>
+</RelativeLayout>

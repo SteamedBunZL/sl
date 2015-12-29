@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:background="@drawable/smile_dialog_background"
+	android:layout_gravity="center"
+	android:paddingLeft="20dip"
+	android:paddingRight="20dip"
+	>
+    
+     <TextView
+          android:id="@+id/sl_group_more_title"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="群公告"
+          android:textColor="@android:color/white"
+          android:layout_centerHorizontal="true"
+          android:textSize="16sp"
+     />
+	<TextView android:id="@+id/sl_group_msg_more"
+		 android:layout_width="wrap_content" android:layout_height="wrap_content"
+		 android:layout_centerVertical="true" android:textSize="16sp"
+		 android:text="test"
+		 android:layout_alignParentLeft="true"
+	     android:textColor="#ffffff"
+		 android:layout_toLeftOf="@+id/notice_close"
+		 android:layout_centerHorizontal="true"
+		 android:layout_below="@+id/sl_group_more_title"
+		/>
+		<TextView android:background="@drawable/clear_all" android:id="@+id/notice_close"
+		android:layout_marginRight="10dip" android:layout_width="wrap_content"
+		android:layout_centerVertical="true" android:layout_alignParentRight="true"
+		android:layout_height="wrap_content" 
+		android:visibility="gone"
+		/>
+</RelativeLayout>

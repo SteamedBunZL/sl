@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/longrecordbg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rel_seek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#00000000"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <RelativeLayout
+            android:id="@+id/seek_rel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <SeekBar
+                android:id="@+id/longrecord_seekBar"
+                style="@style/Widget.SeekBar.LongRecord"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/curtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/longrecord_seekBar"
+                android:text="00:00"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/totaltime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/longrecord_seekBar"
+                android:text="7:00"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mic_rel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seek_rel"
+            android:layout_centerInParent="true" >
+
+            <ImageView
+                android:id="@+id/longrecord_mic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/record_long_mic" />
+
+            <ImageView
+                android:id="@+id/longrecordscreen_MicValoum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/longrecord_mic"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/longrecord_mic"
+                android:src="@drawable/amp1" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/longrecord_begin_rel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mic_rel"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="15dp" >
+
+            <Button
+                android:id="@+id/longrecord_begin"
+                android:layout_width="110dp"
+                android:layout_height="34dp"
+                android:background="@drawable/action_btn_blue_selector"
+                android:text="开始录音"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/longrecord_point"
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/record_point" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/mic_rel"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp" >
+
+            <Button
+                android:id="@+id/longrecord_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/longrecorddel_new" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

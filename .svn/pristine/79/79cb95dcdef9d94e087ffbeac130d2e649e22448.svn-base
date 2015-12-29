@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/msgroom_msgs_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/mTime"
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:background="@color/title_bar_bg_color"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="2012-10-20"
+            android:textColor="#676767"
+            android:textSize="12sp" />
+
+        <View
+            style="@style/content_line_style"
+            android:background="@android:color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/report1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/mMainLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip" 
+            android:layout_marginBottom="15dp">
+
+            <!-- 神聊头像 -->
+
+            <ImageView
+                android:id="@+id/guardHeadPic"
+                android:layout_width="45dip"
+                android:layout_height="45dip"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/user_infor_head_boy" />
+            <!-- 神聊名字 -->
+
+            <LinearLayout
+                android:id="@+id/ll_name_uid"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/guardHeadPic"
+                android:layout_marginLeft="7dip"
+                android:layout_toRightOf="@+id/guardHeadPic" >
+
+                <TextView
+                    android:id="@+id/guardNickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxEms="6"
+                    android:singleLine="true"
+                    android:text="名字"
+                    android:textColor="@color/content_color_blue"
+                    android:textSize="15sp" />
+                <!-- 神聊号 -->
+
+                <TextView
+                    android:id="@+id/guardContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxEms="12"
+                    android:singleLine="true"
+                    android:text="(2131452)"
+                    android:textColor="@color/sub_title_text_color"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_from_msgroom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/ll_name_uid"
+                android:layout_below="@+id/ll_name_uid" >
+
+                <TextView
+                    android:id="@+id/group_smallGuard_listView_tipName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="想想举报"
+                    android:textColor="@color/sub_title_text_color" />
+
+                <TextView
+                    android:id="@+id/group_smallGuard_listView_comeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/group_smallGuard_listView_tipName"
+                    android:layout_alignParentRight="true"
+                    android:singleLine="true"
+                    android:text="来自我们是一家人聊天室"
+                    android:textColor="@color/sub_title_text_color" />
+            </RelativeLayout>
+            <!-- 具体内容 -->
+
+            <LinearLayout
+                android:id="@+id/reportContont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_alignLeft="@+id/rl_from_msgroom"
+                android:layout_below="@+id/rl_from_msgroom"
+                android:orientation="vertical" >
+
+                <!-- 显示失败 -->
+
+                <ImageView
+                    android:id="@+id/iv_msg_failImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/up_error" />
+                <!-- 普通文本信息 -->
+
+                <TextView
+                    android:id="@+id/v1_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:autoLink="all"
+                    android:background="@drawable/msg_bg_other"
+                    android:lineSpacingMultiplier="1.2"
+                    android:linksClickable="true"
+                    android:maxEms="10"
+                    android:text="fghfghfgh"
+                    android:textColor="#003d5c"
+                    android:textSize="15sp" />
+                <!-- 图片信息 -->
+
+                <FrameLayout
+                    android:id="@+id/v2_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/msg_bg_other">
+
+                    <ImageView
+                        android:id="@+id/msgroomitem_List2_MsgImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <LinearLayout
+                        android:id="@+id/msgroomitem_List2_Layout21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical" >
+
+                        <ProgressBar
+                            android:id="@+id/msgroomitem_List2_loading"
+                            style="?android:attr/progressBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal" >
+                        </ProgressBar>
+
+                        <TextView
+                            android:id="@+id/msgroomitem_List2_LoadText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="10%"
+                            android:textColor="#000000"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </FrameLayout>
+                <!-- 语音消息 -->
+
+                <RelativeLayout
+                    android:id="@+id/v3_audio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <com.tuixin11sms.tx.view.WaitAdiouAnimation
+                        android:id="@+id/v3_audio_anti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/msg_bg_other"
+                        android:padding="10dp" >
+
+                        <RelativeLayout
+                            android:id="@+id/msgroomitem_List3_Layout1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp" >
+
+                            <com.tuixin11sms.tx.view.PlayAdiouAnimation
+                                android:id="@+id/msgroomitem_List3_PlayRecordImg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/msg_audio_play_other_3" />
+                        </RelativeLayout>
+
+                        <ProgressBar
+                            android:id="@+id/msgroomitem_List3_loading"
+                            style="?android:attr/progressBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center" >
+                        </ProgressBar>
+                    </com.tuixin11sms.tx.view.WaitAdiouAnimation>
+
+                    <RelativeLayout
+                        android:id="@+id/msgroomitem_List3_Layout1234"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/v3_audio_anti"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/v3_audio_anti" >
+
+                        <ImageView
+                            android:id="@+id/msgroomitem_List3_PlayType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/msg_audio_unread" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/small_guard_audio_msg_recordTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/v3_audio_anti"
+                        android:layout_alignLeft="@id/msgroomitem_List3_Layout1234"
+                        android:layout_marginTop="11dp"
+                        android:text="8“"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <!-- 名片消息 -->
+
+                <FrameLayout
+                    android:id="@+id/v4_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/msg_bg_other"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp" >
+
+                    <LinearLayout
+                        android:id="@+id/msgroomitem_List4_Layout22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <RelativeLayout
+                            android:id="@+id/msgroomitem_List4_Layoutdown"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <ImageView
+                                android:id="@+id/msgroomitem_List4_card_head"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/user_infor_head_boy" />
+
+                            <TextView
+                                android:id="@+id/msgroomitem_List4_cardName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/msgroomitem_List4_card_head"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@id/msgroomitem_List4_card_head"
+                                android:maxEms="6"
+                                android:singleLine="true"
+                                android:text="张三"
+                                android:textColor="#000000"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/msgroomitem_List4_cardtxId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignLeft="@id/msgroomitem_List4_cardName"
+                                android:layout_below="@id/msgroomitem_List4_cardName"
+                                android:text="12345"
+                                android:textColor="#003d5c"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/msgroomitem_List4_loading"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" >
+                    </ProgressBar>
+                </FrameLayout>
+                <!-- 地理位置信息 -->
+
+                <FrameLayout
+                    android:id="@+id/v5_geo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/msg_bg_other">
+
+                    <ImageView
+                        android:id="@+id/msgroomitem_List5_MsgImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/geo_msg" />
+
+                    <ProgressBar
+                        android:id="@+id/msgroomitem_List5_loading"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" >
+                    </ProgressBar>
+                </FrameLayout>
+
+                <!-- 举报大文件消息 -->
+
+                <RelativeLayout
+                    android:id="@+id/v6_big_file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_big_file_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/msg_bg_other" >
+
+                        <ImageView
+                            android:id="@+id/iv_big_file_thumb"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/thumb_video_room_big_file_unreceived" />
+
+                        <TextView
+                            android:id="@+id/tv_big_file_name"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/iv_big_file_thumb"
+                            android:ellipsize="middle"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:singleLine="true"
+                            android:text="papa.mp3"
+                            android:textColor="@color/file_mian_text_color"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_big_file_length"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_big_file_name"
+                            android:layout_toRightOf="@id/iv_big_file_thumb"
+                            android:ellipsize="middle"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:singleLine="true"
+                            android:text="26.5M"
+                            android:textColor="@color/file_sub_text_color"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_download_progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/rl_big_file_message" >
+
+                        <ProgressBar
+                            android:id="@+id/pb_big_file_downloading"
+                            style="@style/progressBarHorizontal_color"
+                            android:layout_width="60dp"
+                            android:layout_height="5dp"
+                            android:layout_marginTop="@dimen/msg_date_bottem"
+                            android:gravity="center_vertical"
+                            android:indeterminate="false"
+                            android:indeterminateOnly="false"
+                            android:max="100"
+                            android:progress="51" />
+
+                        <ImageView
+                            android:id="@+id/iv_stop_download"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/pb_big_file_downloading"
+                            android:src="@drawable/msgroom_stop_down_upload" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View style="@style/content_line_style" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/handler1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip" 
+            android:layout_marginBottom="5dp">
+
+            <!-- 神聊头像 -->
+
+            <ImageView
+                android:id="@+id/guardHeadPic2"
+                android:layout_width="45dip"
+                android:layout_height="45dip"
+                android:layout_marginLeft="13dip"
+                android:background="@drawable/slsafe" />
+            <!-- 处罚内容 -->
+
+            <TextView
+                android:id="@+id/handlerContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/guardHeadPic2"
+                android:layout_marginLeft="7dip"
+                android:layout_toRightOf="@+id/guardHeadPic2"
+                android:autoLink="email"
+                android:text="处罚内容处罚内容处罚罚内容处罚内容处罚内容处罚内容处罚内容处罚内容处罚内容"
+                android:textColor="@color/sub_title_text_color"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <View style="@style/content_line_style" />
+    </LinearLayout>
+
+</LinearLayout>

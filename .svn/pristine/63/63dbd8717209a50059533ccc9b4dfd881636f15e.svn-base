@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <View style="@style/content_line_style" />
+
+    <LinearLayout
+        android:id="@+id/userinfo_settings_sign_linear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:padding="15dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个性签名"
+            android:textColor="@color/sub_title_text_color"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp" >
+
+            <TextView
+                android:id="@+id/tv_user_infor_sign_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="心有猛虎心有猛虎心心猛虎心有猛虎心心心猛虎"
+                android:textColor="@color/title_text_color" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View style="@style/content_line_style" />
+
+</LinearLayout>

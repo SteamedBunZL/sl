@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<menu xmlns:android="http://schemas.android.com/apk/res/android">  
+           
+
+           
+  <item android:id="@+id/msgroom_menu_person_info"  
+           android:title="@string/msg_menu_check_talkperson_info"
+           android:icon="@drawable/msgroom_group_manager"/>
+                             
+
+              
+</menu>  

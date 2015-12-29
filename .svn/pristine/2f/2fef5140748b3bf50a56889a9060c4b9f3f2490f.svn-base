@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_contacts_title"
+        style="@style/title_bar_layout" >
+
+        <TextView
+            android:id="@+id/tv_contacts_title"
+            style="@style/title_bar_textview"
+            android:text="联系人" />
+
+        <View
+            style="@style/content_line_style"
+            android:layout_alignParentBottom="true" />
+
+        <ImageView
+            android:id="@+id/iv_add_contacts"
+            style="@style/title_right_textview"
+            android:src="@drawable/add_contacts" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_contacts_tab"
+        android:layout_width="fill_parent"
+        android:layout_height="43dp"
+        android:layout_below="@+id/rl_contacts_title"
+        android:background="@color/title_bar_bg_color" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" >
+
+            <TextView
+                android:id="@+id/tv_my_friend_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:background="@drawable/contacts_tab_left_selected"
+                android:gravity="center"
+                android:text="我的好友"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tv_my_group_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:background="@drawable/contacts_tab_right_unselected"
+                android:gravity="center"
+                android:text="我的群组"
+                android:textColor="@color/content_color_blue" />
+        </LinearLayout>
+
+        <View
+            style="@style/content_line_style"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/rl_contacts_tab"
+        android:background="@color/settings_bg"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/list_contacts"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/msgroom_msgs_bg"
+            android:cacheColorHint="#00000000"
+            android:fadingEdge="none"
+            android:divider="@android:color/transparent"
+            android:listSelector="@drawable/bg_list_item"
+            android:scrollbars="vertical" />
+        <TextView 
+            android:id="@+id/list_over"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/list_contacts"
+            android:background ="@color/title_bar_bg_color"
+            
+            />
+
+        <RelativeLayout
+            android:id="@+id/rl_no_contacts"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/iv_no_contacts_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/no_friend_bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_no_contacts_bg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:text="您还没有好友，赶快去探索一下吧！"
+                android:textColor="#b5bac5"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <com.tuixin11sms.tx.view.SearchBar
+            android:id="@+id/con_tuixin_mSearchBar"
+            android:layout_width="24dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/prompt_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="60dip"
+            android:layout_marginTop="80dip"
+            android:background="@drawable/contact_prompt"
+            android:layout_toLeftOf="@id/con_tuixin_mSearchBar"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

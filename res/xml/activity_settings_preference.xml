@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="settings_preference"
+    android:layout="@layout/sll_preference_category" >
+
+    <PreferenceCategory android:layout="@layout/sll_preference_category" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/pref_key_notify_title_show"
+            android:layout="@layout/sll_preference_middle"
+            android:title="@string/pref_notify_title_show"
+            android:widgetLayout="@layout/sll_preference_checkbox_top" />
+    </PreferenceCategory>
+
+    <Preference
+        android:layout="@layout/sll_preference_text_bg_bottom"
+        android:title="关闭后，你将不会收到来自神聊的新消息通知。" />
+
+    <PreferenceCategory android:layout="@layout/sll_preference_category" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:disableDependentsState="true"
+            android:key="@string/pref_key_stranger_title"
+            android:layout="@layout/sll_preference_middle"
+            android:title="@string/preferences_stranger_title"
+            android:widgetLayout="@layout/sll_preference_checkbox_top" />
+    </PreferenceCategory>
+
+    <Preference
+        android:layout="@layout/sll_preference_text_bg_bottom"
+        android:title="开启免打扰设置，神聊收到消息将不再发出提示声音和震动，有效时间段22:00-8:00。" />
+
+    <PreferenceCategory android:layout="@layout/sll_preference_category" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="@string/pref_key_notify_title_show"
+            android:key="@string/pref_key_notify_show_mags"
+            android:layout="@layout/sll_preference_middle"
+            android:title="@string/pref_notify_title_show_mags"
+            android:widgetLayout="@layout/sll_preference_checkbox_bottom" />
+    </PreferenceCategory>
+
+    <Preference
+        android:layout="@layout/sll_preference_text_bg_bottom"
+        android:title="开启后，当收到神聊信息时，通知提示将不显示发信人和内容摘要。" />
+
+    <PreferenceCategory android:layout="@layout/sll_preference_category" >
+        <Preference
+            android:layout="@layout/sll_preference_text_bg_top"
+            android:title="软件内消息提醒" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="@string/pref_key_notify_title_zd"
+            android:layout="@layout/sll_preference_top"
+            android:title="@string/pref_notify_title_zd"
+            android:widgetLayout="@layout/sll_preference_checkbox_top" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/pref_key_notify_title_sound"
+            android:layout="@layout/sll_preference_bottom"
+            android:title="@string/pref_notify_title_sound"
+            android:widgetLayout="@layout/sll_preference_checkbox_bottom" />
+    </PreferenceCategory>
+
+    <Preference
+        android:layout="@layout/sll_preference_text_bg_bottom"
+        android:title="你可以设置当神聊运行时，新消息是否需要声音或者震动提醒。" />
+    <Preference android:layout="@layout/sll_preference_text_bg_bottom" />
+    <Preference android:layout="@layout/sll_preference_text_bg_bottom" />
+
+</PreferenceScreen>

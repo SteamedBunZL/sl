@@ -1,0 +1,12 @@
+jdk-home=C:/Program Files/Java/jdk1.6.0_22/
+
+sdk-folder=D:/liu/mep/android-sdk_r06-windows/
+
+sdk-tools=${sdk-folder}/tools
+
+sdk-platform=${sdk-folder}/platforms/android-9
+
+sdk-platform-tools=${sdk-platform}/
+keypass=tuixin
+key=android.keystore
+keystore=android.keystore

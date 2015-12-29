@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sll_more_item_select"
+    android:orientation="vertical"
+     >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:layout_gravity="center_vertical"
+      >
+
+        <TextView
+            android:id="@+id/sl_mTempEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:text="@string/user_email"
+            android:textColor="#0c2049"
+            android:textSize="@dimen/text_size"
+            android:layout_marginLeft="15dp"
+             />
+
+        <LinearLayout
+            android:id="@+id/sl_mSetEmailChecked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+             android:layout_centerVertical="true"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/sl_mSettingEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:layout_toRightOf="@+id/sl_mTempEmail"
+                android:singleLine="true"
+                android:textColor="#888888"
+                android:gravity="center_vertical"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="7dp"
+                android:background="@drawable/bind"
+                 android:layout_centerVertical="true"
+                android:focusable="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="12dp"
+                android:gravity="center"
+                android:text="@string/user_bind_checked"
+                android:textColor="#a6db34" >
+            </TextView>
+
+            <ImageView
+                android:id="@+id/next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/right_03" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sl_mSetEmailUnChecked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" 
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            
+            >
+
+            <TextView
+                android:id="@+id/sl_mSettingEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:layout_toRightOf="@+id/sl_mTempEmail"
+                android:singleLine="true"
+                android:textColor="#888888"
+                android:layout_gravity="center_vertical"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="7dp"
+                android:background="@drawable/nobind"
+                android:focusable="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="12dp"
+                android:gravity="center"
+                android:text="@string/user_bind_unchecked"
+                android:textColor="#ff3b30" >
+            </TextView>
+
+            <ImageView
+                android:id="@+id/next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/right_03"
+                 android:layout_marginRight="15dp"
+                 />
+        </LinearLayout>
+       
+    </RelativeLayout>
+
+</LinearLayout>

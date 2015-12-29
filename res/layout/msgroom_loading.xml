@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:background="#b0000000"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+   <RelativeLayout android:background="#ffffff" android:layout_centerInParent="true"
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"
+	android:paddingTop="10dp" android:paddingBottom="10dp"
+	android:paddingLeft="20dp" android:paddingRight="20dp">
+	 <ProgressBar android:id="@+id/msgroom_loading" 
+	               android:layout_width="wrap_content" 
+	               android:layout_gravity="center"
+	               style="?android:attr/progressBarStyleSmall"
+	               android:layout_height="wrap_content"></ProgressBar>
+     <TextView android:id="@+id/msgroom_loading_text" 
+               android:layout_toRightOf="@id/msgroom_loading"
+               android:layout_marginLeft="10dp" android:textColor="#ff0000"
+               android:layout_width="wrap_content" android:layout_height="wrap_content" 
+              android:textSize="15sp" android:text="加载中"/>
+   </RelativeLayout>
+</RelativeLayout>

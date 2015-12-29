@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="67dp"
+        android:layout_height="67dp"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/ai_item_iv"
+        android:layout_width="67dp"
+        android:layout_height="67dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/about_choose_send"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sl_userinfo_album_default" />
+
+</LinearLayout>

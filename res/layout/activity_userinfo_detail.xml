@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/title_bar_layout" >
+
+        <LinearLayout
+            android:id="@+id/userinfo_loading"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:visibility="visible" />
+
+            <TextView
+                style="@style/Large_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/title_text_color"
+                android:text="正在加载中..." />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/userinfo_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_title_back"
+                style="@style/title_left_textview"
+                android:text="返回" />
+
+            <ImageView
+                android:id="@+id/iv_more_operate"
+                style="@style/title_right_btn" />
+
+            <TextView
+                android:id="@+id/tv_user_infor_title"
+                style="@style/title_bar_textview"
+                android:layout_toLeftOf="@id/iv_more_operate"
+                android:layout_toRightOf="@id/tv_title_back"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="用户昵称" />
+        </RelativeLayout>
+
+        <View
+            style="@style/content_line_style"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/sl_userinfo_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="2dip"
+            android:orientation="vertical" >
+            
+            <!-- 联系人资料头像、昵称等 -->
+
+            <include
+                android:id="@+id/userinfo_settings_photo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                layout="@layout/sll_userinfo_include_top" />
+
+            <!-- 相册布局 -->
+
+            <include
+                android:id="@+id/ll_user_info_album"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                layout="@layout/sll_userinfo_include_photoalbum" />
+
+            <!-- 个性签名 -->
+
+            <include
+                android:id="@+id/ll_user_sign"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                layout="@layout/sll_userinfo_include_sign" />
+            
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_size"
+                android:layout_marginTop="18dp"
+                android:background="#d5d7dc" />
+
+            <include
+                android:id="@+id/ll_user_blog"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/sll_tabitme_more_setting_myblog" />
+
+            <!-- 个人资料 -->
+
+            <include
+                android:id="@+id/userinfo_settings_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dip"
+                layout="@layout/sll_userinfo_include_info" />
+
+            <!-- 兴趣爱好 -->
+
+            <include
+                android:id="@+id/ll_userinfor_favourite"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dip"
+                layout="@layout/sll_userinfo_include_favorite"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/user_Chat_btn"
+                style="@style/action_btn_style"
+                android:layout_marginBottom="36dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/action_btn_blue_selector"
+                android:text="加为好友" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

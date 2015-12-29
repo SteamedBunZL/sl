@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/gray"
+    android:orientation="vertical" >
+
+     <RelativeLayout style="@style/title_bar_layout" >
+
+        <TextView
+            android:id="@+id/tv_title_name"
+            style="@style/title_bar_textview"
+            android:text="文件查看" />
+
+        <View
+            style="@style/content_line_style"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+    
+
+    <RelativeLayout
+        android:id="@+id/rl_send_and_cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#4a4a4a"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tv_cancel_send_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/tv_send_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:text="发送"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/rl_send_and_cancel"
+        android:layout_below="@id/tv_title_sdcard_name" >
+
+        <VideoView
+            android:id="@+id/vv_play_video"
+            android:layout_width="240dp"
+            android:layout_height="320dp"
+            android:layout_centerInParent="true"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/iv_preview_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/play_video" />
+
+        <TextView
+            android:id="@+id/tv_video_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/vv_play_video"
+            android:layout_alignTop="@id/vv_play_video"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/video_record_duration_bg"
+            android:gravity="center"
+            android:text="00:00"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

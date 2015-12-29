@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  android:key="login_preference"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference android:layout="@layout/preference" android:key="@string/pref_key_login_username" android:title="@string/pref_login_username_title" android:summary="@string/pref_login_username_summary" android:dialogTitle="@string/pref_login_username_dialogTitle" />
+    <EditTextPreference android:layout="@layout/preference" android:key="@string/pref_key_login_bind_phone" android:summary="@string/pref_login_bind_phone_summary" android:title="@string/pref_login_bind_phone_title"   />
+   <!--   <com.tuixin11sms.tx.BindPhonePreference android:layout="@layout/preference" android:key="@string/pref_key_login_bind_phone" android:summary="@string/pref_login_bind_phone_summary" android:title="@string/pref_login_bind_phone_title"   /> -->
+    <EditTextPreference android:layout="@layout/preference" android:key="@string/pref_key_login_bind_mail" android:title="@string/pref_login_bind_mail_title" android:summary="@string/pref_login_bind_mail_summary" android:dialogTitle="@string/pref_login_bind_mail_dialog_title" />          
+    <!-- <EditTextPreference android:layout="@layout/preference" android:key="@string/pref_key_login_bind_password" android:title="@string/pref_login_bind_password_title" android:summary="@string/pref_login_bind_password_summary" android:dialogTitle="@string/pref_login_bind_password_dialog_title" /> -->
+   <!--   <PreferenceScreen android:layout="@layout/preference" android:key="@string/pref_key_login_help_doing" android:title="@string/pref_login_help_doing_title" android:summary=""/> -->
+   <!--   <PreferenceScreen android:layout="@layout/preference" android:key="@string/pref_key_login_help_tuixingj" android:title="@string/pref_login_help_tuixingj_title" android:summary=""/>   --> 
+</PreferenceScreen>

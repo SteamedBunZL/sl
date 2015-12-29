@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextView android:textColor="@color/app_background"
+	android:background="@color/app_background" android:paddingLeft="14.0dip"
+	style="?android:listSeparatorTextViewStyle" xmlns:android="http://schemas.android.com/apk/res/android" />

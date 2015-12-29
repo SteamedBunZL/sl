@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/group_edit_screen"
+    style="@style/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/group_edit_title"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="#96eeeeee" >
+
+        <LinearLayout
+            android:id="@+id/btn_back_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="返回"
+                android:textColor="@color/content_color_blue"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/Titile_Name_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=" 编辑资料" />
+
+        <Button
+            android:id="@+id/group_edit_ok_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@color/transparent"
+            android:text="@string/create_group_okbtn"
+            android:textColor="@color/content_color_blue"
+            android:textSize="17sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#cac8c9" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="15dp"
+        android:background="#d5d7dc" />
+
+    <LinearLayout
+        android:id="@+id/sl_tab_setting_include_image_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sll_more_item_select"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="81dip"
+            android:layout_gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="@string/sll_userinfo_head"
+                android:textColor="@color/title_text_color"
+                android:textSize="@dimen/text_size" />
+
+            <ImageView
+                android:id="@+id/sl_tab_setting_include_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/right_03" />
+
+            <ImageView
+                android:id="@+id/group_edit_head"
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dip"
+                android:layout_toLeftOf="@id/sl_tab_setting_include_image"
+                android:singleLine="true"
+                android:src="@drawable/qun_default" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#d5d7dc" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/edit_group_input_box_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sll_more_item_select"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="44dip"
+            android:layout_gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="名称"
+                android:textColor="@color/title_text_color"
+                android:textSize="@dimen/text_size" />
+
+            <ImageView
+                android:id="@+id/sl_tab_setting_include_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/right_03" />
+
+            <TextView
+                android:id="@+id/edit_group_input_box"
+                style="@style/textColor_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dip"
+                android:layout_toLeftOf="@id/sl_tab_setting_include_image"
+                android:maxWidth="150dp"
+                android:singleLine="true"
+                android:text="必填"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#d5d7dc" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/create_group_introl_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sll_more_item_select"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="44dip"
+            android:layout_gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="简介"
+                android:textColor="@color/title_text_color"
+                android:textSize="@dimen/text_size" />
+
+            <ImageView
+                android:id="@+id/sl_tab_setting_include_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/right_03" />
+
+            <TextView
+                android:id="@+id/create_group_introl"
+                style="@style/textColor_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dip"
+                android:layout_toLeftOf="@id/sl_tab_setting_include_image"
+                android:maxWidth="150dp"
+                android:singleLine="true"
+                android:text="必填"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#d5d7dc" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/edit_group_notice_box_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sll_more_item_select"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="44dip"
+            android:layout_gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="公告"
+                android:textColor="@color/title_text_color"
+                android:textSize="@dimen/text_size" />
+
+            <ImageView
+                android:id="@+id/sl_tab_setting_include_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/right_03" />
+
+            <TextView
+                android:id="@+id/edit_group_notice_box"
+                style="@style/textColor_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dip"
+                android:layout_toLeftOf="@id/sl_tab_setting_include_image"
+                android:maxWidth="150dp"
+                android:singleLine="true"
+                android:text="必填"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#d5d7dc" />
+    </LinearLayout>
+
+    <!--
+	<ScrollView android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:scrollbars="none"
+		android:layout_marginLeft="5dp" android:layout_marginRight="5dp"
+		android:layout_marginTop="5dp">
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:orientation="vertical">
+
+
+			<LinearLayout android:layout_width="fill_parent"
+
+				android:orientation="vertical" android:layout_height="wrap_content">
+				<RadioGroup android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:id="@+id/group_edit_radioGroup"
+					>
+					<RadioButton android:id="@+id/group_edit_public"
+						android:textColor="@color/black" android:text="公开聊天室,所有用户均可进入"
+						android:textSize="14sp" />
+					<RadioButton android:id="@+id/group_edit_request"
+						android:textColor="@color/black" android:text="可被搜索到,用户可申请成为聊天室成员"
+						android:textSize="14sp" />
+					<RadioButton android:id="@+id/group_edit_secret"
+						android:textColor="@color/black" android:text="不可被搜索到,须邀请加入"
+						android:textSize="14sp" />
+				</RadioGroup>
+
+				<Button android:layout_width="fill_parent" android:id="@+id/group_edit_ok_btn"
+					android:layout_height="wrap_content" android:text="@string/create_group_okbtn"
+					android:layout_marginTop="10dp" android:background="@drawable/green_btn"
+					android:textSize="15sp" android:textColor="@android:color/white" />
+
+			</LinearLayout>
+		</LinearLayout>
+
+	</ScrollView>
+    -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>

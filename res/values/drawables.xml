@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <item type="drawable" name="color_white">#ffececec</item>
+    <item type="drawable" name="preference_drawable">@drawable/list_item_background</item>
+    <item type="drawable" name="top_preference">@drawable/preference_item_top</item>
+    <item type="drawable" name="mid_preference">@drawable/preference_item_mid</item>
+    <item type="drawable" name="bottom_preference">@drawable/preference_item_bottom</item>
+    <item type="drawable" name="thread_bg">#ffffffff</item>
+    <item type="drawable" name="text_color_black">#ff000000</item>
+    
+</resources>

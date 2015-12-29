@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_user_info_favourite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="15sp"
+        android:text="@string/user_favourite_new"
+        android:textColor="@color/sub_title_text_color"
+        android:textSize="14sp" />
+
+    <View style="@style/content_line_style" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="15dp" >
+
+        <com.shenliao.view.SlGridView
+            android:id="@+id/user_info_favourite_gridView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:columnWidth="60dip"
+            android:focusable="false"
+            android:gravity="center"
+            android:horizontalSpacing="8dp"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="4"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="8dp" />
+    </LinearLayout>
+
+    <View style="@style/content_line_style" />
+
+</LinearLayout>

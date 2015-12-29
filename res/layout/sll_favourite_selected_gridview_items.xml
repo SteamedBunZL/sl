@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="130dp"
+    android:layout_height="30dp"
+    android:background="@drawable/sll_user_select_favourite_one" >
+
+    <TextView
+        android:id="@+id/sl_tab_userinfo_favourite_selected_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="14123"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/selected_clear"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12dip"
+        android:background="@drawable/lov_03" />
+
+</RelativeLayout>

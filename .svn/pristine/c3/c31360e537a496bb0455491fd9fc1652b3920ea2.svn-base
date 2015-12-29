@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.tuixin11sms.tx.view.PraiseCountTextView
+        android:id="@+id/tv_cur_room_praised_count"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="35dp"
+        android:textSize="13sp"
+        android:textColor="#ff3262"
+        android:text="0"
+        android:gravity="center"
+        android:background="@drawable/dian_03" />
+
+    <ImageView
+        android:id="@+id/iv_aminbg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/light" />
+
+    <ImageView
+        android:id="@+id/iv_aminbg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/light2" />
+
+    <ImageView
+        android:id="@+id/iv_amin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/heart" />
+
+    <ImageView
+        android:id="@+id/iv_end"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:layout_marginRight="43dp"
+        android:layout_marginTop="38dp"
+        android:src="@drawable/heart"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/iv_amin1"
+         style="@style/praise_star_style"
+        android:src="@drawable/star_03" />
+
+    <ImageView
+        android:id="@+id/iv_amin2"
+         style="@style/praise_star_style"
+        android:src="@drawable/star_07" />
+
+    <ImageView
+        android:id="@+id/iv_amin3"
+         style="@style/praise_star_style"
+        android:src="@drawable/star_10" />
+
+    <ImageView
+        android:id="@+id/iv_amin4"
+         style="@style/praise_star_style"
+        android:src="@drawable/star_03" />
+
+    <ImageView
+        android:id="@+id/iv_amin5"
+         style="@style/praise_star_style"
+        android:src="@drawable/star_07" />
+
+    <ImageView
+        android:id="@+id/iv_amin6"
+         style="@style/praise_star_style"
+        android:src="@drawable/star_10" />
+
+    <ImageView
+        android:id="@+id/iv_amin7"
+         style="@style/praise_star_style"
+        android:src="@drawable/star_03" />
+
+    <ImageView
+        android:id="@+id/iv_amin8"
+        style="@style/praise_star_style"
+        android:src="@drawable/star_07" />
+
+</RelativeLayout>

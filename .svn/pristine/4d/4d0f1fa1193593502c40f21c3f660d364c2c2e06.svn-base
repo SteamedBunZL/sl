@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/message_view"
+    style="@style/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/invite_tab_title"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="#96eeeeee" >
+
+        <LinearLayout
+            android:id="@+id/btn_back_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="返回"
+                android:textColor="@color/content_color_blue"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/Titile_Name_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="邀请手机好友" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/line_size"
+            android:layout_alignParentBottom="true"
+            android:background="#cac8c9" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/invite_tab_title"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/list_contacts"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/list_seperator"
+            android:fadingEdge="none"
+            android:listSelector="@drawable/bg_list_item"
+            android:scrollbars="vertical" />
+
+        <TextView
+            android:id="@+id/prompt_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/invite_tab_title"
+            android:layout_marginRight="60dip"
+            android:layout_marginTop="80dip"
+            android:gravity="center"
+            android:text="no"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:textColor="@color/white" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/line_size"
+            android:background="#d5d7dc" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/content_bg_color"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp" >
+
+            <Button
+                android:id="@+id/invite_mSelected"
+                style="@style/action_btn_style"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:text="确定"
+                android:textSize="@dimen/title_text_size"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/invite_mCancel"
+                style="@style/action_btn_style"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="取消"
+                android:textSize="@dimen/title_text_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

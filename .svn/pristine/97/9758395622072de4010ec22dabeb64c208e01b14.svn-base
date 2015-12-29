@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tuixin11sms.tx"
+    android:versionCode="411"
+    android:versionName="4.1.1" >
+
+    <!-- android:theme="@style/Theme.IOSched" -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 以下为可选权限 -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+
+    <application
+        android:name=".TxData"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.IOSched" >
+
+        <!--
+        <activity
+            android:name="net.youmi.android.AdBrowser"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+
+        <service
+            android:name="net.youmi.android.AdService"
+            android:exported="false" >
+        </service>
+
+        <receiver android:name="net.youmi.android.AdReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        -->
+
+        <activity
+            android:name="com.tuixin11sms.tx.activity.SelectFriendListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name=".activity.TutorialTeachActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.IndexActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IndexActiviy" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.TuiXinMainTab"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.tuixin11sms.tx.activity.ADActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.tuixin11sms.tx.activity.WeiboCardActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="OAuthActivity"
+                    android:scheme="tuixinweibo" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tuixin11sms.tx.activity.OAuthShareWeiboActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.tuixin11sms.tx.activity.WebViewActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name=".activity.PrivacyViewActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.SellActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.MessageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".activity.TuixinContactsActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.tuixin11sms.tx.activity.InviteContactsActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustPan" />
+        <activity
+            android:name=".activity.RegistActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustPan" />
+        <activity
+            android:name=".activity.PhoneBindActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name=".activity.LostPasswordActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustPan" />
+        <activity
+            android:name="com.tuixin11sms.tx.activity.UserInfoSupplementActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tuixin11sms.tx.activity.SettingsPreference"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/sll_title_theme" />
+        <activity
+            android:name=".activity.AboutActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.tuixin11sms.tx.activity.MyBlogActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.tuixin11sms.tx.activity.AddMyBlogActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.tuixin11sms.tx.activity.LikeNoticeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name=".activity.TelCheckActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustPan" />
+        <activity
+            android:name="com.tuixin11sms.tx.activity.HelpActivity"
+            android:configChanges="keyboardHidden|navigation|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <!-- 通过条件找好友 -->
+        <activity
+            android:name="com.tuixin11sms.tx.activity.FindConditionFriendActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.tuixin11sms.tx.activity.SearchConditionResultActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name=".activity.NearlyFriendActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name=".activity.FindTxFriendActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name="com.tuixin11sms.tx.activity.SearchFriendActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.tuixin11sms.tx.activity.AddContactsActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name=".activity.SingleMsgRoom"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name=".activity.GroupMsgRoom"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.tuixin11sms.tx.activity.EditHeadIcon"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.tuixin11sms.tx.activity.CheckBigImgActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name=".activity.EditSendImg"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name=".activity.FriendManagerActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <!-- 新的个人设置 -->
+        <activity
+            android:name="com.shenliao.set.activity.SetUserInfoActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.set.activity.SetGroupNewNameAcitivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.set.activity.SetGroupNewInfonActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.set.activity.SetGroupNewNoticeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.set.activity.TabSetActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.set.activity.SetUpdateSignActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.set.activity.SetAssistFunctionActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.set.activity.SetBindManageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.set.activity.SetUpdatePassWordActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.set.activity.SetUpdateOtherPassWordActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.set.activity.SetBlackManageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.set.activity.SetUserInfoUpdateNameAcitivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.set.activity.SetUpdateProfessionActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.set.activity.SetUpdateFavouriteActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.set.activity.SetUpdateInviteFriendActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.set.activity.SetEmailBindActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.set.activity.UserInfoJoinFriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.set.activity.SetUpdateLanguageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.set.activity.SetUpdateAreaActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <!-- 新的个人资料 -->
+        <activity
+            android:name="com.shenliao.user.activity.UserInfoPerfectActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.user.activity.UserInformationActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.user.activity.UserInforRequestActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <!-- 新的聊天室 -->
+        <activity
+            android:name="com.shenliao.group.activity.GroupIndex"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.group.activity.GroupPublic"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.group.activity.GroupMine"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.group.activity.GroupVisited"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.group.activity.GroupCreate"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.shenliao.group.activity.CreateQun"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.shenliao.group.activity.GroupSearch"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.group.activity.GroupSmallGuard"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.group.activity.GroupCreateResult"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.group.activity.GroupTip"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.shenliao.group.activity.GroupWarn"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.shenliao.group.activity.GroupMember"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.group.activity.GroupNewsActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.group.activity.GroupJoin"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.group.activity.GroupInfo"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name="com.shenliao.group.activity.GroupEdit"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name=".activity.RegistSucceedActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name=".activity.VideoCaptureActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name=".activity.MusicPlayActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name=".activity.ReceivedFilesActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" />
+        <activity
+            android:name=".activity.GalleryFileActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GalleryUrlActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SelectFileActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.VideoPlayActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.UnkownFileActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.explorer.FolderExplorerActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tuixin11sms.tx.activity.WarnDialogAcitvity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.tuixin11sms.tx.activity.PraiseNoticeActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.tuixin11sms.tx.gif.FolderExplorerGifActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+
+        <!-- 3.9 -->
+        <activity
+            android:name="com.shenliao.set.activity.TabMoreActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="54067c29fd98c53b3c0011a1" >
+        </meta-data>
+
+        <receiver android:name=".BootReceiver" >
+            <intent-filter>
+
+                <!-- 系统启动完成后会调用 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".Alarmreceiver" >
+        </receiver>
+        <!--
+        <receiver
+            android:name="BootReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        -->
+
+        <service
+            android:name=".TuixinService1"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="com.tuixin11sms.tx.TuixinService1" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".ShenliaoOtherLoginService"
+            android:enabled="true" >
+        </service>
+        <service
+            android:name=".net.LBSMsgHandleService"
+            android:enabled="true" >
+        </service>
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+
+        <provider
+            android:name="com.tuixin11sms.tx.db.TxDBContentProvider"
+            android:authorities="com.tuixin11.smstx" >
+        </provider>
+        <!--
+        <provider
+            android:name=".SearchProvider"
+            android:authorities="com.tuixin11.smstx.search" >
+        </provider>
+        -->
+        <activity android:name=".gif.GifDownActivity"></activity>
+        <activity android:name=".gif.GifOrderActivity"></activity>
+        <activity android:name=".activity.GifPackageDownActivity"></activity>
+    </application>
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+
+    <!-- 下面两个权限注掉试试？常报错 -->
+    <!--
+    <uses-permission android:name="android.permission.UPDATE_DEVICE_STATS" />
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    -->
+
+    <uses-sdk android:minSdkVersion="5" />
+
+    <supports-screens android:anyDensity="true" />
+
+</manifest>

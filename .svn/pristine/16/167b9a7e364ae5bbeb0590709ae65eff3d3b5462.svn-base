@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/group_index_title"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="#96eeeeee" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="44dp" >
+
+            <TextView
+                android:id="@+id/tuixin_info_title"
+                style="@style/Large_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:text="@string/channelroom_title"
+                android:textColor="#0e2049"
+                android:textStyle="bold"
+                android:textSize="17sp" />
+            <!--
+			<TextView android:textSize="12.0sp" android:id="@+id/unread_count"
+			android:text="dddddd" android:gravity="center"
+			android:textColor="#ffffffff"
+			android:background="@drawable/magst_new" android:paddingLeft="3.0dip"
+			android:paddingTop="1.0dip" android:paddingRight="3.0dip"
+			android:layout_marginLeft="35dip" android:paddingBottom="1.0dip"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+            -->
+
+            <ImageView
+                android:id="@+id/group_index_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/sll_search_btn_select"
+                 />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#cac8c9" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/group_index_imagerelative"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="@color/titlecolor"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/group_index_ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY" >
+        </ImageView>
+
+        <Button
+            android:id="@+id/group_index_closebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/sl_group_index_close"
+            android:padding="6dp" />
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="43dp"
+        android:background="#96eeeeee"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/ll_main"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/room_name_tv_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/tab_23"
+                android:gravity="center"
+                android:text="热门聊天室"
+                android:textColor="@color/content_color_blue"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/room_name_tv_mid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/tab_19"
+                android:gravity="center"
+                android:text="我的聊天室"
+                android:textColor="@color/content_color_blue"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/room_name_tv_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/tab_20"
+                android:gravity="center"
+                android:text="最近访问"
+                android:textColor="@color/content_color_blue"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="#c6c4c5" />
+    <!--
+		<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="1dip"
+		android:background="@android:color/darker_gray" > </LinearLayout>
+    -->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

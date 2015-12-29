@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/group_index_title"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="#96eeeeee" >
+
+        <LinearLayout
+            android:id="@+id/btn_back_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="返回"
+                android:textColor="@color/content_color_blue"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/Titile_Name_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="设置" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/line_size"
+            android:layout_alignParentBottom="true"
+            android:background="#cac8c9" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <include
+                android:id="@+id/userinfo_settings_userinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="0dip"
+                android:layout_marginRight="2dip"
+                layout="@layout/sll_more_info_item"
+                android:visibility="gone" />
+            <!-- 照片设置 -->
+
+            <include
+                android:id="@+id/sl_tab_setting_userinfo_photo"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="9dp"
+                android:layout_marginTop="10dip"
+                layout="@layout/sl_tab_setting_userinfo_include_photo"
+                android:visibility="gone" />
+
+            <!-- 个性签名 -->
+
+            <include
+                android:id="@+id/sl_tab_settting_sign"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="9dip"
+                android:layout_marginRight="9dip"
+                android:layout_marginTop="5dp"
+                layout="@layout/sl_tab_setting_sign"
+                android:visibility="gone" />
+
+
+            <include
+                android:id="@+id/rl_tab_my_receive_files"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="9dip"
+                android:layout_marginRight="9dip"
+                android:layout_marginTop="10dip"
+                layout="@layout/sl_tab_setting_receive_files"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_size"
+                android:layout_marginTop="18dp"
+                android:background="#d5d7dc" />
+            <!-- 新消息通知 -->
+
+            <include
+                android:id="@+id/sl_tab_setting_state"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/sll_tab_setting_item_state" />
+
+            <!-- 辅助功能 -->
+
+            <include
+                android:id="@+id/sl_tab_setting_assist"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/sll_tab_setting_item_assist" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_size"
+                android:layout_marginTop="18dp"
+                android:background="#d5d7dc" />
+            <!-- 密码修改 -->
+
+            <include
+                android:id="@+id/sl_tab_setting_password"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/sll_tab_setting_item_password" />
+            <!-- 账号安全 -->
+
+            <include
+                android:id="@+id/sl_tab_setting_binding"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/sll_tab_setting_item_binding" />
+
+            <!-- 黑名单管理 -->
+
+            <include
+                android:id="@+id/sl_tab_setting_shield"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/sll_tab_setting_iteme_shield" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_size"
+                android:layout_marginTop="18dp"
+                android:background="#d5d7dc" />
+            <!-- 邀请朋友 -->
+
+            <include
+                android:id="@+id/sl_tab_setting_invited"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/sll_tab_setting_item_invited" />
+                
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_size"
+                android:layout_marginTop="18dp"
+                android:background="#d5d7dc" />
+            <!-- 精品应用推荐 -->
+
+            <include
+                android:id="@+id/sl_tab_setting_recommend"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/sll_tab_setting_item_recommend" />
+            <!-- 联系神聊客服 -->
+
+            <include
+                android:id="@+id/sl_tab_setting_contact"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/sll_tab_setting_item_contact" />
+            <!-- 帮助与反馈 -->
+
+            <include
+                android:id="@+id/sl_tab_setting_help"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/sll_tab_setting_item_help" />
+            <!-- 关于神聊 -->
+
+            <include
+                android:id="@+id/sl_tab_setting_about"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="18dp"
+                layout="@layout/sll_tab_setting_item_about" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

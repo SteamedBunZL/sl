@@ -1,0 +1,176 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mBackground"
+    style="@style/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/group_index_title"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="#96eeeeee" >
+
+        <LinearLayout
+            android:id="@+id/btn_back_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="返回"
+                android:textColor="@color/content_color_blue"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/Titile_Name_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/setting_assist" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/line_size"
+            android:layout_alignParentBottom="true"
+            android:background="#cac8c9" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_size"
+                android:layout_marginTop="18dp"
+                android:background="#d5d7dc" />
+
+            <!-- 拒绝加好友 -->
+
+            <include
+                android:id="@+id/sl_tab_setting_update_assist_function_nojoin"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/sll_setting_update_assist_function_item_nojoin" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_size"
+                android:layout_marginTop="16dp"
+                android:background="#d5d7dc" />
+            <!-- 2G或3G -->
+
+            <include
+                android:id="@+id/sl_tab_setting_update_assist_function_netType"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/sll_setting_update_assist_function_tem_nettype" />
+            <!-- 自动下载语音 -->
+
+            <include
+                android:id="@+id/sl_tab_setting_update_assist_function_downLoadAudio"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/sll_setting_update_assist_function_item_downaudio" />
+            <!-- 自动下载图片 -->
+
+            <include
+                android:id="@+id/sl_tab_setting_update_assist_function_downLoadImage"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/sll_setting_update_assist_function_item_downimage" />
+
+            <!-- 2G或3G环境 -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="8dp"
+                android:text="选择是否在2G/3G网络中自动下载语音和图片消息。关闭后，您可以手动下载这些消息。"
+                android:textColor="@color/sub_title_text_color"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_size"
+                android:layout_marginTop="16dp"
+                android:background="#d5d7dc" />
+            <!-- 启用后台线控录音 -->
+
+            <include
+                android:id="@+id/sl_tab_setting_update_assist_function_backgroud_wire"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/sll_setting_update_assist_function_item_backgroud_wire" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="8dp"
+                android:text="开启后，可在非神聊界面通过线控启用录音功能。 "
+                android:textColor="@color/sub_title_text_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="3dp"
+                android:text="注：个别机型或系统不支持本功能。  "
+                android:textColor="@color/sub_title_text_color"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_size"
+                android:layout_marginTop="16dp"
+                android:background="#d5d7dc" />
+            <!-- 清除缓存文件 -->
+
+            <include
+                android:id="@+id/sl_tab_setting_update_assist_function_clearCache"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/sll_setting_update_assist_function_item_clearcache" />
+            <!-- 清除所有聊天记录 -->
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_size"
+                android:layout_marginTop="16dp"
+                android:background="#d5d7dc" />
+
+            <include
+                android:id="@+id/sl_tab_setting_update_assist_function_clearRecord"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/sll_setting_update_assist_function_item_clearrecord" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

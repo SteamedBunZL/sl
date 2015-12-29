@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout  android:orientation="vertical" android:background="@drawable/popupwindow_bg" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  <!-- <TextView android:textSize="@dimen/preference_text_title_size" android:layout_centerVertical="true" android:text="发消息" android:textColor="@color/black"  android:id="@android:id/title"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+  <TextView android:textSize="@dimen/preference_text_title_size" android:layout_centerVertical="true" android:textColor="@color/black" android:text="从本聊天室移除" android:id="@android:id/summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="4" android:layout_below="@android:id/title"  />
+   -->
+</LinearLayout>

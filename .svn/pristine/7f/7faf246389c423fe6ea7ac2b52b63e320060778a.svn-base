@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/group_index_title" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="126dp" >
+
+                <ImageView
+                    android:id="@+id/creat_group_touxiang"
+                    android:layout_width="70dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/qun_default" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#d5d7dc" />
+
+            <RelativeLayout
+                android:id="@+id/group_relative"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:background="@drawable/sll_more_item_select" >
+
+                <TextView
+                    android:id="@+id/group_create_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="聊天室ID"
+                    android:textColor="@color/sub_title_text_color"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/group_create_groupid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_toRightOf="@+id/group_create_number"
+                    android:text="11111111"
+                    android:textColor="@color/content_color_blue"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#d5d7dc" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/recommend_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <ScrollView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0dip"
+                    android:layout_weight="1.0"
+                    android:fadingEdge="none"
+                    android:fillViewport="true"
+                    android:scrollbars="none" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_share"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical"
+                        android:visibility="visible" >
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginTop="18dp"
+                            android:background="#d5d7dc" />
+
+                        <include
+                            android:id="@+id/group_shareweibo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            layout="@layout/sll_group_createresult_shareweibo" />
+
+                        <include
+                            android:id="@+id/group_email"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            layout="@layout/sll_group_createresult_email" />
+
+                        <include
+                            android:id="@+id/group_message"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            layout="@layout/sll_group_createresult_message" />
+                    </LinearLayout>
+                </ScrollView>
+
+                <RelativeLayout
+                    android:id="@+id/group_success_prompt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <Button
+                        android:id="@+id/group_create_add_member"
+                        style="@style/action_btn_style"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="23dip"
+                        android:text="添加好友到聊天室"
+                        android:textSize="@dimen/title_text_size"
+                        android:visibility="gone"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/group_create_success"
+        android:layout_width="fill_parent"
+        android:layout_height="36dp"
+        android:background="#9991d302"
+        android:gravity="center"
+        android:text="恭喜您，创建聊天室成功"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/group_index_title"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="#eeeeee" >
+
+        <LinearLayout
+            android:id="@+id/btn_back_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="返回"
+                android:textColor="@color/content_color_blue"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tuixin_info_title"
+            style="@style/Titile_Name_Style"
+            android:textStyle="normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="创建成功" />
+
+        <Button
+            android:id="@+id/group_create_join"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@color/transparent"
+            android:text="跳过"
+            android:textColor="@color/content_color_blue"
+            android:textSize="@dimen/title_text_size" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#cac8c9" />
+    </RelativeLayout>
+
+</RelativeLayout>

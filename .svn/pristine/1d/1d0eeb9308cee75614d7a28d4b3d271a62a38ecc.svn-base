@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <color name="transparent">#00000000</color>
+    <color name="translucent_background">#60000000</color>
+    <color name="init_view_title">#ff2f2f2f</color>
+    <color name="init_view_input">#ffd6d6d6</color>
+    <color name="init_view_privacy">#ff2da6df</color>
+    <color name="trans">#00000000</color>
+    <color name="alpha0">#00000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="app_background">#fff5f5f5</color>
+    <color name="traffic_background">#dbe7ea</color>
+    <color name="gray_all">#ff00212d</color>
+    <color name="gray_per">#ffefefef</color>
+    <color name="red">#ffff0000</color>
+    <color name="light_blue">#7599a7</color>
+    <color name="light_gray">#ffa7a7a7</color>
+    <color name="gray_per_type">#7599a7</color>
+    <color name="blue">#ff0000ff</color>
+    <color name="qian_blue">#ffe2e9ea</color>
+    <color name="divider">#ffdddddd</color>
+    <color name="link">#ff00aae6</color>
+    <color name="gray">#ffc0c0c0</color>
+    <color name="settings_bg">#fff5f5f5</color>
+    <color name="settings_sub">#ffb8b8b8</color>
+    <color name="settings_blue">#ff18b2de</color>
+    <color name="setting_black">#ff585858</color>
+    <color name="settingsview_btn">#ff585858</color>
+    <color name="setting_dark">#ff000000</color>
+    <color name="tab_gray">#ff9b9b9b</color>
+    <color name="tab_white">#ffcccccc</color>
+    <color name="ic_black">#ff585858</color>
+    <color name="ic_gray">#ff626262</color>
+    <color name="ic_blue">#ff2fa51f</color>
+    <color name="ic_count">#ff5cb8e5</color>
+    <color name="ic_last">#ff999999</color>
+    <color name="chat_cont">#ff333333</color>
+    <color name="chat_gray">#ff666666</color>
+    <color name="chat_sig">#ffdbeeff</color>
+    <color name="chat_name">#ffffffff</color>
+    <color name="chat_time">#ff3366ff</color>
+    <color name="chat_bg">#ffccdeee</color>
+    <color name="chat_link">#ff0033ff</color>
+    <color name="chat_youni_ad_bg">#ffffff99</color>
+    <color name="chat_youni_ad_txt">#ff7d7d7d</color>
+    <color name="blacklist_cancel_btn">#ff74787a</color>
+    <color name="input_cont">#ff333333</color>
+    <color name="input_btn_disabled">#ff999999</color>
+    <color name="input_contact_name">#ffbfbfbf</color>
+    <color name="inbox_selector">#ff511519</color>
+    <color name="popup_blue">#ff0072e7</color>
+    <color name="popup_count_time">#ff5e5d5d</color>
+    <color name="popup_window">#00000000</color>
+    <color name="smile_dialog_top_background">#ff222222</color>
+    <color name="smile_dialog_bottom_background">#ff222222</color>
+    <color name="smile_dialog_title_color">#ffdddddd</color>
+    <color name="timestamp_color">#bf000000</color>
+    <color name="recipients_text_color">#ff088dc4</color>
+    <color name="settings_count_text_color">#ff7b7b7b</color>
+    <color name="settings_count_label_color">#ff0693c0</color>
+    <color name="tab">#ff5c6166</color>
+    <color name="popup_white_btn">#ff0072e7</color>
+    <color name="rating_star_one">#ff331b01</color>
+    <color name="rating_star_two">#ff663701</color>
+    <color name="rating_star_three">#ff995202</color>
+    <color name="rating_star_four">#ffcc6e02</color>
+    <color name="rating_star_five">#ffff8a01</color>
+    <color name="detailblackground">#ffedfbfe</color>
+    <color name="detailtitle">#ff353535</color>
+    <color name="detailcontent">#ff545454</color>
+    <color name="itemblackground1">#ffffffff</color>
+    <color name="itemblackground2">#fff3f3f3</color>
+    <color name="gray_selected_color">#ffccced4</color>
+    <color name="about_text_color">#ff474747</color>
+    <color name="msg_send_wait_color">#ff797979</color>
+    <color name="msg_send_color">#ff797979</color>
+    <color name="nick_color">#ff7abfde</color>
+    <color name="signature_color">#ff919fa4</color>
+    <color name="darkblue_color">#ff314b55</color>
+    <color name="search_subtitle">#ff314b55</color>
+    <color name="message_resulttext">#FF4040</color>
+    <color name="pink">#fff15b6c</color>
+
+    <drawable name="darkgray">#ffefefef</drawable>
+    <drawable name="defaultgray">#fff5f5f5</drawable>
+    <drawable name="popup_bg_blue">#27a5de</drawable>
+
+    <color name="titlecolor">#404141</color>
+    <color name="searchtext_color">#2e86b4</color>
+    <color name="searchtext_default_color">#474747</color>
+    <color name="request_tilte_color_black">#232323</color>
+    <color name="request_tilte_color_gray">#717171</color>
+    <color name="request_tilte_color_blue">#7ec424</color>
+    <color name="request_tilte_color_red">#f04242</color>
+    <color name="gray_text">#828282</color>
+    <color name="default_text_color">#2e86b4</color>
+    <color name="log_text_color">#0c415a</color>
+    <color name="search_reslut_sign_color">#3c3c3c</color>
+    <color name="regist_text_color">#1b92c2</color>
+    <color name="start_text_color">#f8af00</color>
+    <!-- file_mian_text_color,收到的文件相关页面主体文字颜色，例如文件名颜色等 -->
+    <color name="file_mian_text_color">#13274e</color>
+    <!-- file_sub_text_color,收到的文件相关页面二级文字颜色，例如文件大小数字的颜色等 -->
+    <color name="file_sub_text_color">#7e7e7e</color>
+    <!-- file_divide_line_color,条目间分割线的颜色 -->
+    <color name="file_divide_line_color">#8a8a8a</color>
+    <!-- folder_listview_bg_color,遍历浏览文件的listview的背景颜色 -->
+    <color name="folder_listview_bg_color">#f5f5f5</color>
+    <!-- folder_listview_bg_color,遍历浏览文件的listview的分割线颜色 -->
+    <color name="folder_listview_divider_color">#dddcdc</color>
+
+    <!-- 3.9新添加的颜色 -->
+    <color name="black">#ff000000</color>
+    <color name="title_bar_bg_color">#eeeeee</color>
+    <color name="title_text_color">#0c2049</color>
+    <color name="content_color_blue">#00a8ff</color>
+    <color name="content_color_red">#fe44a6</color>
+    <color name="content_color_blue_pressed">#bb4abffb</color>
+    <color name="content_bg_color">#f5f5f5</color>
+    <color name="content_line_color_gray">#d5d7dc</color>
+    <color name="expression_gray">#c6c4c5</color>
+    <color name="sub_title_text_color">#888888</color>
+    <!-- EditText前面标题和联系人资料副标题的颜色，例如神聊号： -->
+    <color name="edit_hint_color">#d7d8d9</color>
+    <color name="user_fav_stroke_one">#b4cfaf</color>
+    <color name="user_fav_stroke_two">#e7d4a8</color>
+    <color name="user_fav_stroke_three">#b0d0f1</color>
+    <color name="user_fav_gradient_one">#e0ebdd</color>
+    <color name="user_fav_gradient_two">#fff5d8</color>
+    <color name="user_fav_gradient_three">#d9ecff</color>
+    <color name="user_fav_text_one">#6c8465</color>
+    <color name="user_fav_text_two">#e5a22e</color>
+    <color name="user_fav_text_three">#6092c6</color>
+    <color name="room_name">#284abffb</color>
+    <color name="more_item">#f6f8f9</color>
+    <color name="select_lan">@color/content_color_blue</color>
+    <color name="search_girl">#ff5cad</color>
+    <color name="item_sign_text">#777777</color>
+    <color name="item_title_text">#676767</color>
+    <!-- item_masking_color是实现遮挡效果的颜色 -->
+    <color name="item_masking_color">#99ffffff</color>
+    <color name="user_sex_bg_color_male">#32b4f6</color>
+    <color name="user_sex_bg_color_female">#ff5cad</color>
+
+    <!-- 消息会话条目按下时颜色 -->
+    <color name="message_item_onpressed">#f6f8f9</color>
+    <color name="msgroom_msgs_bg">#f5f5f5</color>
+    <color name="msgroom_msg_card_name_color">#4a4a4a</color>
+    <color name="msgroom_nick_name_male">#1c9dde</color>
+    <color name="msgroom_nick_name_female">#ff1791</color>
+    <color name="creat_success">#bb91d302</color>
+    <color name="place_bg">#e8e8e8</color>
+    <color name="like_notice_activity_bg">#fafafa</color>
+    <color name="myblog_music_seekbar_bg">#bb23c2ff</color>
+    <color name="myblog_music_play_bg">#29b9f7</color>
+    <color name="myblog_warn">#ff3b30</color>
+    <color name="myblog_img">#bbf7f7f7</color>
+    <color name="myblog_noimg">#f7f7f7</color>
+    <color name="level_bg">#ffcc1a</color>
+    <color name="expression_view_normal">#efefef</color>
+    <color name="expression_view_selected">#adadad</color>
+
+</resources>

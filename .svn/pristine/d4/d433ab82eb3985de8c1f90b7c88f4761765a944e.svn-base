@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout android:background="@color/white" android:orientation="vertical" 
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<Button
+	    android:id="@+id/more_contacts"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginBottom="5dp"
+	    android:layout_marginLeft="@dimen/btn_margin_left"
+	    android:layout_marginRight="@dimen/btn_margin_right"
+	    android:layout_marginTop="10dp"
+	    android:text="@string/invite_list_button"
+	    android:textColor="#ff698591"
+	    android:textSize="@dimen/public_btn_textsize" />
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/btn_margin_left"
+        android:layout_marginRight="@dimen/btn_margin_right"
+        android:layout_marginBottom="17dp"
+        android:text="@string/invite_state"
+        android:textColor="#ff698591"
+        android:textAppearance="@style/IC_XName" />
+	<LinearLayout android:background="@color/white" android:orientation="vertical" 
+	android:layout_width="fill_parent" android:layout_height="40dp">
+	</LinearLayout>
+
+</LinearLayout>

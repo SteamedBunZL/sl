@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="67dp"
+    android:layout_height="28dp"
+    android:background="@drawable/sll_favourite_textbackgroud_selector"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/sl_tab_userinfo_favourite_griview_textView"
+        android:layout_width="67dp"
+        android:layout_height="28dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="爱好"
+        android:textColor="@color/title_text_color"
+        android:textSize="13sp" />
+
+</LinearLayout>

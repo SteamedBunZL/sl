@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/title"
+    style="?android:listSeparatorTextViewStyle"
+    android:background="@color/content_bg_color"
+    android:textColor="@color/title_text_color"
+    android:textSize="16sp" />

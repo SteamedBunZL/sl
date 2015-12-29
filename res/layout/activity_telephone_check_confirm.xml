@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/tab_title"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="#96eeeeee" >
+
+        <LinearLayout
+            android:id="@+id/btn_back_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="返回"
+                android:textColor="@color/content_color_blue"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/Titile_Name_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/code_confirm_page_title" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#cac8c9" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/mMain"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tab_title"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/layoutPhone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/mPhoneNumber"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="15dip"
+                android:layout_weight="1.0"
+                android:text="已经向13261933629发送短信，请在下方输入验证码"
+                android:textColor="@color/title_text_color"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/get_code_again"
+                style="@style/action_btn_style"
+                android:layout_width="230dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0"
+                android:text="重新获取"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/line_size"
+            android:layout_marginTop="20dp"
+            android:background="#d5d7dc" />
+
+        <EditText
+            android:id="@+id/input_code"
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/sll_more_item_select"
+            android:hint="@string/regist_phone_code_prompt"
+            android:inputType="number"
+            android:maxLength="100"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:singleLine="true"
+            android:textColorHint="#b9bbbe"
+            android:textSize="16sp"
+            android:width="150dip" >
+        </EditText>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/line_size"
+            android:background="#d5d7dc" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/line_size"
+            android:background="#d5d7dc" />
+
+        <Button
+            android:id="@+id/code_confirm_button"
+            style="@style/action_btn_style"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="23dip"
+            android:text="马上验证"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

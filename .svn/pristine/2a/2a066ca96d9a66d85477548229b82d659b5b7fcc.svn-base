@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/reletive"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffab34"
+    android:paddingBottom="3dip"
+    android:paddingTop="3dip" >
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dip"
+        android:fadingEdgeLength="0dp"
+        android:scrollbars="none" >
+
+        <TextView
+            android:id="@+id/msgRoom_notice_msg"
+            android:layout_width="fill_parent"
+            android:layout_height="20dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:text="test"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/notice_close"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/close_ad_pic" />
+
+</RelativeLayout>

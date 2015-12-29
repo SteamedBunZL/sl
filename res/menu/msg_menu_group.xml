@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<menu xmlns:android="http://schemas.android.com/apk/res/android">  
+           
+                
+           
+     <item android:id="@+id/msgroom_menu_deletMsg"  
+           android:title="@string/msg_menu_delet_allmessage"
+           android:icon="@drawable/msgroom_deletmessage" />  
+          
+              
+</menu>  

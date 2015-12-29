@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tuixin_tab_inbox"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/msgroom_msgs_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/message_tab_title"
+        style="@style/title_bar_layout" >
+
+        <TextView
+            android:id="@+id/inbox_title_name"
+            style="@style/title_bar_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="1dp"
+            android:maxWidth="150dp"
+            android:text="昵称" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inbox_title_name"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/tuixin_id_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tuixin_id"
+                android:textColor="@color/content_color_blue"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tuixin_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11111"
+                android:textColor="@color/content_color_blue"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/connect_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/connect_states"
+                android:textColor="@color/content_color_blue"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            style="@style/content_line_style"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:id="@+id/message_list_hint_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/no_message_conversation"
+            android:gravity="center"
+            android:visibility="visible" />
+
+        <ListView
+            android:id="@+id/list_inbox"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/msgroom_msgs_bg"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/list_seperator"/>
+    </FrameLayout>
+
+</LinearLayout>

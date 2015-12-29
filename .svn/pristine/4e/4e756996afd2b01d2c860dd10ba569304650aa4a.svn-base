@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/tab_title"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="#96eeeeee" >
+
+        <TextView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15.0dip"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:text="@string/back_btn"
+            android:textAppearance="@style/White_Text"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/btn_back_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="返回"
+                android:textColor="@color/content_color_blue"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/con_info_title_name"
+            style="@style/Titile_Name_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/share_tuixin_id" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#cac8c9" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="20dip"
+        android:text="我的神聊名片"
+        android:textColor="@color/black"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <RelativeLayout
+            android:id="@+id/mCardLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="81dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/sll_more_item_select" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_size"
+                android:layout_alignParentTop="true"
+                android:background="#d5d7dc" />
+
+            <ImageView
+                android:id="@+id/mHeadPic"
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/user_infor_head_boy" >
+            </ImageView>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="57dp"
+                android:layout_alignTop="@id/mHeadPic"
+                android:layout_toRightOf="@+id/mHeadPic"
+                android:background="@drawable/sll_more_item_select" >
+
+                <TextView
+                    android:id="@+id/mNickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="名字"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="18.0sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="30dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/mNickname"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="1dp" >
+
+                    <ImageView
+                        android:id="@+id/mSex"
+                        android:layout_width="30dp"
+                        android:layout_height="15dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/user_infor_sex_girl" />
+
+                    <TextView
+                        android:id="@+id/mAge_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="2dp"
+                        android:text="12"
+                        android:textColor="@color/white"
+                        android:textSize="13.0sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/mTuixinText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/tuixin_id"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/mTuixinnumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/mTuixinText"
+                    android:layout_marginLeft="2dip"
+                    android:layout_toRightOf="@id/mTuixinText"
+                    android:text="123456"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="13.0sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_size"
+                android:layout_alignParentBottom="true"
+                android:background="#d5d7dc" />
+        </RelativeLayout>
+
+        <Button
+            style="@style/action_btn_style"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="23dip"
+            android:onClick="next"
+            android:text="@string/weibo_next"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="将我的神聊名片发送到新浪微博，呼朋唤友一起神聊吧"
+            android:textColor="@color/content_color_blue"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

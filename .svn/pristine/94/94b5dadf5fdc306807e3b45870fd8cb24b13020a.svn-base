@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/msgroom_more_back"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/msgroom_more_back"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/msgRoom_more_item4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="6dip"
+        android:paddingRight="10dip"
+        android:paddingTop="6dip" >
+
+        <RelativeLayout
+            android:id="@+id/msgRoom_more_item4_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp" >
+
+            <ImageView
+                android:id="@+id/msgRoom_more_item4_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="20dip"
+                android:background="@drawable/msgroom_more_pop_member" />
+
+            <TextView
+                android:id="@+id/msgRoom_more_item4_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/msgRoom_more_item4_icon"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@id/msgRoom_more_item4_icon"
+                android:gravity="center"
+                android:text="查看在线人员"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/msgRoom_more_item4_line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/msgroom_more_pop_line" />
+
+    <RelativeLayout
+        android:id="@+id/msgRoom_more_item1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="6dip" >
+
+        <RelativeLayout
+            android:id="@+id/msgRoom_more_item1_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp" >
+
+            <ImageView
+                android:id="@+id/msgRoom_more_item1_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dip"
+                android:background="@drawable/msgroom_more_pop_invit" />
+
+            <TextView
+                android:id="@+id/msgRoom_more_item1_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/msgRoom_more_item1_icon"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/msgRoom_more_item1_icon"
+                android:gravity="center"
+                android:text="@string/msgroom_more_pop_invite"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/msgRoom_more_item1_line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/msgroom_more_pop_line" />
+
+    <RelativeLayout
+        android:id="@+id/msgRoom_more_item2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="6dip" >
+
+        <RelativeLayout
+            android:id="@+id/msgRoom_more_item2_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp" >
+
+            <ImageView
+                android:id="@+id/msgRoom_more_item2_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/msgroom_more_pop_autoplay" />
+
+            <TextView
+                android:id="@+id/msgRoom_more_item2_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/msgRoom_more_item2_icon"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@id/msgRoom_more_item2_icon"
+                android:gravity="center"
+                android:text="@string/msgroom_more_pop_autoplay"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/msgRoom_more_item3_line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/msgroom_more_pop_line" />
+
+    <RelativeLayout
+        android:id="@+id/msgRoom_more_item3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="6dip" >
+
+        <RelativeLayout
+            android:id="@+id/msgRoom_more_item3_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp" >
+
+            <ImageView
+                android:id="@+id/msgRoom_more_item3_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/msgroom_more_pop_handset" />
+
+            <TextView
+                android:id="@+id/msgRoom_more_item3_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/msgRoom_more_item3_icon"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@id/msgRoom_more_item3_icon"
+                android:gravity="center"
+                android:text="@string/msgroom_more_pop_nomalplay"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/msgRoom_more_item4_line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/msgroom_more_pop_line" />
+
+    <RelativeLayout
+        android:id="@+id/msgRoom_more_item_clear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="6dip" >
+
+        <RelativeLayout
+            android:id="@+id/msgRoom_more_item_layout_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp" >
+
+            <ImageView
+                android:id="@+id/msgRoom_more_item3_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/msgroom_more_pop_clear" />
+
+            <TextView
+                android:id="@+id/msgRoom_more_item_text_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/msgRoom_more_item3_icon"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@id/msgRoom_more_item3_icon"
+                android:gravity="center"
+                android:text="清除聊天记录"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

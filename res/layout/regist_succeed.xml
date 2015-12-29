@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/content_bg_color"
+    android:orientation="vertical" >
+
+    <!-- @+id/tv_empty_view 这个view只是为了占位，让ScrollView放在其下面，方便“注册成功”提示动画的显示 -->
+
+    <TextView
+        android:id="@+id/tv_empty_view"
+        style="@style/title_bar_textview"
+        android:visibility="invisible" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/tv_empty_view"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="72dip"
+                android:layout_height="72dip"
+                android:layout_marginBottom="28dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/corner_round_white"
+                android:padding="2dp"
+                android:src="@drawable/user_infor_head_boy" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_regist_nick_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44dp"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:id="@+id/tv_regist_nick_name"
+                        style="@style/edit_infor_text"
+                        android:layout_width="55dp"
+                        android:layout_marginLeft="5dip"
+                        android:text="昵    称" />
+
+                    <TextView
+                        android:id="@+id/regist_successed_nickName"
+                        style="@style/regist_success_text"
+                        android:layout_marginLeft="35dip"
+                        android:layout_toRightOf="@+id/tv_regist_nick_name"
+                        android:text="王晓玥" />
+                </RelativeLayout>
+
+                <View style="@style/content_line_style" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_regist_pwd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44dp"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:id="@+id/tv_account"
+                        style="@style/edit_infor_text"
+                        android:layout_width="55dp"
+                        android:layout_marginLeft="5dip"
+                        android:text="神聊号"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/sl_number"
+                        style="@style/regist_success_text"
+                        android:layout_marginLeft="35dip"
+                        android:layout_toRightOf="@id/tv_account"
+                        android:text="123456" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/start"
+                style="@style/action_btn_style"
+                android:layout_marginTop="23dp"
+                android:gravity="center"
+                android:text="开始神聊吧" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dip"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/privacy_warning" />
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="您可以使用神聊号及密码登录"
+                    android:textColor="@color/sub_title_text_color" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_regist_success_prompt"
+        android:layout_width="fill_parent"
+        android:layout_height="39dp"
+        android:background="#9991d302"
+        android:gravity="center"
+        android:text="恭喜您，注册成功！"
+        android:textColor="@android:color/white" />
+
+    <RelativeLayout
+        android:id="@+id/rl_title_regist_success"
+        style="@style/title_bar_layout" >
+
+        <TextView
+            android:id="@+id/tv_regist_success_title"
+            style="@style/title_bar_textview"
+            android:text="注册成功" />
+
+        <View
+            style="@style/content_line_style"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+</RelativeLayout>
